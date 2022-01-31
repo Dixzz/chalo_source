@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:background="@drawable/drawer_item_selector" android:paddingTop="16dp" android:paddingRight="8dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+    <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/profile_picture" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:src="@drawable/nopic_user_drawer" android:layout_centerVertical="true"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toRightOf="@+id/profile_picture" android:layout_centerVertical="true">
+        <TextView android:textSize="18sp" android:textColor="@color/black_87" android:ellipsize="end" android:id="@+id/user_name" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:maxLines="2" style="@style/mediumFont"/>
+        <TextView android:textSize="14dp" android:textColor="@color/black_70" android:id="@+id/user_email" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="8dp" android:text="Test" android:maxLines="2" android:layout_below="@+id/user_name" android:alpha="0.6" android:fontFamily="@string/font_regular"/>
+    </LinearLayout>
+</RelativeLayout>

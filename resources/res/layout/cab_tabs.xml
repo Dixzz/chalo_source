@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:background="@drawable/cab_tabs_selector" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="match_parent">
+        <TextView android:textSize="16dp" android:textColor="@color/black_60" android:gravity="center" android:id="@+id/tab_title" android:paddingLeft="12dp" android:paddingRight="12dp" android:layout_width="wrap_content" android:layout_height="@dimen/horizontal_tab_height" android:text="TRAIN" android:drawablePadding="4dp" fontPath="@string/font_regular"/>
+    </LinearLayout>
+</RelativeLayout>

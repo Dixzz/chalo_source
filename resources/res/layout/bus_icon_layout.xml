@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/bus_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:src="@drawable/live_bus2"/>
+    <ImageView android:id="@+id/bus_direction_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:src="@drawable/live_bus2_direction"/>
+    <LinearLayout android:id="@+id/info_layout" android:background="@drawable/gps_delay_window" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:translationZ="20dp">
+        <ImageView android:id="@+id/info_icon" android:paddingLeft="2dp" android:paddingTop="4dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/alert_routescreen"/>
+        <TextView android:textSize="12dp" android:textColor="@color/black_70" android:id="@+id/updated_time" android:paddingLeft="4dp" android:paddingTop="3dp" android:paddingRight="10dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Updated\102 min ago" android:layout_toRightOf="@+id/bus_icon"/>
+    </LinearLayout>
+</RelativeLayout>

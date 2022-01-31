@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <include layout="@layout/pass_details"/>
+    <include layout="@layout/pass_valid_layout"/>
+    <include layout="@layout/punch_ticket_layout"/>
+    <TextView android:textSize="15dp" android:textColor="@color/white" android:gravity="center" android:id="@+id/renew_pass" android:background="@drawable/orange_rounded_button" android:layout_width="match_parent" android:layout_height="56dp" android:text="@string/renew_pass" fontPath="fonts/NotoSans-SemiBold.ttf"/>
+</LinearLayout>

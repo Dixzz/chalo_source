@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@color/orange_pressed_state"/>
+    <item android:state_selected="false" android:drawable="@color/orange_sound"/>
+    <item android:drawable="@color/rating_tag_background_not_selected"/>
+</selector>

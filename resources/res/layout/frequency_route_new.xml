@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/frequency_route_container" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout android:gravity="bottom" android:id="@+id/sliding_layout" android:layout_width="match_parent" android:layout_height="match_parent" app:umanoDragView="@+id/towards" app:umanoFadeColor="@android:color/transparent" app:umanoInitialState="2">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <FrameLayout android:id="@+id/route_container" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <include android:id="@+id/liveInfoContainer" layout="@layout/check_in_header"/>
+            <androidx.cardview.widget.CardView android:id="@+id/product_discount_card" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:layout_marginRight="4dp" android:layout_marginBottom="4dp" android:layout_above="@+id/route_screen_horizontal_axis" app:cardCornerRadius="4dp" app:cardElevation="8dp" app:cardUseCompatPadding="true">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="8dp" android:layout_marginRight="10dp" android:layout_marginBottom="8dp">
+                    <ImageView android:layout_gravity="center_vertical" android:id="@+id/discount_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4dp" android:src="@drawable/discount_route"/>
+                    <TextView android:textSize="14dp" android:textColor="@color/black_87" android:layout_gravity="center_vertical" android:id="@+id/discount_text" android:layout_width="0dp" android:layout_height="wrap_content" android:text="10% Off on all your ticket bookings" android:layout_weight="1" fontPath="fonts/NotoSans-SemiBold.ttf"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <View android:id="@+id/route_screen_horizontal_axis" android:background="@color/scheduler_input_divider" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="0dp" android:layout_centerVertical="true"/>
+            <app.zophop.ui.views.MapCustomMyLocation android:id="@+id/route_my_location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16dp" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/route_lists_container" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentBottom="true">
+            <LinearLayout android:orientation="horizontal" android:id="@+id/towards_container" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <View android:layout_gravity="center_vertical" android:id="@+id/route_header_back" android:layout_width="@dimen/route_back_arrow_initial_size" android:layout_height="0dp" android:layout_marginRight="8dp"/>
+                <LinearLayout android:paddingBottom="16dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <include layout="@layout/route_text_info_layout"/>
+                </LinearLayout>
+                <TextView android:textSize="14dp" android:textColor="@color/white" android:id="@+id/btn_book_mticket" android:background="@drawable/green_rounded_button_otp" android:paddingLeft="16dp" android:paddingTop="8dp" android:paddingRight="16dp" android:paddingBottom="8dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="12dp" android:text="@string/btn_text_buy_ticket" fontPath="fonts/NotoSans-SemiBold.ttf"/>
+                <ImageView android:id="@+id/subscription_icon" android:background="@drawable/drawer_item_selector" android:padding="8dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="8dp" android:layout_marginRight="-8dp" android:layout_marginBottom="8dp" android:src="@drawable/subscribe_tool_bar_icon"/>
+                <RelativeLayout android:id="@+id/route_screen_options_container" android:paddingLeft="8dp" android:paddingTop="8dp" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:id="@+id/route_screen_options" android:background="@drawable/drawer_item_selector" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/route_screen_menu"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <View android:id="@+id/header_divider" android:background="@color/scheduler_input_divider" android:layout_width="match_parent" android:layout_height="1dp" android:layout_below="@+id/towards_container"/>
+            <TextView android:textSize="14dp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@+id/txtRouteInfo" android:background="@color/black_route" android:paddingLeft="14dp" android:paddingTop="8dp" android:paddingRight="16dp" android:paddingBottom="8dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/header_divider"/>
+            <FrameLayout android:id="@+id/bus_route_viewpager" android:background="@color/white" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/txtRouteInfo"/>
+        </RelativeLayout>
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView android:id="@+id/back_button_card" android:clickable="true" android:layout_width="@dimen/route_back_arrow_size" android:layout_height="@dimen/route_back_arrow_size" android:layout_margin="8dp" android:foreground="@drawable/drawer_item_selector" android:shape="ring" android:innerRadius="0dp" app:cardCornerRadius="@dimen/route_back_arrow_card_radius">
+            <ImageView android:layout_gravity="center" android:id="@+id/route_screen_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_arrow_back_black_24dp" android:scaleType="center"/>
+        </androidx.cardview.widget.CardView>
+        <ImageView android:id="@+id/route_screen_back_v19" android:background="@drawable/drawer_item_selector" android:visibility="gone" android:layout_width="@dimen/route_back_arrow_size" android:layout_height="@dimen/route_back_arrow_size" android:src="@drawable/route_back" android:scaleType="center"/>
+    </LinearLayout>
+</RelativeLayout>

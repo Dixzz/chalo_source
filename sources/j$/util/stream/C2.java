@@ -1,0 +1,17 @@
+package j$.util.stream;
+
+import j$.util.stream.A2;
+
+abstract class C2 extends A2.a<Double> {
+    protected boolean b;
+
+    C2(A2 a2) {
+        super(a2);
+    }
+
+    @Override // j$.util.stream.A2.a, j$.util.stream.A2
+    public final boolean p() {
+        this.b = true;
+        return false;
+    }
+}

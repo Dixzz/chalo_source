@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="docs_upload_instructions">
+        <item>Original photo (No copy)</item>
+        <item>A clear photo of both Front and Back</item>
+        <item>Data on Aadhar card should be clearly visible</item>
+        <item>No Mobile Aadhar card is accepted</item>
+    </array>
+    <array name="gen_instructions_arr">
+        <item>This pass is non-transferable and non-refundable.</item>
+        <item>This pass is only valid till the expiry date.</item>
+        <item>It is mandatory to show your pass to authorised persons upon request.</item>
+        <item>Your pass may be cancelled without a refund in the event of misuse or fraud.</item>
+    </array>
+    <array name="gen_instructions_arr_aictsl">
+        <item>This pass is non-transferable and non-refundable.</item>
+        <item>This pass is only valid till the expiry date.</item>
+        <item>This pass is only valid in AICTSL buses.</item>
+        <item>Students, senior citizens and the physically challenged can avail discounted passes by submitting\10            additional documents.</item>
+        <item>It is mandatory to show your pass to authorised persons upon request.</item>
+        <item>We reserve the right to cancel your pass without a refund in the event of misuse or fraud.</item>
+    </array>
+    <array name="gen_instructions_arr_astc">
+        <item>This pass is non-transferable and non-refundable.</item>
+        <item>This pass is only valid till the expiry date.</item>
+        <item>This pass is valid in all the ASTC buses.</item>
+        <item>It is mandatory to show your pass to authorised persons upon request.</item>
+        <item>We reserve the right to cancel your pass without a refund in the event of misuse or fraud.</item>
+    </array>
+    <array name="gen_instructions_arr_bcll">
+        <item>This pass is non-transferable and non-refundable.</item>
+        <item>This pass is only valid till the expiry date.</item>
+        <item>This pass is only valid in Mybuses.</item>
+        <item>Students, senior citizens and the physically challenged can avail discounted passes by submitting\10            additional documents.</item>
+        <item>It is mandatory to show your pass to authorised persons upon request.</item>
+        <item>We reserve the right to cancel your pass without a refund in the event of misuse or fraud.</item>
+    </array>
+    <array name="gen_instructions_arr_bsrtc">
+        <item>This pass is non-transferable and non-refundable.</item>
+        <item>This pass is only valid till the expiry date.</item>
+        <item>This pass is valid in all the BSRTC buses except routes 100, 200, 444, 777, 888, 888A.</item>
+        <item>Students and women can avail discounted passes by submitting additional documents.</item>
+        <item>It is mandatory to show your pass to authorised persons upon request.</item>
+        <item>We reserve the right to cancel your pass without a refund in the event of misuse or fraud.</item>
+    </array>
+    <array name="gen_instructions_arr_dkboa">
+        <item>This pass is valid for travel only on the specified route(s).</item>
+        <item>This pass is non-transferable and non-refundable.</item>
+        <item>This pass is only valid till the expiry date.</item>
+        <item>It is mandatory to show your pass to authorised persons upon request.</item>
+        <item>Your pass may be cancelled without a refund in the event of misuse or fraud.</item>
+    </array>
+    <array name="gen_instructions_arr_jctsl">
+        <item>This pass is non-transferable and non-refundable.</item>
+        <item>This pass is only valid till the expiry date.</item>
+        <item>This pass is only valid in Metro Buses.</item>
+        <item>Students, senior citizens and the physically challenged can avail discounted passes by submitting\10            additional documents.</item>
+        <item>It is mandatory to show your pass to authorised persons upon request.</item>
+        <item>We reserve the right to cancel your pass without a refund in the event of misuse or fraud.</item>
+    </array>
+    <array name="kochi_beta_instructions">
+        <item>Some buses may not show up</item>
+        <item>Fares may not be accurate</item>
+        <item>Timings may differ</item>
+    </array>
+    <array name="mticket_instructions_arr_cstc">
+        <item>This ticket is only valid for WBTC buses.</item>
+        <item>This ticket is non-transferable and non-refundable.</item>
+        <item>This ticket is only valid for next 24 hours.</item>
+        <item>After activation, the ticket is only valid for one hour.</item>
+        <item>Upon request, It&apos;s mandatory to show your ticket to authorised personnel.</item>
+    </array>
+    <array name="scan_pay_instructions_arr">
+        <item>This ticket is non-transferable and non-refundable.</item>
+        <item>This ticket is only valid till the expiry date.</item>
+        <item>It is mandatory to show your ticket to authorised persons upon request.</item>
+        <item>Your ticket may be cancelled without a refund in the event of misuse or fraud.</item>
+    </array>
+</resources>

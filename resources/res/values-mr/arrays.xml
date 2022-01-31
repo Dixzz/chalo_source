@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="gen_instructions_arr">
+        <item>एकदा घेतलेला पास परत करता येणार नाही आणि पास अ-हस्तांतरणीय आहे.</item>
+        <item>आपणाला कोणतेही कागद- तिकीट आणण्याची गरज नाही</item>
+        <item>इंटरनेट शिवाय पास वापरू शकता</item>
+        <item>आपण फक्त दिवसातून दोन वेळाच पास ने प्रवास करू शकता</item>
+    </array>
+</resources>

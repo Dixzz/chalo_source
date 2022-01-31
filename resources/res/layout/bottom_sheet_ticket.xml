@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/bottomSheet" android:background="#ffffff" android:paddingBottom="32dp" android:layout_width="match_parent" android:layout_height="wrap_content" app:behavior_hideable="true" app:behavior_peekHeight="16dp" app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+    <TextView android:textSize="18sp" android:textColor="@color/black" android:id="@+id/productName" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="24dp" android:layout_marginTop="24dp" android:layout_marginRight="24dp" android:text="Single Journey Ticket" style="@style/mediumFont"/>
+    <androidx.cardview.widget.CardView android:gravity="bottom" android:layout_gravity="bottom" android:id="@+id/card_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16dp" android:layout_below="@+id/productName" app:cardCornerRadius="4dp" app:cardElevation="4dp" app:cardUseCompatPadding="true">
+        <LinearLayout android:orientation="vertical" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/profile_info_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:id="@+id/profile_info" android:background="@color/white" android:paddingLeft="13dp" android:paddingTop="13dp" android:paddingRight="16dp" android:paddingBottom="16dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp">
+                        <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/profile_pic" android:focusable="false" android:focusableInTouchMode="false" android:clickable="true" android:layout_width="99dp" android:layout_height="99dp" android:src="@drawable/profile_empty"/>
+                        <ProgressBar android:id="@+id/pass_profile_pic_progressbar" android:visibility="gone" android:layout_width="32dp" android:layout_height="82dp" android:indeterminate="true" android:layout_centerHorizontal="true" android:indeterminateTint="@color/orange_primary" android:indeterminateTintMode="src_atop" style="@style/Widget.ProgressBar.Small"/>
+                    </RelativeLayout>
+                    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="8dp" android:layout_weight="1">
+                        <TextView android:textSize="14sp" android:textColor="@color/black_70" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/passenger" style="@style/regularFont"/>
+                        <TextView android:textSize="18sp" android:textColor="@color/black_87" android:id="@+id/profile_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="0dp" style="@style/mediumFont"/>
+                        <TextView android:textSize="16sp" android:textColor="@color/black_87" android:id="@+id/dob" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Student" style="@style/mediumFont"/>
+                        <TextView android:textSize="16sp" android:textColor="@color/black_87" android:id="@+id/gender" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4dp" style="@style/mediumFont"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:id="@+id/max_fare_divider" android:background="@color/scheduler_input_divider" android:visibility="visible" android:layout_width="match_parent" android:layout_height="1dp"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/mticket_route_details" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include layout="@layout/mticket_route_stop_details_layout"/>
+                <View android:id="@+id/max_fare_divider" android:background="@color/scheduler_input_divider" android:visibility="visible" android:layout_width="match_parent" android:layout_height="1dp"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/passenger_count" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include layout="@layout/mticket_booking_details_layout"/>
+                <View android:id="@+id/max_fare_divider" android:background="@color/scheduler_input_divider" android:visibility="visible" android:layout_width="match_parent" android:layout_height="1dp"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/route_container_padding_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <include android:id="@+id/route_container" android:visibility="gone" layout="@layout/route_details_layout"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/trip_details" android:paddingTop="13dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include android:id="@+id/ride_details_layout" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16dp" layout="@layout/ride_details"/>
+                <View android:id="@+id/max_fare_divider" android:background="@color/scheduler_input_divider" android:visibility="visible" android:layout_width="match_parent" android:layout_height="1dp"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/max_fare_info" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include android:id="@+id/ride_details_layout" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" layout="@layout/ride_details"/>
+                <View android:id="@+id/max_fare_divider" android:background="@color/scheduler_input_divider" android:visibility="visible" android:layout_width="match_parent" android:layout_height="1dp"/>
+            </LinearLayout>
+            <RelativeLayout android:id="@+id/scan_pay_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="18sp" android:textColor="#de000000" android:id="@+id/amount_paid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:text="@string/amount_paid" android:layout_below="@+id/payment_details_header" style="@style/mediumFont"/>
+                <TextView android:textSize="18sp" android:textColor="#de000000" android:gravity="end" android:id="@+id/amount_paid_val" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="16dp" android:layout_marginRight="16dp" android:text="20" android:layout_toRightOf="@+id/amount_paid" android:layout_below="@+id/payment_details_header" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/mediumFont"/>
+                <View android:id="@+id/max_fare_divider" android:background="@color/scheduler_input_divider" android:visibility="visible" android:layout_width="match_parent" android:layout_height="1dp" android:layout_below="@+id/amount_paid"/>
+            </RelativeLayout>
+            <TextView android:textSize="18sp" android:textColor="#de000000" android:id="@+id/validity" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_margin="16dp" android:text="@string/mticket_banner_valid_till" style="@style/mediumFont"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <TextView android:textSize="14sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@+id/dismiss_btn" android:background="@drawable/orange_rounded_button" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:text="@string/dismiss_caps" android:layout_below="@+id/card_container" style="@style/mediumFont"/>
+</RelativeLayout>

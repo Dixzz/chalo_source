@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/activation_bottomsheet" android:background="@color/white" android:paddingLeft="16dp" android:paddingTop="24dp" android:paddingRight="16dp" android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="wrap_content" app:behavior_hideable="false" app:behavior_peekHeight="22dp" app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/iv_activation_lock" android:layout_width="45dp" android:layout_height="45dp" android:src="@drawable/lock_circle"/>
+        <LinearLayout android:orientation="vertical" android:paddingLeft="16dp" android:paddingRight="32dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="18sp" android:textColor="@color/black_87" android:id="@+id/activation_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/activate_screen_bottomsheet_title" style="@style/boldFont"/>
+            <TextView android:textSize="16sp" android:textColor="@color/black_70" android:id="@+id/activation_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/mpass_activation_text" style="@style/regularFont"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="14sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/activate_btn" android:background="@drawable/activate_button" android:paddingTop="12dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/btn_txt_activate" style="@style/mediumFont"/>
+    <TextView android:textSize="14sp" android:textColor="@color/black_87" android:gravity="center" android:id="@+id/view_receipts_btn" android:background="@drawable/grey_rounded_button" android:paddingTop="12dp" android:paddingBottom="12dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/view_trip_history_caps" style="@style/mediumFont"/>
+</LinearLayout>

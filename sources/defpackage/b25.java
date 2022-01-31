@@ -1,0 +1,659 @@
+package defpackage;
+
+import j$.lang.Iterable;
+import j$.util.Collection;
+import j$.util.Iterator;
+import j$.util.Map;
+import j$.util.Set;
+import j$.util.function.BiConsumer;
+import j$.util.function.BiFunction;
+import j$.util.function.Consumer;
+import j$.util.function.Function;
+import j$.util.function.Predicate;
+import j$.util.stream.Stream;
+import java.lang.Comparable;
+import java.util.AbstractMap;
+import java.util.AbstractSet;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.NoSuchElementException;
+import java.util.SortedMap;
+import java.util.Spliterator;
+import java.util.TreeMap;
+
+/* renamed from: b25  reason: default package */
+/* compiled from: SmallSortedMap */
+public class b25<K extends Comparable<K>, V> extends AbstractMap<K, V> implements Map {
+    public static final /* synthetic */ int m = 0;
+    public final int f;
+    public List<b25<K, V>.d> g = Collections.emptyList();
+    public java.util.Map<K, V> h = Collections.emptyMap();
+    public boolean i;
+    public volatile b25<K, V>.f j;
+    public java.util.Map<K, V> k = Collections.emptyMap();
+    public volatile b25<K, V>.b l;
+
+    /* renamed from: b25$a */
+    /* compiled from: SmallSortedMap */
+    public class a implements Iterator<Map.Entry<K, V>>, j$.util.Iterator {
+        public int f;
+        public Iterator<Map.Entry<K, V>> g;
+
+        public a(a25 a25) {
+            this.f = b25.this.g.size();
+        }
+
+        /* JADX DEBUG: Type inference failed for r0v1. Raw type applied. Possible types: java.util.Iterator<java.util.Map$Entry<K, V>>, java.util.Iterator<java.util.Map$Entry<K extends java.lang.Comparable<K>, V>> */
+        public final Iterator<Map.Entry<K, V>> a() {
+            if (this.g == null) {
+                this.g = b25.this.k.entrySet().iterator();
+            }
+            return (Iterator<Map.Entry<K, V>>) this.g;
+        }
+
+        @Override // j$.util.Iterator
+        public /* synthetic */ void forEachRemaining(Consumer consumer) {
+            Iterator.CC.$default$forEachRemaining(this, consumer);
+        }
+
+        @Override // j$.util.Iterator
+        public boolean hasNext() {
+            int i = this.f;
+            return (i > 0 && i <= b25.this.g.size()) || a().hasNext();
+        }
+
+        @Override // j$.util.Iterator, java.util.Iterator
+        public Object next() {
+            if (a().hasNext()) {
+                return a().next();
+            }
+            List<b25<K, V>.d> list = b25.this.g;
+            int i = this.f - 1;
+            this.f = i;
+            return list.get(i);
+        }
+
+        @Override // j$.util.Iterator
+        public void remove() {
+            throw new UnsupportedOperationException();
+        }
+    }
+
+    /* renamed from: b25$b */
+    /* compiled from: SmallSortedMap */
+    public class b extends b25<K, V>.f {
+        public b(a25 a25) {
+            super(null);
+        }
+
+        @Override // j$.util.Collection, java.util.AbstractCollection, java.util.Collection, java.util.Set, j$.util.Set, j$.lang.Iterable, defpackage.b25.f, java.lang.Iterable
+        public java.util.Iterator<Map.Entry<K, V>> iterator() {
+            return new a(null);
+        }
+    }
+
+    /* renamed from: b25$c */
+    /* compiled from: SmallSortedMap */
+    public static class c {
+
+        /* renamed from: a  reason: collision with root package name */
+        public static final java.util.Iterator<Object> f371a = new a();
+        public static final Iterable<Object> b = new b();
+
+        /* renamed from: b25$c$a */
+        /* compiled from: SmallSortedMap */
+        public static class a implements java.util.Iterator<Object>, j$.util.Iterator {
+            @Override // j$.util.Iterator
+            public /* synthetic */ void forEachRemaining(Consumer consumer) {
+                Iterator.CC.$default$forEachRemaining(this, consumer);
+            }
+
+            @Override // j$.util.Iterator
+            public boolean hasNext() {
+                return false;
+            }
+
+            @Override // j$.util.Iterator, java.util.Iterator
+            public Object next() {
+                throw new NoSuchElementException();
+            }
+
+            @Override // j$.util.Iterator
+            public void remove() {
+                throw new UnsupportedOperationException();
+            }
+        }
+
+        /* renamed from: b25$c$b */
+        /* compiled from: SmallSortedMap */
+        public static class b implements Iterable<Object>, Iterable {
+            @Override // j$.lang.Iterable
+            public /* synthetic */ void forEach(Consumer consumer) {
+                Iterable.CC.$default$forEach(this, consumer);
+            }
+
+            @Override // j$.lang.Iterable, java.lang.Iterable
+            public java.util.Iterator<Object> iterator() {
+                return c.f371a;
+            }
+
+            /* Return type fixed from 'j$.util.Spliterator' to match base method */
+            @Override // j$.lang.Iterable, java.lang.Iterable
+            public /* synthetic */ Spliterator<Object> spliterator() {
+                return Iterable.CC.$default$spliterator(this);
+            }
+        }
+    }
+
+    /* renamed from: b25$e */
+    /* compiled from: SmallSortedMap */
+    public class e implements java.util.Iterator<Map.Entry<K, V>>, j$.util.Iterator {
+        public int f = -1;
+        public boolean g;
+        public java.util.Iterator<Map.Entry<K, V>> h;
+
+        public e(a25 a25) {
+        }
+
+        /* JADX DEBUG: Type inference failed for r0v1. Raw type applied. Possible types: java.util.Iterator<java.util.Map$Entry<K, V>>, java.util.Iterator<java.util.Map$Entry<K extends java.lang.Comparable<K>, V>> */
+        public final java.util.Iterator<Map.Entry<K, V>> a() {
+            if (this.h == null) {
+                this.h = b25.this.h.entrySet().iterator();
+            }
+            return (java.util.Iterator<Map.Entry<K, V>>) this.h;
+        }
+
+        @Override // j$.util.Iterator
+        public /* synthetic */ void forEachRemaining(Consumer consumer) {
+            Iterator.CC.$default$forEachRemaining(this, consumer);
+        }
+
+        @Override // j$.util.Iterator
+        public boolean hasNext() {
+            if (this.f + 1 < b25.this.g.size()) {
+                return true;
+            }
+            if (b25.this.h.isEmpty() || !a().hasNext()) {
+                return false;
+            }
+            return true;
+        }
+
+        @Override // j$.util.Iterator, java.util.Iterator
+        public Object next() {
+            this.g = true;
+            int i2 = this.f + 1;
+            this.f = i2;
+            if (i2 < b25.this.g.size()) {
+                return b25.this.g.get(this.f);
+            }
+            return a().next();
+        }
+
+        @Override // j$.util.Iterator
+        public void remove() {
+            if (this.g) {
+                this.g = false;
+                b25 b25 = b25.this;
+                int i2 = b25.m;
+                b25.b();
+                if (this.f < b25.this.g.size()) {
+                    b25 b252 = b25.this;
+                    int i3 = this.f;
+                    this.f = i3 - 1;
+                    b252.i(i3);
+                    return;
+                }
+                a().remove();
+                return;
+            }
+            throw new IllegalStateException("remove() was called before next()");
+        }
+    }
+
+    /* renamed from: b25$f */
+    /* compiled from: SmallSortedMap */
+    public class f extends AbstractSet<Map.Entry<K, V>> implements Set {
+        public f(a25 a25) {
+        }
+
+        /* JADX DEBUG: Multi-variable search result rejected for r0v1, resolved type: b25 */
+        /* JADX WARN: Multi-variable type inference failed */
+        @Override // j$.util.Collection, java.util.AbstractCollection, java.util.Collection, java.util.Set, j$.util.Set
+        public boolean add(Object obj) {
+            Map.Entry entry = (Map.Entry) obj;
+            if (contains(entry)) {
+                return false;
+            }
+            b25.this.put((Comparable) entry.getKey(), entry.getValue());
+            return true;
+        }
+
+        @Override // j$.util.Collection, j$.util.Set
+        public void clear() {
+            b25.this.clear();
+        }
+
+        @Override // j$.util.Collection, j$.util.Set
+        public boolean contains(Object obj) {
+            Map.Entry entry = (Map.Entry) obj;
+            Object obj2 = b25.this.get(entry.getKey());
+            Object value = entry.getValue();
+            return obj2 == value || (obj2 != null && obj2.equals(value));
+        }
+
+        @Override // j$.util.Collection, j$.lang.Iterable
+        public /* synthetic */ void forEach(Consumer consumer) {
+            Iterable.CC.$default$forEach(this, consumer);
+        }
+
+        @Override // j$.util.Collection, java.util.AbstractCollection, java.util.Collection, java.util.Set, j$.util.Set, j$.lang.Iterable, java.lang.Iterable
+        public java.util.Iterator<Map.Entry<K, V>> iterator() {
+            return new e(null);
+        }
+
+        @Override // j$.util.Collection, java.util.Collection
+        public /* synthetic */ Stream parallelStream() {
+            return Collection.CC.$default$parallelStream(this);
+        }
+
+        @Override // j$.util.Collection, j$.util.Set
+        public boolean remove(Object obj) {
+            Map.Entry entry = (Map.Entry) obj;
+            if (!contains(entry)) {
+                return false;
+            }
+            b25.this.remove(entry.getKey());
+            return true;
+        }
+
+        @Override // j$.util.Collection
+        public /* synthetic */ boolean removeIf(Predicate predicate) {
+            return Collection.CC.$default$removeIf(this, predicate);
+        }
+
+        @Override // j$.util.Collection, j$.util.Set
+        public int size() {
+            return b25.this.size();
+        }
+
+        @Override // j$.util.Collection, java.util.Collection, java.util.Set, j$.util.Set, j$.lang.Iterable, java.lang.Iterable
+        public /* synthetic */ j$.util.Spliterator spliterator() {
+            return Set.CC.$default$spliterator(this);
+        }
+
+        @Override // j$.util.Collection, java.util.Collection
+        public /* synthetic */ Stream stream() {
+            return Collection.CC.$default$stream(this);
+        }
+    }
+
+    public b25(int i2, a25 a25) {
+        this.f = i2;
+    }
+
+    public final int a(K k2) {
+        int size = this.g.size() - 1;
+        if (size >= 0) {
+            int compareTo = k2.compareTo(this.g.get(size).f);
+            if (compareTo > 0) {
+                return -(size + 2);
+            }
+            if (compareTo == 0) {
+                return size;
+            }
+        }
+        int i2 = 0;
+        while (i2 <= size) {
+            int i3 = (i2 + size) / 2;
+            int compareTo2 = k2.compareTo(this.g.get(i3).f);
+            if (compareTo2 < 0) {
+                size = i3 - 1;
+            } else if (compareTo2 <= 0) {
+                return i3;
+            } else {
+                i2 = i3 + 1;
+            }
+        }
+        return -(i2 + 1);
+    }
+
+    public final void b() {
+        if (this.i) {
+            throw new UnsupportedOperationException();
+        }
+    }
+
+    public Map.Entry<K, V> c(int i2) {
+        return this.g.get(i2);
+    }
+
+    @Override // j$.util.Map
+    public void clear() {
+        b();
+        if (!this.g.isEmpty()) {
+            this.g.clear();
+        }
+        if (!this.h.isEmpty()) {
+            this.h.clear();
+        }
+    }
+
+    @Override // j$.util.Map
+    public /* synthetic */ Object compute(Object obj, BiFunction biFunction) {
+        return Map.CC.$default$compute(this, obj, biFunction);
+    }
+
+    @Override // j$.util.Map
+    public /* synthetic */ Object computeIfAbsent(Object obj, Function function) {
+        return Map.CC.$default$computeIfAbsent(this, obj, function);
+    }
+
+    @Override // j$.util.Map
+    public /* synthetic */ Object computeIfPresent(Object obj, BiFunction biFunction) {
+        return Map.CC.$default$computeIfPresent(this, obj, biFunction);
+    }
+
+    /* JADX DEBUG: Multi-variable search result rejected for r1v0, resolved type: b25<K extends java.lang.Comparable<K>, V> */
+    /* JADX WARN: Multi-variable type inference failed */
+    @Override // j$.util.Map
+    public boolean containsKey(Object obj) {
+        Comparable comparable = (Comparable) obj;
+        return a(comparable) >= 0 || this.h.containsKey(comparable);
+    }
+
+    public int d() {
+        return this.g.size();
+    }
+
+    public Iterable<Map.Entry<K, V>> e() {
+        return this.h.isEmpty() ? (Iterable<Map.Entry<K, V>>) c.b : this.h.entrySet();
+    }
+
+    @Override // java.util.AbstractMap, java.util.Map, j$.util.Map
+    public java.util.Set<Map.Entry<K, V>> entrySet() {
+        if (this.j == null) {
+            this.j = new f(null);
+        }
+        return this.j;
+    }
+
+    @Override // j$.util.Map
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof b25)) {
+            return super.equals(obj);
+        }
+        b25 b25 = (b25) obj;
+        int size = size();
+        if (size != b25.size()) {
+            return false;
+        }
+        int d2 = d();
+        if (d2 != b25.d()) {
+            return entrySet().equals(b25.entrySet());
+        }
+        for (int i2 = 0; i2 < d2; i2++) {
+            if (!c(i2).equals(b25.c(i2))) {
+                return false;
+            }
+        }
+        if (d2 != size) {
+            return this.h.equals(b25.h);
+        }
+        return true;
+    }
+
+    public final SortedMap<K, V> f() {
+        b();
+        if (this.h.isEmpty() && !(this.h instanceof TreeMap)) {
+            TreeMap treeMap = new TreeMap();
+            this.h = treeMap;
+            this.k = treeMap.descendingMap();
+        }
+        return (SortedMap) this.h;
+    }
+
+    @Override // j$.util.Map
+    public /* synthetic */ void forEach(BiConsumer biConsumer) {
+        Map.CC.$default$forEach(this, biConsumer);
+    }
+
+    public void g() {
+        java.util.Map<K, V> map;
+        java.util.Map<K, V> map2;
+        if (!this.i) {
+            if (this.h.isEmpty()) {
+                map = Collections.emptyMap();
+            } else {
+                map = Collections.unmodifiableMap(this.h);
+            }
+            this.h = map;
+            if (this.k.isEmpty()) {
+                map2 = Collections.emptyMap();
+            } else {
+                map2 = Collections.unmodifiableMap(this.k);
+            }
+            this.k = map2;
+            this.i = true;
+        }
+    }
+
+    /* JADX DEBUG: Multi-variable search result rejected for r1v0, resolved type: b25<K extends java.lang.Comparable<K>, V> */
+    /* JADX WARN: Multi-variable type inference failed */
+    @Override // java.util.AbstractMap, java.util.Map, j$.util.Map
+    public V get(Object obj) {
+        Comparable comparable = (Comparable) obj;
+        int a2 = a(comparable);
+        if (a2 >= 0) {
+            return this.g.get(a2).g;
+        }
+        return this.h.get(comparable);
+    }
+
+    @Override // java.util.Map, j$.util.Map
+    public /* synthetic */ Object getOrDefault(Object obj, Object obj2) {
+        return Map.CC.$default$getOrDefault(this, obj, obj2);
+    }
+
+    /* JADX WARN: Type inference failed for: r3v0, types: [java.lang.Object, K] */
+    /* renamed from: h */
+    public V put(K k2, V v) {
+        b();
+        int a2 = a(k2);
+        if (a2 >= 0) {
+            b25<K, V>.d dVar = this.g.get(a2);
+            b25.this.b();
+            V v2 = dVar.g;
+            dVar.g = v;
+            return v2;
+        }
+        b();
+        if (this.g.isEmpty() && !(this.g instanceof ArrayList)) {
+            this.g = new ArrayList(this.f);
+        }
+        int i2 = -(a2 + 1);
+        if (i2 >= this.f) {
+            return f().put(k2, v);
+        }
+        int size = this.g.size();
+        int i3 = this.f;
+        if (size == i3) {
+            b25<K, V>.d remove = this.g.remove(i3 - 1);
+            f().put(remove.f, remove.g);
+        }
+        this.g.add(i2, new d(k2, v));
+        return null;
+    }
+
+    @Override // j$.util.Map
+    public int hashCode() {
+        int d2 = d();
+        int i2 = 0;
+        for (int i3 = 0; i3 < d2; i3++) {
+            i2 += this.g.get(i3).hashCode();
+        }
+        return this.h.size() > 0 ? i2 + this.h.hashCode() : i2;
+    }
+
+    public final V i(int i2) {
+        b();
+        V v = this.g.remove(i2).g;
+        if (!this.h.isEmpty()) {
+            java.util.Iterator<Map.Entry<K, V>> it = f().entrySet().iterator();
+            this.g.add(new d(this, it.next()));
+            it.remove();
+        }
+        return v;
+    }
+
+    @Override // j$.util.Map
+    public /* synthetic */ Object merge(Object obj, Object obj2, BiFunction biFunction) {
+        return Map.CC.$default$merge(this, obj, obj2, biFunction);
+    }
+
+    @Override // java.util.Map, j$.util.Map
+    public /* synthetic */ Object putIfAbsent(Object obj, Object obj2) {
+        return Map.CC.$default$putIfAbsent(this, obj, obj2);
+    }
+
+    /* JADX DEBUG: Multi-variable search result rejected for r1v0, resolved type: b25<K extends java.lang.Comparable<K>, V> */
+    /* JADX WARN: Multi-variable type inference failed */
+    @Override // java.util.AbstractMap, java.util.Map, j$.util.Map
+    public V remove(Object obj) {
+        b();
+        Comparable comparable = (Comparable) obj;
+        int a2 = a(comparable);
+        if (a2 >= 0) {
+            return (V) i(a2);
+        }
+        if (this.h.isEmpty()) {
+            return null;
+        }
+        return this.h.remove(comparable);
+    }
+
+    @Override // j$.util.Map
+    public /* synthetic */ boolean remove(Object obj, Object obj2) {
+        return Map.CC.$default$remove(this, obj, obj2);
+    }
+
+    @Override // java.util.Map, j$.util.Map
+    public /* synthetic */ Object replace(Object obj, Object obj2) {
+        return Map.CC.$default$replace(this, obj, obj2);
+    }
+
+    @Override // java.util.Map, j$.util.Map
+    public /* synthetic */ boolean replace(Object obj, Object obj2, Object obj3) {
+        return Map.CC.$default$replace(this, obj, obj2, obj3);
+    }
+
+    @Override // j$.util.Map
+    public /* synthetic */ void replaceAll(BiFunction biFunction) {
+        Map.CC.$default$replaceAll(this, biFunction);
+    }
+
+    @Override // j$.util.Map
+    public int size() {
+        return this.h.size() + this.g.size();
+    }
+
+    /* renamed from: b25$d */
+    /* compiled from: SmallSortedMap */
+    public class d implements Map.Entry<K, V>, Comparable<b25<K, V>.d>, Map.Entry {
+        public final K f;
+        public V g;
+
+        public d(b25 b25, Map.Entry<K, V> entry) {
+            V value = entry.getValue();
+            b25.this = b25;
+            this.f = entry.getKey();
+            this.g = value;
+        }
+
+        /* JADX DEBUG: Method arguments types fixed to match base method, original types: [java.lang.Object] */
+        @Override // java.lang.Comparable
+        public int compareTo(b25<K, V>.d dVar) {
+            return this.f.compareTo(dVar.f);
+        }
+
+        @Override // j$.util.Map.Entry
+        public boolean equals(Object obj) {
+            boolean z;
+            boolean z2;
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof Map.Entry)) {
+                return false;
+            }
+            Map.Entry entry = (Map.Entry) obj;
+            K k = this.f;
+            Object key = entry.getKey();
+            if (k == null) {
+                z = key == null;
+            } else {
+                z = k.equals(key);
+            }
+            if (z) {
+                V v = this.g;
+                Object value = entry.getValue();
+                if (v == null) {
+                    z2 = value == null;
+                } else {
+                    z2 = v.equals(value);
+                }
+                if (z2) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        @Override // java.util.Map.Entry, j$.util.Map.Entry
+        public Object getKey() {
+            return this.f;
+        }
+
+        @Override // java.util.Map.Entry, j$.util.Map.Entry
+        public V getValue() {
+            return this.g;
+        }
+
+        @Override // j$.util.Map.Entry
+        public int hashCode() {
+            K k = this.f;
+            int i = 0;
+            int hashCode = k == null ? 0 : k.hashCode();
+            V v = this.g;
+            if (v != null) {
+                i = v.hashCode();
+            }
+            return hashCode ^ i;
+        }
+
+        @Override // java.util.Map.Entry, j$.util.Map.Entry
+        public V setValue(V v) {
+            b25 b25 = b25.this;
+            int i = b25.m;
+            b25.b();
+            V v2 = this.g;
+            this.g = v;
+            return v2;
+        }
+
+        public String toString() {
+            return ((Object) this.f) + "=" + ((Object) this.g);
+        }
+
+        public d(K k, V v) {
+            this.f = k;
+            this.g = v;
+        }
+    }
+}

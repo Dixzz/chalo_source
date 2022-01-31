@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardPreventCornerOverlap="false">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include android:id="@+id/input_from" layout="@layout/scheduler_fromto"/>
+        <include android:id="@+id/input_to" layout="@layout/scheduler_fromto"/>
+        <LinearLayout android:gravity="center_vertical" android:paddingLeft="40dp" android:layout_width="match_parent" android:layout_height="56dp">
+            <TextView android:textSize="16dp" android:textColor="#de000000" android:id="@+id/scheduler_time" android:background="@drawable/spinner_schedular" android:layout_width="172dp" android:layout_height="wrap_content" android:text="@string/leave_now" android:drawableLeft="@drawable/clock_schedular" android:drawablePadding="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

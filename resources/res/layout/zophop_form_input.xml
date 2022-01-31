@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/drawer_item_selector" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="72dp">
+    <TextView android:textColor="#66000000" android:id="@+id/field_description" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="testinsjdsahdgsauc" android:layout_above="@+id/input_container" style="@style/regularFont"/>
+    <RelativeLayout android:id="@+id/input_container" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_toRightOf="@+id/agency_logo" android:layout_above="@+id/header_separator" android:layout_alignParentLeft="true">
+        <LinearLayout android:id="@+id/input_edit" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <app.zophop.ui.views.EditTextListeners android:background="@null" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true" style="@style/form_input_style"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:id="@+id/header_separator" android:background="@color/scheduler_input_divider" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="12dp" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

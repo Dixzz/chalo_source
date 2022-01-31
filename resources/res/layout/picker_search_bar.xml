@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/location_search_container" android:background="@drawable/search_actionbar_bg" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="56dp">
+    <ImageView android:id="@+id/back" android:background="@drawable/white_action_bar_selector" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/back_location_search" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+    <EditText android:textSize="16dp" android:textColor="#252525" android:id="@+id/location_input" android:background="@null" android:paddingLeft="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toRightOf="@+id/back" android:layout_centerVertical="true" android:inputType="textNoSuggestions" android:imeOptions="actionSearch" fontPath="@string/font_regular">
+        <requestFocus/>
+    </EditText>
+    <app.zophop.utilities.external.loader_view.LoadingSpinnerView android:id="@+id/loading_spinner" android:paddingLeft="20dp" android:layout_width="20dp" android:layout_height="20dp" android:layout_toLeftOf="@+id/location_clear" android:layout_centerVertical="true" app:loaderThickness="2dp"/>
+    <ImageView android:id="@+id/location_clear" android:background="@drawable/white_action_bar_selector" android:paddingLeft="20dp" android:paddingRight="20dp" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/close_location_search" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+</RelativeLayout>

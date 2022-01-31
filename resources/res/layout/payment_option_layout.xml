@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/option_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="20dp" android:layout_marginRight="16dp" android:layout_marginBottom="20dp" android:src="@drawable/wallet"/>
+    <TextView android:textSize="18dp" android:textColor="@color/black_87" android:id="@+id/option_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="20dp" android:text="Net Banking" android:layout_toEndOf="@+id/option_icon" style="@style/mediumFont"/>
+    <ImageView android:id="@+id/imageView" android:paddingTop="16dp" android:paddingRight="16dp" android:paddingBottom="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_tripplanner_result" android:layout_weight="1" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    <View android:background="@drawable/seperator" android:layout_width="wrap_content" android:layout_height="1dp" android:layout_below="@+id/option_icon"/>
+</RelativeLayout>

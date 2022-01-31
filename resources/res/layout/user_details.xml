@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/register_scroller" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <app.zophop.ui.views.collapse_on_scroll.ProfileVerificationStateView android:id="@+id/profile_verification_status" android:background="@drawable/view_bottom_divider" android:paddingLeft="16dp" android:paddingTop="8dp" android:paddingRight="16dp" android:paddingBottom="8dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="3" style="@style/mediumFont.LargeText"/>
+        <RelativeLayout android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/profile_pic_text">
+            <app.zophop.ui.views.PassDurationFormInput android:id="@+id/select_date" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <View android:id="@+id/start_date_seperator" android:background="#eeeeee" android:layout_width="match_parent" android:layout_height="8dp" android:layout_below="@+id/select_date"/>
+            <TextView android:textSize="18sp" android:textColor="#de000000" android:id="@+id/passenger_details_header" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/passenger_details" android:layout_below="@+id/start_date_seperator" style="@style/mediumFont"/>
+            <TextView android:textSize="14sp" android:textColor="#de000000" android:id="@+id/passenger_details_notes" android:background="@drawable/passenger_details_background" android:padding="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:text="@string/passenger_details" android:layout_below="@+id/passenger_details_header" style="@style/regularFont"/>
+            <include android:id="@+id/register_form" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/passenger_details_notes" layout="@layout/user_details_form"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

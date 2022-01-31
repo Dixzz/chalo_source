@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView android:id="@+id/card_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="1dp" android:layout_marginTop="1dp" android:layout_marginRight="1dp" android:layout_marginBottom="7dp" app:cardCornerRadius="4dp" app:cardElevation="4dp"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="4dp">
+        <LinearLayout android:gravity="end" android:id="@+id/report_problem_container" android:background="@drawable/drawer_item_selector" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true">
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/report_problem_icon" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4dp" android:src="@drawable/report_problem_icon"/>
+            <TextView android:textSize="12dp" android:textColor="@color/txt_report_problem_color" android:layout_gravity="center_vertical" android:id="@+id/report_problem" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_report_problem_hook" style="@style/mediumFont"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

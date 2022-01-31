@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/mticket_trip_info_container" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="@dimen/action_bar_height" android:elevation="@dimen/action_bar_elevation" style="@style/ZophopToolbarStyle.WhiteToolBar"/>
+    <ScrollView android:id="@+id/main_layout" android:background="@color/cards_container_background" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:layout_above="@+id/btn_mticket_pay" android:layout_below="@+id/toolbar">
+        <RelativeLayout android:background="@color/cards_container_background" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/visible_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp">
+                <include layout="@layout/mticket_route_stop_details_layout"/>
+                <LinearLayout android:orientation="vertical" android:id="@+id/mticket_passenger_details" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/black_60" android:id="@+id/mticket_passenger_details_title" android:background="@color/cards_container_background" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/tv_txt_select_mtickets" style="@style/mediumFont.LargeText"/>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/passenger_fare_details" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    <include layout="@layout/free_ride_coupon"/>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/fare_breakup_container" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <include layout="@layout/component_divider_thick_layout"/>
+                        <LinearLayout android:orientation="vertical" android:id="@+id/fare_details" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/terms_layout" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16dp">
+                    <TextView android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Non Refundable."/>
+                    <TextView android:textColor="@color/chalo_primary" android:id="@+id/tv_terms_conditions" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="Terms and Conditions"/>
+                </LinearLayout>
+                <include layout="@layout/branding_mticket"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <TextView android:textColor="@color/white" android:gravity="center" android:id="@+id/btn_mticket_pay" android:background="@drawable/orange_button" android:visibility="gone" android:layout_width="match_parent" android:layout_height="56dp" android:text="@string/btn_txt_mticket_next" android:layout_above="@+id/reference_view" android:layout_alignParentBottom="true" style="@style/mediumFont.LargeText"/>
+</RelativeLayout>

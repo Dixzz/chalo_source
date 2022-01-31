@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="16dp">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/main_layout" android:paddingLeft="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include android:layout_gravity="center_vertical" android:paddingLeft="8dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.6" layout="@layout/route_list_card_item_from_to"/>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@+id/time_details_containter" android:paddingLeft="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:layout_gravity="right" android:id="@+id/card_timing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Time" android:drawablePadding="8dp" fontPath="fonts/NotoSans-Regular.ttf" style="@style/card_item_time"/>
+            <TextView android:textSize="12dp" android:textColor="@color/view_schedule_color" android:layout_gravity="right" android:id="@+id/view_schedule_view" android:paddingTop="8dp" android:paddingBottom="8dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/view_schedule" style="@style/mediumFont"/>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@+id/train_list_bottom_line" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/card_special_feature_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_alignBottom="@+id/main_content_view" android:layout_alignParentLeft="true" android:layout_alignParentStart="true">
+            <TextView android:id="@+id/card_special_feature" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp" android:text="Fast" style="@style/card_item_speacial_feature"/>
+            <TextView android:id="@+id/card_subtitle" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Platform" android:color="#87000000" style="@style/card_item_platform"/>
+        </LinearLayout>
+        <TextView android:textSize="14dp" android:textColor="@color/black" android:id="@+id/scheduled_time" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="8dp" android:layout_alignBottom="@+id/card_info_container" android:layout_alignParentRight="true" android:alpha="0.6" android:layout_alignParentEnd="true" fontPath="fonts/NotoSans-Regular.ttf"/>
+        <TextView android:id="@+id/trainTypeDescription" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="4dp" android:text="Central Railways" android:layout_toRightOf="@+id/card_special_feature_view" android:color="#87000000" android:layout_marginStart="10dp" android:layout_toEndOf="@+id/card_info_container" style="@style/card_item_platform"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/eta_card_container" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="0dp"/>
+</LinearLayout>

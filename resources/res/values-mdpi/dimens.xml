@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="home_screen_route_search">14dp</dimen>
+    <dimen name="tv_home_screen_hook_size">14dp</dimen>
+</resources>

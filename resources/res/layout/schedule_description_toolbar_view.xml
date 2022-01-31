@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="56dp">
+    <TextView android:textColor="@color/black_87" android:id="@+id/total_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2hr 32 min" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/scheduler_header_text"/>
+    <TextView android:textColor="@color/black_87" android:id="@+id/fare" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginRight="12dp" android:text="Rs 32" android:layout_toRightOf="@+id/total_time" android:layout_centerVertical="true" style="@style/scheduler_header_text"/>
+    <TextView android:textSize="16dp" android:textColor="@color/black_87" android:gravity="right" android:id="@+id/no_changes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp" android:text="2 changes" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/scheduler_header_text"/>
+</RelativeLayout>

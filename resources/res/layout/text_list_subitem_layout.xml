@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:padding="1dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textColor="@color/black_60" android:id="@+id/order_number" android:paddingRight="4dp" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1)" style="@style/regularFont"/>
+    <ImageView android:layout_gravity="center_vertical" android:id="@+id/order_bullet" android:paddingLeft="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bullet"/>
+    <TextView android:textColor="@color/black_60" android:id="@+id/order_text" android:paddingLeft="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:text="lorem ipson dipsuum yadadada" android:singleLine="false" style="@style/regularFont"/>
+</LinearLayout>

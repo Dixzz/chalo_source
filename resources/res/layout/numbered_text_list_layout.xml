@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:padding="1dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textColor="@color/black_87" android:id="@+id/order_number" android:paddingRight="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1)" android:includeFontPadding="false" style="@style/regularFont"/>
+    <TextView android:textColor="@color/black_87" android:id="@+id/order_text" android:paddingLeft="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="lorem ipson dipsuum yadadada" android:singleLine="false" android:includeFontPadding="false" style="@style/regularFont"/>
+</LinearLayout>

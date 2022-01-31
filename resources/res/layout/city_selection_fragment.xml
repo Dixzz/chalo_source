@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/home_screen_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/toolbar_top_container" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:stateListAnimator="@null">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="70dp" app:layout_scrollFlags="3">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <androidx.appcompat.widget.Toolbar android:theme="@style/Theme.MaterialComponents.Light" android:id="@+id/toolbar" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="@dimen/action_bar_height" android:layout_marginBottom="18dp" app:navigationIcon="@drawable/ic_arrow_back_black_24dp" app:title="@string/city_selection_activity_toolbar_title"/>
+                <app.zophop.ui.views.ResizableImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/city_selection_banner" android:layout_below="@+id/toolbar"/>
+                <androidx.cardview.widget.CardView android:id="@+id/search_container" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="110dp" android:foreground="@drawable/drawer_item_selector" android:layout_centerHorizontal="true" app:cardBackgroundColor="@color/white" app:cardCornerRadius="24dp" app:cardElevation="4dp" app:cardUseCompatPadding="true">
+                    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="48dp">
+                        <ImageView android:layout_gravity="center" android:id="@+id/search_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:src="@drawable/search_black"/>
+                        <TextView android:textSize="16sp" android:textColor="@color/black_60" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center" android:id="@+id/search_city" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/title_city_search" android:singleLine="true" android:includeFontPadding="false" android:alpha="0.6" fontPath="fonts/NotoSans-Regular.ttf"/>
+                        <EditText android:textSize="16sp" android:textColor="@color/card_item_enable_color" android:textColorHint="@color/black_60" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center" android:id="@+id/et_city_name_query" android:background="@null" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:hint="@string/hint_city_name" android:singleLine="true" android:includeFontPadding="false" fontPath="fonts/NotoSans-Regular.ttf"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/city_selection_list" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
+    <include android:id="@+id/loading_screen" layout="@layout/loader_view_new"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

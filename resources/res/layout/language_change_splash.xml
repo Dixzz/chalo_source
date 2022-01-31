@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:background="@color/transparent" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/action_bar_height" app:navigationIcon="@drawable/ic_arrow_back_black_24dp"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/language_welcome_header" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="125dp">
+        <ImageView android:id="@+id/top_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="48dp" android:src="@drawable/chalo_logo_language_screen"/>
+        <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="24dp" android:text="@string/choose_your_language" style="@style/choose_your_language"/>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/language_view" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <View android:background="@drawable/bottomsheet_shadow" android:layout_width="match_parent" android:layout_height="12dp" app:layout_anchor="@+id/confirm_language"/>
+    <include android:id="@+id/confirm_language" layout="@layout/confirmation_screen_bottomsheet"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

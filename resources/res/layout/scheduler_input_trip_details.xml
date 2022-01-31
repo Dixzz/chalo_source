@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <RelativeLayout android:background="@color/new_activity_color" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:id="@+id/frame_container" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="2dp" android:layout_below="@+id/scheduler_divider">
+            <RelativeLayout android:id="@+id/scheduler_cards" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="8dp">
+                <RelativeLayout android:id="@+id/favorite_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/trips_header">
+                    <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+                        <LinearLayout android:orientation="vertical" android:background="@color/trip_detail_list_grey_color" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="14dp" android:textColor="@color/black_60" android:gravity="center_vertical" android:id="@+id/favorite_header" android:background="@color/white" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginBottom="1dp" android:text="@string/scheduler_trips_tab" fontPath="fonts/NotoSans-SemiBold.ttf"/>
+                            <ListView android:id="@+id/trip_list" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/fav_list"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </RelativeLayout>
+            <app.zophop.utilities.external.loader_view.LoadingSpinnerView android:layout_gravity="center" android:id="@+id/loading_spinner" android:visibility="visible" android:layout_width="@dimen/loader_width" android:layout_height="@dimen/loader_height" android:layout_centerHorizontal="true" android:layout_centerVertical="true"/>
+        </FrameLayout>
+    </RelativeLayout>
+</ScrollView>

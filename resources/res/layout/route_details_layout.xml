@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/route_details_container" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/route_layout" android:background="@color/white" android:paddingLeft="16dp" android:paddingTop="16dp" android:paddingRight="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:layout_weight="1">
+            <TextView android:textSize="14sp" android:textColor="@color/black_60" android:id="@+id/route_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:text="@string/route_title" style="@style/regularFont"/>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4dp">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8dp" android:src="@drawable/bus_trip_planner"/>
+                <TextView android:textSize="18dp" android:textColor="@color/black_87" android:id="@+id/route_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sample_route" style="@style/mediumFont"/>
+            </LinearLayout>
+            <TextView android:textSize="16sp" android:textColor="@color/black_87" android:id="@+id/route_details" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/route_from_to" style="@style/mediumFont"/>
+        </LinearLayout>
+        <TextView android:textColor="@color/view_schedule_color" android:id="@+id/edit_route_pass" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Edit" style="@style/mediumFont.NormalText"/>
+    </LinearLayout>
+    <View android:id="@+id/pass_divider" android:background="@color/scheduler_input_divider" android:layout_width="match_parent" android:layout_height="1dp"/>
+</LinearLayout>

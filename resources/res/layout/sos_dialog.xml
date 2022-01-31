@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center" android:layout_width="312dp" android:layout_height="wrap_content" android:layout_centerInParent="true">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="18dp" android:textColor="@color/black_87" android:id="@+id/redeem_title" android:paddingTop="32dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/emergency_alert" android:layout_centerHorizontal="true" android:textAllCaps="true" style="@style/mediumFont"/>
+            <ImageView android:id="@+id/close_dialog" android:padding="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/menu_close" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <TextView android:textColor="@color/black_87" android:gravity="center" android:id="@+id/sos_message" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="16dp" android:layout_marginRight="16dp" android:layout_marginBottom="24dp" style="@style/regularFont.LargeText"/>
+        <TextView android:textColor="@color/white" android:gravity="center" android:id="@+id/sendSos" android:background="@drawable/red_rounded_button" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:text="@string/send_now" android:textAllCaps="true" style="@style/mediumFont.LargeText"/>
+        <TextView android:textColor="@color/black_60" android:gravity="center" android:id="@+id/edit_details" android:background="@drawable/drawer_item_selector" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginLeft="16dp" android:layout_marginTop="4dp" android:layout_marginRight="16dp" android:text="@string/edit_details" style="@style/mediumFont.LargeText"/>
+    </LinearLayout>
+</LinearLayout>

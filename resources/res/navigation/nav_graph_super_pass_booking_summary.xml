@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph_super_pass_booking_summary" app:startDestination="@layout/fragment_super_pass_booking_summary">
+    <fragment android:label="" android:name="app.zophop.ui.fragments.superPassHistory.SuperPassBookingSummaryFragment" android:id="@+id/superPassBookingSummaryFragment">
+        <action android:id="@+id/action_superPassBookingSummaryFragment_to_digitalTripReceiptHistoryFragment" app:destination="@+id/digitalTripReceiptHistoryFragment" app:enterAnim="@anim/fragment_slide_in_right_slow" app:exitAnim="@anim/fragment_slide_out_left_slow" app:popEnterAnim="@anim/fragment_slide_in_left" app:popExitAnim="@anim/fragment_slide_out_right"/>
+    </fragment>
+    <fragment android:label="SuperPassBookingSummaryFragment" android:name="app.zophop.ui.fragments.superPassHistory.PendingSuperPassBookingSummaryFragment" android:id="@+id/pendingSuperPassBookingSummaryFragment"/>
+    <fragment android:label="SuperPassBookingSummaryFragment" android:name="app.zophop.ui.fragments.superPassHistory.SuperPassApplicationBookingSummaryFragment" android:id="@+id/superPassApplicationBookingSummaryFragment"/>
+    <fragment android:label="Trip History" android:name="app.zophop.ui.fragments.superPassHistory.DigitalTripReceiptHistoryFragment" android:id="@+id/digitalTripReceiptHistoryFragment">
+        <argument android:name="arg_source" app:argType="string"/>
+        <argument android:name="arg_superPassId" app:argType="string"/>
+        <argument android:name="arg_superPassSubType" app:argType="app.zophop.models.mTicketing.superPass.SuperPassSubType"/>
+        <action android:id="@+id/action_digitalTripReceiptHistoryFragment_to_superPassTripReceiptFragment" app:destination="@+id/superPassTripReceiptFragment" app:enterAnim="@anim/fragment_slide_in_right_slow" app:exitAnim="@anim/fragment_slide_out_left_slow" app:popEnterAnim="@anim/fragment_slide_in_left" app:popExitAnim="@anim/fragment_slide_out_right"/>
+    </fragment>
+    <fragment android:label="Trip Receipt" android:name="app.zophop.ui.fragments.superPassHistory.SuperPassTripReceiptFragment" android:id="@+id/superPassTripReceiptFragment">
+        <argument android:name="arg_source" app:argType="string"/>
+        <argument android:name="arg_superPassId" app:argType="string"/>
+        <argument android:name="arg_superPassSubType" app:argType="app.zophop.models.mTicketing.superPass.SuperPassSubType"/>
+        <argument android:name="arg_activationTimeStamp" app:argType="long"/>
+    </fragment>
+</navigation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:id="@+id/connection_error_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/ic_connection_error" android:layout_width="100dp" android:layout_height="100dp" android:layout_marginBottom="20dp" android:src="@drawable/internet_error" android:layout_centerHorizontal="true"/>
+    <TextView android:textSize="18sp" android:textColor="@color/black_87" android:id="@+id/connection_error_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:text="@string/connection_error" style="@style/mediumFont"/>
+    <TextView android:textSize="14sp" android:textColor="#898989" android:gravity="center" android:id="@+id/connection_error_desc" android:layout_width="300dp" android:layout_height="wrap_content" android:text="@string/check_connection"/>
+    <TextView android:textSize="14dp" android:textColor="@color/white" android:gravity="center" android:id="@+id/btn_retry" android:background="@drawable/orange_rounded_button" android:paddingLeft="60dp" android:paddingRight="60dp" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_marginTop="20dp" android:text="@string/retry_large_text" android:layout_below="@+id/empty_view_text" android:layout_centerHorizontal="true" fontPath="fonts/NotoSans-SemiBold.ttf"/>
+</LinearLayout>

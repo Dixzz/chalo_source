@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph_card_recharge" app:startDestination="@+id/cardRechargeConfirmPaymentFragment">
+    <fragment android:label="" android:name="app.zophop.ui.fragments.cardRecharge.CardDetailsFragment" android:id="@+id/cardDetailsFragment">
+        <argument android:name="arg_cardRechargeConfiguration" app:argType="app.zophop.models.mTicketing.CardRechargeConfiguration"/>
+        <action android:id="@+id/action_cardDetailsFragment_to_cardRechargeAmountFragment" app:destination="@+id/cardRechargeAmountFragment" app:enterAnim="@anim/fragment_slide_in_right_slow" app:exitAnim="@anim/fragment_slide_out_left_slow" app:popEnterAnim="@anim/fragment_slide_in_left" app:popExitAnim="@anim/fragment_slide_out_right"/>
+        <action android:id="@+id/action_cardDetailsFragment_to_cardRechargeConfirmPaymentFragment" app:destination="@+id/cardRechargeConfirmPaymentFragment" app:enterAnim="@anim/fragment_slide_in_right_slow" app:exitAnim="@anim/fragment_slide_out_left_slow" app:popEnterAnim="@anim/fragment_slide_in_left" app:popExitAnim="@anim/fragment_slide_out_right"/>
+    </fragment>
+    <fragment android:label="" android:name="app.zophop.ui.fragments.cardRecharge.CardRechargeAmountFragment" android:id="@+id/cardRechargeAmountFragment">
+        <argument android:name="arg_cardRechargeConfiguration" app:argType="app.zophop.models.mTicketing.CardRechargeConfiguration"/>
+        <argument android:name="arg_rechargeLimit" app:argType="long"/>
+        <argument android:name="arg_cardNumber" app:argType="string"/>
+        <action android:id="@+id/action_cardRechargeAmountFragment_to_cardRechargeConfirmPaymentFragment" app:destination="@+id/cardRechargeConfirmPaymentFragment" app:enterAnim="@anim/fragment_slide_in_right_slow" app:exitAnim="@anim/fragment_slide_out_left_slow" app:popEnterAnim="@anim/fragment_slide_in_left" app:popExitAnim="@anim/fragment_slide_out_right"/>
+    </fragment>
+    <fragment android:label="" android:name="app.zophop.ui.fragments.cardRecharge.CardRechargeConfirmPaymentFragment" android:id="@+id/cardRechargeConfirmPaymentFragment">
+        <argument android:name="arg_cardRechargeConfiguration" app:argType="app.zophop.models.mTicketing.CardRechargeConfiguration"/>
+        <argument android:name="arg_rechargeAmount" app:argType="long"/>
+        <argument android:name="arg_cardNumber" app:argType="string"/>
+    </fragment>
+</navigation>

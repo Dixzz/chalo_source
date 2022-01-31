@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/route_container" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/route_list_parent" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="14dp" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/live_updated_status" android:background="@drawable/bottom_divider_black_12" android:paddingLeft="16dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="40dp" style="@style/regularFont.NormalText"/>
+        <ListView android:id="@+id/route_list" android:paddingBottom="@dimen/route_list_bottom_padding" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent" android:divider="@null"/>
+    </LinearLayout>
+</FrameLayout>

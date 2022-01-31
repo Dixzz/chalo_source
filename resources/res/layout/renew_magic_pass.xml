@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/activity_renew_pass_toolbar" android:layout_width="match_parent" android:layout_height="@dimen/action_bar_height" style="@style/ZophopToolbarStyle.WhiteToolBar"/>
+    <ScrollView android:background="@color/new_activity_color" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/renew_pass_container" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <ImageView android:id="@+id/single_logo" android:paddingTop="16dp" android:paddingBottom="16dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/aictsl_logo_grey"/>
+            <RelativeLayout android:gravity="center" android:layout_gravity="center" android:id="@+id/dual_logo" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/left_logo" android:paddingTop="16dp" android:paddingBottom="16dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20dp" android:src="@drawable/bhopal_logo_1"/>
+                <ImageView android:id="@+id/right_logo" android:paddingTop="16dp" android:paddingBottom="16dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bhopal_logo_2" android:layout_toRightOf="@+id/left_logo"/>
+            </RelativeLayout>
+            <TextView android:textSize="18dp" android:textColor="@color/black_60" android:gravity="center" android:id="@+id/agency_text_id" android:background="#eeeeee" android:paddingTop="24dp" android:paddingBottom="24dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/agency_text" android:includeFontPadding="false" style="@style/mediumFont"/>
+        </LinearLayout>
+    </ScrollView>
+    <Button android:textSize="16dp" android:textColor="@color/white" android:id="@+id/renew_proceed" android:background="@color/orange_primary" android:layout_width="match_parent" android:layout_height="56dp" android:text="@string/next" style="@style/mediumFont"/>
+</LinearLayout>

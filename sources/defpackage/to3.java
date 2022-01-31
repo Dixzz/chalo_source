@@ -1,0 +1,28 @@
+package defpackage;
+
+import android.os.Bundle;
+import android.os.RemoteException;
+import defpackage.oo3;
+
+/* renamed from: to3  reason: default package */
+/* compiled from: com.google.android.gms:play-services-measurement-sdk-api@@18.0.0 */
+public final class to3 extends oo3.b {
+    public final /* synthetic */ String j;
+    public final /* synthetic */ String k;
+    public final /* synthetic */ Bundle l;
+    public final /* synthetic */ oo3 m;
+
+    /* JADX INFO: super call moved to the top of the method (can break code semantics) */
+    public to3(oo3 oo3, String str, String str2, Bundle bundle) {
+        super(true);
+        this.m = oo3;
+        this.j = str;
+        this.k = str2;
+        this.l = bundle;
+    }
+
+    @Override // defpackage.oo3.b
+    public final void a() throws RemoteException {
+        this.m.h.clearConditionalUserProperty(this.j, this.k, this.l);
+    }
+}

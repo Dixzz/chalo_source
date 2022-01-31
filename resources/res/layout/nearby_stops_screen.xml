@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="bottom" android:id="@+id/sliding_layout" android:layout_width="match_parent" android:layout_height="match_parent" app:umanoFadeColor="@android:color/transparent" app:umanoPanelHeight="0dp">
+    <include android:id="@+id/map_layer" layout="@layout/nearby_screen_map_layer"/>
+    <RelativeLayout android:id="@+id/nearby_card_container" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:id="@+id/nearby_card_container_root" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/home_screen_card_container_margin_right"/>
+    </RelativeLayout>
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

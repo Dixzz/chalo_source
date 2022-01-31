@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph_splash" app:startDestination="@+id/splashScreenFragment">
+    <fragment android:label="SplashScreenFragment" android:name="app.zophop.ui.fragments.SplashScreenFragment" android:id="@+id/splashScreenFragment">
+        <action android:id="@+id/action_splashScreenFragment_to_languageSelectSplashScreen" app:destination="@+id/languageSelectSplashScreen" app:popUpTo="@+id/nav_graph_splash" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_splashScreenFragment_to_tutorialViewPagerFragment" app:destination="@+id/tutorialViewPagerFragment" app:popUpTo="@+id/nav_graph_splash" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_splashScreenFragment_to_citySelectionFragment" app:destination="@+id/citySelectionFragment" app:popUpTo="@+id/nav_graph_splash" app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment android:label="LanguageSelectSplashScreen" android:name="app.zophop.ui.fragments.LanguageSelectSplashScreen" android:id="@+id/languageSelectSplashScreen">
+        <action android:id="@+id/action_languageSelectSplashScreen_to_citySelectionFragment" app:destination="@+id/citySelectionFragment"/>
+        <argument android:name="isFromSplash" android:defaultValue="false" app:argType="boolean"/>
+    </fragment>
+    <fragment android:label="CitySelectionFragment" android:name="app.zophop.ui.fragments.CitySelectionFragment" android:id="@+id/citySelectionFragment">
+        <action android:id="@+id/action_citySelectionFragment_to_tutorialViewPagerFragment" app:destination="@+id/tutorialViewPagerFragment"/>
+        <argument android:name="isFromSplash" android:defaultValue="false" app:argType="boolean"/>
+        <action android:id="@+id/action_citySelectionFragment_to_mumbaiOnBoardingFragment" app:destination="@+id/mumbaiOnBoardingFragment"/>
+    </fragment>
+    <fragment android:label="TutorialViewPagerFragment" android:name="app.zophop.ui.fragments.TutorialViewPagerFragment" android:id="@+id/tutorialViewPagerFragment"/>
+    <fragment android:label="MumbaiOnBoardingFragment" android:name="app.zophop.ui.fragments.MumbaiOnBoardingFragment" android:id="@+id/mumbaiOnBoardingFragment">
+        <action android:id="@+id/action_mumbaiOnBoardingFragment_to_tutorialViewPagerFragment" app:destination="@+id/tutorialViewPagerFragment"/>
+    </fragment>
+</navigation>

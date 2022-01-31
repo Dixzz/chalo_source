@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/attachment_layout" android:background="@color/white" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@+id/proof_1_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="48dp">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/proof_1" android:visibility="visible" android:layout_width="96dp" android:layout_height="96dp" android:src="@drawable/profile_empty"/>
+                <ProgressBar android:id="@+id/profile_pic_progressbar_1" android:visibility="gone" android:layout_width="32dp" android:layout_height="96dp" android:indeterminate="true" android:layout_centerHorizontal="true" android:indeterminateTint="@color/orange_primary" android:indeterminateTintMode="src_atop" style="@style/Widget.ProgressBar.Small"/>
+            </RelativeLayout>
+            <TextView android:textColor="@color/black_60" android:gravity="center" android:layout_gravity="center" android:id="@+id/proof_1_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/Share" style="@style/regularFont.NormalText"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/proof_2_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/proof_2" android:visibility="visible" android:layout_width="96dp" android:layout_height="96dp" android:src="@drawable/profile_empty"/>
+                <ProgressBar android:id="@+id/profile_pic_progressbar_2" android:visibility="gone" android:layout_width="32dp" android:layout_height="96dp" android:indeterminate="true" android:layout_centerHorizontal="true" android:indeterminateTint="@color/orange_primary" android:indeterminateTintMode="src_atop" style="@style/Widget.ProgressBar.Small"/>
+            </RelativeLayout>
+            <TextView android:textColor="@color/black_60" android:gravity="center" android:layout_gravity="center" android:id="@+id/proof_2_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/Share" style="@style/regularFont.NormalText"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/additional_proofs" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@+id/additional_proof_container_3" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginRight="48dp">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/proof_3" android:visibility="visible" android:layout_width="96dp" android:layout_height="96dp" android:src="@drawable/profile_empty"/>
+                <ProgressBar android:id="@+id/profile_pic_progressbar_3" android:visibility="gone" android:layout_width="32dp" android:layout_height="96dp" android:indeterminate="true" android:layout_centerHorizontal="true" android:indeterminateTint="@color/orange_primary" android:indeterminateTintMode="src_atop" style="@style/Widget.ProgressBar.Small"/>
+            </RelativeLayout>
+            <TextView android:textColor="@color/black_60" android:gravity="center" android:layout_gravity="center" android:id="@+id/proof_3_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/Share" style="@style/regularFont.NormalText"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/additional_proof_container_4" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/proof_4" android:visibility="visible" android:layout_width="96dp" android:layout_height="96dp" android:src="@drawable/profile_empty"/>
+                <ProgressBar android:id="@+id/profile_pic_progressbar_4" android:visibility="gone" android:layout_width="32dp" android:layout_height="96dp" android:indeterminate="true" android:layout_centerHorizontal="true" android:indeterminateTint="@color/orange_primary" android:indeterminateTintMode="src_atop" style="@style/Widget.ProgressBar.Small"/>
+            </RelativeLayout>
+            <TextView android:textColor="@color/black_60" android:gravity="center" android:layout_gravity="center" android:id="@+id/proof_4_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/Share" style="@style/regularFont.NormalText"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

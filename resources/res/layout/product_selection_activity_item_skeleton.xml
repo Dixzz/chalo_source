@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/shimmer_view_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginTop="0dp" android:layout_marginRight="12dp" android:layout_marginBottom="8dp">
+    <View android:layout_gravity="end" android:id="@+id/label" android:background="@drawable/skeleton_bone" android:layout_width="40dp" android:layout_height="12dp"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16dp">
+        <RelativeLayout android:orientation="horizontal" android:id="@+id/content_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <View android:id="@+id/product_title" android:background="@drawable/skeleton_bone" android:layout_width="100dp" android:layout_height="24dp" android:layout_toRightOf="@+id/product_logo"/>
+            <View android:id="@+id/product_add_info" android:background="@drawable/skeleton_bone" android:layout_width="170dp" android:layout_height="14dp" android:layout_marginLeft="0dp" android:layout_marginTop="4dp" android:layout_toRightOf="@+id/product_logo" android:layout_below="@+id/product_title"/>
+        </RelativeLayout>
+    </LinearLayout>
+</com.facebook.shimmer.ShimmerFrameLayout>

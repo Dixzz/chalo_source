@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:truesdk="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:textColor="@color/orange_primary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="20dp" android:text="Enter Your Number"/>
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/phone_edit_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+            <TextView android:textSize="18dp" android:textColor="@color/black_87" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+91" style="@style/regularFont"/>
+            <EditText android:theme="@style/edit_text_theme" android:textSize="18dp" android:textColor="@color/black_87" android:id="@+id/mobile_no" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLength="10" android:layout_weight="1" android:layout_alignParentTop="true" android:inputType="phone" android:layout_toEndOf="@+id/phoneCode" style="@style/regularFont">
+                <requestFocus/>
+            </EditText>
+        </LinearLayout>
+        <TextView android:textSize="12dp" android:textColor="@color/dark_red_color" android:id="@+id/error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Invalid phone number" android:layout_below="@+id/phone_edit_text" android:layout_marginStart="33dp" android:layout_alignStart="@+id/phone_edit_text"/>
+    </RelativeLayout>
+    <TextView android:textSize="14dp" android:textColor="@color/black_60" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="8dp" android:layout_marginRight="20dp" android:text="@string/otp_copy"/>
+    <Button android:textSize="14dp" android:textColor="@color/white" android:gravity="center" android:id="@+id/login_continue" android:background="@drawable/green_rounded_button_otp" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginLeft="20dp" android:layout_marginTop="32dp" android:layout_marginRight="20dp" android:text="@string/continue_copy" fontPath="@string/font_medium"/>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="horizontal" android:background="@drawable/eta_selector" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <View android:id="@+id/divider" android:background="@color/cards_container_background" android:visibility="gone" android:layout_width="match_parent" android:layout_height="8dp" android:layout_alignParentTop="true"/>
+    <app.zophop.ui.views.RouteListLine android:id="@+id/route_list_line" android:layout_width="wrap_content" android:layout_height="match_parent" android:minWidth="@dimen/stop_pin_width" android:layout_alignTop="@+id/card_item" android:layout_alignBottom="@+id/card_item" app:rectcolor="@color/train_color"/>
+    <app.zophop.ui.views.summary_card.RouteListCardItem android:id="@+id/card_item" android:paddingTop="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="34dp" android:layout_below="@+id/divider"/>
+</RelativeLayout>

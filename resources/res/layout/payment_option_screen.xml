@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/list_divider_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="@dimen/action_bar_height" android:elevation="4dp" app:title="Confirm Details" style="@style/ZophopToolbarStyle.WhiteToolBar"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/content_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_below="@+id/toolbar"/>
+    <Button android:textSize="16dp" android:textColor="@color/white" android:id="@+id/proceed_btn" android:background="@color/orange_primary" android:layout_width="match_parent" android:layout_height="56dp" android:text="@string/continue_copy_pass" android:layout_alignParentBottom="true" style="@style/mediumFont"/>
+</RelativeLayout>

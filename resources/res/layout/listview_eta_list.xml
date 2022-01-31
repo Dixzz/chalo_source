@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingTop="14dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textColor="@color/black" android:id="@+id/eta" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="In 2 min"/>
+    <LinearLayout android:gravity="center_vertical" android:id="@+id/saLayout" android:paddingLeft="8dp" android:paddingRight="8dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toRightOf="@+id/eta" android:layout_below="@+id/card_title_from" android:layout_alignTop="@+id/card_title" android:layout_alignBottom="@+id/card_title">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/availability_icon" android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/overcrowded"/>
+        <TextView android:textSize="14dp" android:textColor="@color/black_60" android:id="@+id/seat_availaility_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="High Chances of getting a seat" style="@style/regularFont"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="1"/>
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/sa_icon" android:background="?attr/selectableItemBackgroundBorderless" android:clickable="true" android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/info_occupancy"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/info_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_below="@+id/eta" android:layout_alignLeft="@+id/card_title">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/alert_routescreen"/>
+        <TextView android:textSize="14dp" android:textColor="@color/black_70" android:layout_gravity="center_vertical" android:id="@+id/via_route" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:text="Via test" android:layout_alignBottom="@+id/card_info_container" fontPath="fonts/NotoSans-Regular.ttf"/>
+    </LinearLayout>
+    <View android:id="@+id/above_nearby_stop_trip_card_div" android:background="@color/scheduler_input_divider" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="15dp" android:layout_below="@+id/info_layout"/>
+    <TextView android:textSize="14dp" android:textColor="@color/black_70" android:id="@+id/empty_view" android:background="@color/white" android:paddingLeft="16dp" android:paddingTop="14dp" android:paddingBottom="14dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/eta_list_empty_message" android:fontFamily="@string/font_regular"/>
+</RelativeLayout>

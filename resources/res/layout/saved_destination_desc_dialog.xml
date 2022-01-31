@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="24dp" android:paddingTop="16dp" android:paddingRight="24dp" android:layout_width="312dp" android:layout_height="wrap_content">
+        <TextView android:textSize="18dp" android:textColor="@color/black" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="@string/saved_destination_dialog_title" android:alpha="0.87" style="@style/mediumFont"/>
+        <RadioGroup android:orientation="vertical" android:id="@+id/radioGroup" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RadioButton android:textColor="@color/black" android:id="@+id/radio_home" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="@string/saved_destination_dialog_home" android:alpha="0.87" style="@style/mediumFont.LargeText"/>
+            <RadioButton android:textColor="@color/black" android:id="@+id/radio_work" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="@string/saved_destination_dialog_work" android:alpha="0.87" style="@style/mediumFont.LargeText"/>
+            <RadioButton android:textColor="@color/black" android:id="@+id/radio_other" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="@string/saved_destination_dialog_other" android:alpha="0.87" style="@style/mediumFont.LargeText"/>
+        </RadioGroup>
+        <EditText android:textColor="@color/black" android:id="@+id/ET_saved_desc" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:hint="@string/saved_destination_dialog_edit_text_hint" android:maxLength="25" android:inputType="text" android:imeOptions="actionDone"/>
+        <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginBottom="8dp">
+            <TextView android:textColor="@color/black" android:id="@+id/negative" android:background="@drawable/drawer_item_selector" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="24dp" android:text="@string/saved_destination_dialog_cancel_button" android:alpha="0.87" style="@style/mediumFont.NormalText.BlackColor"/>
+            <TextView android:textColor="#2196f3" android:id="@+id/positive" android:background="@drawable/drawer_item_selector" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp" android:text="@string/saved_destination_dialog_save_button" style="@style/mediumFont.NormalText"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

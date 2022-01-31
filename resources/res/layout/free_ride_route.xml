@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.6" layout="@layout/card_item_from_to"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/tag_container" android:paddingLeft="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="12dp" android:textColor="@color/white" android:layout_gravity="right" android:id="@+id/free_ride_tag" android:background="@drawable/free_ride_tag" android:paddingLeft="6dp" android:paddingTop="2dp" android:paddingRight="6dp" android:paddingBottom="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tag_free_ticket" fontPath="@string/font_medium"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

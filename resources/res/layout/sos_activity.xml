@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="@dimen/action_bar_height" app:title="@string/add_contact" style="@style/ZophopToolbarStyle.WhiteToolBar"/>
+    <ScrollView android:background="@color/new_activity_color" android:layout_width="match_parent" android:layout_height="0dp" android:fillViewport="true" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/black_54" android:paddingLeft="16dp" android:paddingTop="8dp" android:paddingRight="16dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/send_alert_pressed" style="@style/regularFont.NormalText"/>
+            <RelativeLayout android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="48dp">
+                <TextView android:textColor="@color/black_60" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/message" android:layout_centerVertical="true" style="@style/mediumFont.LargeText"/>
+                <TextView android:textColor="@color/view_schedule_color" android:id="@+id/edit_message" android:paddingLeft="8dp" android:paddingTop="4dp" android:paddingRight="8dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/edit" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:textAllCaps="true" style="@style/mediumFont.NormalText"/>
+            </RelativeLayout>
+            <TextView android:textColor="@color/black_87" android:id="@+id/sos_message" android:background="@color/white" android:paddingLeft="16dp" android:paddingTop="12dp" android:paddingRight="16dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/regularFont.LargeText"/>
+            <View android:background="@color/scheduler_input_divider" android:layout_width="match_parent" android:layout_height="1dp"/>
+            <TextView android:textColor="@color/black_60" android:gravity="center" android:paddingLeft="16dp" android:layout_width="wrap_content" android:layout_height="48dp" android:text="@string/contact" style="@style/mediumFont.LargeText"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/contacts_list" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <RelativeLayout android:id="@+id/add_contacts" android:background="@drawable/item_selector" android:layout_width="match_parent" android:layout_height="48dp">
+                <TextView android:textColor="@color/orange_primary" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add_contact" android:drawableLeft="@drawable/add_contact_sos" android:drawablePadding="4dp" android:layout_centerInParent="true" style="@style/mediumFont.LargeText"/>
+            </RelativeLayout>
+            <View android:background="@color/scheduler_input_divider" android:layout_width="match_parent" android:layout_height="1dp"/>
+        </LinearLayout>
+    </ScrollView>
+    <TextView android:textColor="@color/white" android:gravity="center" android:id="@+id/send_alerts" android:background="@drawable/green_tv_pressed" android:layout_width="match_parent" android:layout_height="56dp" android:text="@string/send_alert" style="@style/mediumFont.LargeText"/>
+</LinearLayout>

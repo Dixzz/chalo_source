@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="24dp" android:paddingTop="16dp" android:paddingRight="24dp" android:paddingBottom="8dp" android:layout_width="312dp" android:layout_height="wrap_content">
+        <TextView android:textSize="18dp" android:textColor="@color/black" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:text="Total Tickets" android:alpha="0.87" style="@style/mediumFont"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp">
+            <include android:id="@+id/adult_ticket_count" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" layout="@layout/dialog_spinner_layout"/>
+            <include android:id="@+id/child_ticket_count" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" layout="@layout/dialog_spinner_layout"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="48dp">
+            <TextView android:textSize="14dp" android:textColor="@color/black" android:id="@+id/cancel" android:background="@drawable/drawer_item_selector" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="24dp" android:text="CANCEL" android:alpha="0.87" fontPath="@string/font_medium"/>
+            <TextView android:textSize="14dp" android:textColor="#689f38" android:id="@+id/done" android:background="@drawable/drawer_item_selector" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DONE" fontPath="@string/font_medium"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

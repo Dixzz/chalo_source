@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:paddingLeft="16dp" android:paddingTop="12dp" android:paddingRight="16dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:gravity="center" android:id="@+id/eta_container" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <TextView android:gravity="center" android:id="@+id/eta_hint" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/cab_pick_up_time" android:layout_alignParentLeft="true" android:alpha="0.6" style="@style/regularFont.NormalText.BlackColor"/>
+        <TextView android:gravity="center" android:id="@+id/eta_info" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="10 min" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/price_container" android:paddingTop="8dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <TextView android:gravity="center" android:id="@+id/price_hint" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/cab_fare_estimate" android:layout_alignParentLeft="true" android:alpha="0.6" style="@style/regularFont.NormalText.BlackColor"/>
+        <TextView android:textSize="18dp" android:textColor="@color/black_87" android:gravity="center" android:id="@+id/price_info" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="R 100-200" android:layout_alignParentRight="true" fontPath="@string/font_medium"/>
+    </RelativeLayout>
+</LinearLayout>

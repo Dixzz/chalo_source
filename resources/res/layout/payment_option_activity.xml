@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="@dimen/action_bar_height" android:elevation="8dp" app:title="Confirm Details" style="@style/ZophopToolbarStyle.WhiteToolBar"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/header_layout" android:background="@color/white" android:layout_width="match_parent" android:layout_height="56dp" android:layout_below="@+id/toolbar">
+        <TextView android:textSize="18dp" android:textColor="@color/orange_primary" android:paddingLeft="16dp" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="0dp" android:layout_height="56dp" android:text="Total Amount" android:layout_weight="1" style="@style/mediumFont"/>
+        <TextView android:textSize="18dp" android:textColor="@color/orange_primary" android:id="@+id/payment_fees" android:paddingRight="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rs. 500" style="@style/mediumFont"/>
+    </LinearLayout>
+    <TextView android:textSize="16dp" android:textColor="@color/black_60" android:id="@+id/header_payment" android:background="#eeeeee" android:paddingLeft="16dp" android:paddingTop="14dp" android:layout_width="match_parent" android:layout_height="48dp" android:text="Pay using" android:layout_below="@+id/header_layout" android:layout_centerHorizontal="true" style="@style/mediumFont"/>
+    <ScrollView android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/header_payment">
+        <LinearLayout android:orientation="vertical" android:id="@+id/payment_list" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </ScrollView>
+</RelativeLayout>

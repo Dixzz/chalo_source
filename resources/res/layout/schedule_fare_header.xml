@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/fare_header_container" android:paddingLeft="16dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="56dp">
+    <TextView android:textSize="12dp" android:id="@+id/number_of_changes" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12dp" fontPath="fonts/NotoSans-Regular.ttf"/>
+</LinearLayout>

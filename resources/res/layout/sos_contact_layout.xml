@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:background="@color/white" android:paddingLeft="16dp" android:paddingTop="12dp" android:paddingRight="16dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/contactPhoto" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/nopicture"/>
+        <LinearLayout android:orientation="vertical" android:paddingLeft="16dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textColor="@color/black_60" android:id="@+id/contactName" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/regularFont.LargeText"/>
+            <TextView android:textSize="18dp" android:textColor="@color/black_87" android:id="@+id/phoneNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" style="@style/mediumFont"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/remove_menu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/favorite_overflow"/>
+    </LinearLayout>
+    <View android:background="@color/scheduler_input_divider" android:layout_width="match_parent" android:layout_height="1dp"/>
+</LinearLayout>

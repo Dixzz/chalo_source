@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/drawer_item_selector" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="14dp" android:textColor="@color/black" android:id="@+id/alert_time" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="12dp" android:layout_marginRight="16dp" android:layout_marginBottom="8dp" android:alpha="0.4" fontPath="fonts/NotoSans-Regular.ttf"/>
+    <TextView android:textSize="18dp" android:textColor="@color/black_87" android:id="@+id/alert_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginBottom="8dp" style="@style/mediumFont"/>
+    <ImageView android:id="@+id/alert_image" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="4dp" android:layout_marginRight="16dp" android:layout_marginBottom="12dp" android:adjustViewBounds="true"/>
+    <TextView android:textSize="14dp" android:textColor="@color/black_60" android:autoLink="all" android:linksClickable="true" android:id="@+id/alert_message" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginBottom="12dp" android:textIsSelectable="true" style="@style/regularFont"/>
+    <View android:id="@+id/alert_divider" android:background="@color/list_divider_color" android:layout_width="match_parent" android:layout_height="2dp"/>
+    <include android:id="@+id/alert_footer" layout="@layout/alert_footer"/>
+</LinearLayout>

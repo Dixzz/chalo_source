@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/register_scroller" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <app.zophop.ui.views.collapse_on_scroll.ProfileVerificationStateView android:id="@+id/profile_verification_status" android:background="@drawable/view_bottom_divider" android:paddingLeft="16dp" android:paddingTop="8dp" android:paddingRight="16dp" android:paddingBottom="8dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="3" style="@style/mediumFont.LargeText"/>
+        <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/register_profile_picture" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="@dimen/profile_image_size" android:layout_height="@dimen/profile_image_size" android:layout_marginTop="12dp" android:layout_marginBottom="12dp" android:src="@drawable/profile_empty" android:layout_below="@+id/profile_verification_status" android:layout_centerHorizontal="true"/>
+        <ProgressBar android:id="@+id/profile_pic_progressbar" android:visibility="gone" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginTop="76dp" android:indeterminateDrawable="@drawable/progress_bar_circle_orange" android:layout_below="@+id/profile_verification_status" android:layout_centerHorizontal="true"/>
+        <ImageView android:id="@+id/camera_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pic_edit" android:layout_alignRight="@+id/register_profile_picture" android:layout_alignBottom="@+id/register_profile_picture"/>
+        <TextView android:textSize="20sp" android:textColor="@color/black" android:id="@+id/profile_pic_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="24dp" android:text="Anuja Nakade" android:layout_below="@+id/register_profile_picture" android:layout_centerHorizontal="true" android:fontFamily="@string/font_medium" style="@style/profile_pic_text_style"/>
+        <RelativeLayout android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/profile_pic_text">
+            <include android:id="@+id/register_form" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/register_form"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

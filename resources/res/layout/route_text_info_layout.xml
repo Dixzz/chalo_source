@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingTop="16dp" android:paddingBottom="4dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+    <RelativeLayout android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="18sp" android:textColor="@color/black_87" android:ellipsize="end" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="A1 Airport Express One" android:maxLines="2" android:includeFontPadding="false" android:drawablePadding="8dp" android:layout_toLeftOf="@+id/bus_agency_name" fontPath="fonts/NotoSans-SemiBold.ttf"/>
+        <TextView android:id="@+id/bus_agency_name" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="32dp" android:text="Central Railways" android:layout_alignParentRight="true" style="@style/bus_route_agency"/>
+    </RelativeLayout>
+    <TextView android:textSize="14dp" android:textColor="@color/black_87" android:ellipsize="end" android:id="@+id/subtext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="BelapurCSt - Khatgopar " android:maxLines="2" android:includeFontPadding="false" fontPath="fonts/NotoSans-Regular.ttf"/>
+</LinearLayout>

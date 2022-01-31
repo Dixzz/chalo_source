@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/frame_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+    <ImageView android:gravity="bottom" android:orientation="horizontal" android:id="@+id/bottom_layout" android:background="@color/home_screen_bg" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="48dp" android:src="@drawable/aictsl_logo_grey" android:scaleType="center" android:layout_alignParentBottom="true"/>
+    <RelativeLayout android:gravity="center" android:id="@+id/dual_logo" android:background="@color/home_screen_bg" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <ImageView android:id="@+id/left_logo" android:paddingTop="16dp" android:paddingBottom="16dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20dp" android:src="@drawable/bhopal_logo_1"/>
+        <ImageView android:id="@+id/right_logo" android:paddingTop="16dp" android:paddingBottom="16dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bhopal_logo_2" android:layout_toRightOf="@+id/left_logo"/>
+    </RelativeLayout>
+    <TextView android:textSize="18dp" android:textColor="@color/black_60" android:gravity="center" android:id="@+id/agency_text_id" android:background="@color/home_screen_bg" android:paddingTop="16dp" android:paddingBottom="16dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/agency_text" android:includeFontPadding="false" style="@style/mediumFont"/>
+</FrameLayout>

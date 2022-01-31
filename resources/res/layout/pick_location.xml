@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/pick_location_container" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/picker_search_bar"/>
+    <include layout="@layout/no_internet_layout"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/location_list_container" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ListView android:id="@+id/location_list" android:paddingTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:listSelector="@drawable/drawer_item_selector" android:drawSelectorOnTop="true" android:divider="@null"/>
+    </LinearLayout>
+</LinearLayout>

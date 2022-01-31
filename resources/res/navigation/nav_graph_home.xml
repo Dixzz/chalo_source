@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph_home" app:startDestination="@+id/homeScreenMainFragment">
+    <fragment android:label="HomeScreenMainFragment" android:name="app.zophop.ui.fragments.HomeScreenMainFragment" android:id="@+id/homeScreenMainFragment"/>
+</navigation>

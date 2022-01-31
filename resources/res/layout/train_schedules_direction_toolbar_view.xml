@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="match_parent">
+    <TextView android:textSize="14dp" android:textColor="@color/black" android:gravity="center" android:id="@+id/distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp" android:drawablePadding="2dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" fontPath="@string/font_regular"/>
+    <TextView android:textSize="16dp" android:textColor="@color/black" android:ellipsize="end" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:layout_toLeftOf="@+id/distance" android:layout_alignParentLeft="true" android:layout_centerVertical="true" fontPath="@string/font_medium" style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
+</RelativeLayout>

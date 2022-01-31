@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/detail_layout" android:background="#f57c00" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:orientation="vertical" android:id="@+id/top_containner" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.viewpager.widget.ViewPager android:id="@+id/tutorial_view_pager" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+        <RelativeLayout android:id="@+id/bottom_container" android:layout_width="match_parent" android:layout_height="200dp">
+            <Button android:textColor="#f57c00" android:id="@+id/next" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="40dp" android:text="@string/next"/>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/dot_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/next" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

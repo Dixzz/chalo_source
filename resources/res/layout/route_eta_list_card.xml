@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/eta_card_root" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/nearby_stop_trip_card_header" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/route_availability_level_banner" android:background="@color/new_activity_color" android:paddingTop="8dp" android:paddingBottom="8dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/icon" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="8dp" android:src="@drawable/alert_route_card"/>
+            <TextView android:textSize="14sp" android:textColor="@color/black_70" android:id="@+id/availability_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:text="@string/disruption_info" style="@style/regularFont"/>
+        </LinearLayout>
+        <RelativeLayout android:id="@+id/disruptionBanner" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginRight="16dp" android:layout_below="@+id/route_availability_level_banner">
+            <RelativeLayout android:id="@+id/copyChanges" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/alertIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:src="@drawable/alert_route_card" android:layout_centerVertical="true"/>
+                <TextView android:textSize="14dp" android:textColor="@color/black_70" android:id="@+id/disruptionText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:text="@string/disruption_info" android:layout_toRightOf="@+id/alertIcon" style="@style/mediumFont"/>
+            </RelativeLayout>
+            <View android:id="@+id/disruptionDivider" android:background="@color/scheduler_input_divider" android:visibility="visible" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="12dp" android:layout_below="@+id/copyChanges"/>
+        </RelativeLayout>
+        <TextView android:textSize="14dp" android:textColor="@color/black_70" android:gravity="center" android:id="@+id/next_availability_header" android:background="#eeeeee" android:paddingLeft="8dp" android:paddingRight="8dp" android:paddingBottom="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14dp" android:layout_marginTop="12dp" android:text="@string/next_buses" android:layout_below="@+id/disruptionBanner" fontPath="@string/font_medium"/>
+    </RelativeLayout>
+    <View android:id="@+id/new_nearby_first_div" android:background="@color/scheduler_input_divider" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="12dp" android:layout_marginRight="12dp"/>
+    <View android:id="@+id/above_nearby_stop_trip_card_div" android:background="@color/scheduler_input_divider" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="12dp" android:layout_marginRight="12dp"/>
+    <LinearLayout android:gravity="left" android:orientation="horizontal" android:id="@+id/eta_card_more_container" android:visibility="visible" android:layout_width="match_parent" android:layout_height="42dp">
+        <TextView android:textSize="14dp" android:textColor="@color/home_screen_header_color" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/more_buses_prefix" android:background="@drawable/drawer_item_selector" android:paddingLeft="14dp" android:paddingRight="56dp" android:layout_width="447dp" android:layout_height="match_parent" android:text="@string/see_more_buses" android:maxLines="1" style="@style/mediumFont"/>
+    </LinearLayout>
+</LinearLayout>

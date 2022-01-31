@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/new_activity_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:id="@+id/main_layout" android:background="@color/new_activity_color" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.google.android.material.textview.MaterialTextView android:id="@+id/used_on_title" android:background="@color/white" android:paddingLeft="16dp" android:paddingTop="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/trip_start_time"/>
+            <com.google.android.material.textview.MaterialTextView android:textSize="18sp" android:textColor="@color/black_87" android:id="@+id/used_on_text" android:background="@color/white" android:paddingLeft="16dp" android:paddingRight="16dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="MP 20 AA 1234" style="@style/mediumFont"/>
+            <include layout="@layout/component_divider_layout"/>
+            <include android:id="@+id/user_details" layout="@layout/user_details_layout"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/trip_details_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include layout="@layout/component_divider_layout"/>
+                <include android:id="@+id/trip_details" layout="@layout/route_from_to_layout"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/ticket_count_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include layout="@layout/component_divider_layout"/>
+                <com.google.android.material.textview.MaterialTextView android:id="@+id/ticket_count_title" android:background="@color/white" android:paddingLeft="16dp" android:paddingTop="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Total tickets"/>
+                <com.google.android.material.textview.MaterialTextView android:textSize="18sp" android:textColor="@color/black_87" android:id="@+id/ticket_count" android:background="@color/white" android:paddingLeft="16dp" android:paddingRight="16dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="1 Adult" style="@style/mediumFont"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/conductor_info_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include layout="@layout/component_divider_layout"/>
+                <com.google.android.material.textview.MaterialTextView android:id="@+id/conductor_id_title" android:background="@color/white" android:paddingLeft="16dp" android:paddingTop="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/conductor_id"/>
+                <com.google.android.material.textview.MaterialTextView android:textSize="18sp" android:textColor="@color/black_87" android:id="@+id/conductor_id" android:background="@color/white" android:paddingLeft="16dp" android:paddingRight="16dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="lkfenjskfbhjsbvk" style="@style/mediumFont"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/vehicle_info_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include layout="@layout/component_divider_layout"/>
+                <com.google.android.material.textview.MaterialTextView android:id="@+id/vehicle_no_title" android:background="@color/white" android:paddingLeft="16dp" android:paddingTop="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/vehicle_no"/>
+                <com.google.android.material.textview.MaterialTextView android:textSize="18sp" android:textColor="@color/black_87" android:id="@+id/vehicle_no" android:background="@color/white" android:paddingLeft="16dp" android:paddingRight="16dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="MP 20 AA 1234" style="@style/mediumFont"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/fare_info_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include layout="@layout/component_divider_layout"/>
+                <com.google.android.material.textview.MaterialTextView android:id="@+id/ticket_fare_title" android:background="@color/white" android:paddingLeft="16dp" android:paddingTop="12dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ticket_fare"/>
+                <com.google.android.material.textview.MaterialTextView android:textSize="18sp" android:textColor="@color/black_87" android:id="@+id/ticket_fare" android:background="@color/white" android:paddingLeft="16dp" android:paddingRight="16dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Rs 20" style="@style/mediumFont"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/info_not_available_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include layout="@layout/component_divider_layout"/>
+                <com.google.android.material.textview.MaterialTextView android:textSize="18sp" android:textColor="@color/black_87" android:background="@color/white" android:paddingLeft="16dp" android:paddingTop="14dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ticket_receipt_not_available_title" style="@style/mediumFont"/>
+                <com.google.android.material.textview.MaterialTextView android:background="@color/white" android:paddingLeft="16dp" android:paddingTop="4dp" android:paddingRight="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ticket_receipt_not_available_copy"/>
+            </LinearLayout>
+            <ir.beigirad.zigzagview.ZigzagView android:layout_width="match_parent" android:layout_height="wrap_content" android:elevation="10dp" app:zigzagBackgroundColor="@color/white" app:zigzagHeight="10dp" app:zigzagShadowAlpha="0.9" app:zigzagSides="2"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

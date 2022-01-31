@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph_super_pass_booking">
+    <fragment android:label="" android:name="app.zophop.ui.fragments.superpassPurchase.SuperPassBasicUserDetailsFragment" android:id="@+id/superPassBasicUserDetailsFragment">
+        <action android:id="@+id/action_superPassBasicUserDetailsFragment_to_superPassUserProofsOverviewFragment" app:destination="@+id/superPassUserProofsOverviewFragment" app:enterAnim="@anim/fragment_slide_in_right_slow" app:exitAnim="@anim/fragment_slide_out_left_slow" app:popEnterAnim="@anim/fragment_slide_in_left" app:popExitAnim="@anim/fragment_slide_out_right"/>
+    </fragment>
+    <fragment android:label="" android:name="app.zophop.ui.fragments.superpassPurchase.SuperPassUserProofsOverviewFragment" android:id="@+id/superPassUserProofsOverviewFragment">
+        <action android:id="@+id/action_superPassUserProofsOverviewFragment_to_superPassUserProofUploadFragment" app:destination="@+id/superPassUserProofUploadFragment" app:enterAnim="@anim/fragment_slide_in_right" app:exitAnim="@anim/fragment_slide_out_left" app:popEnterAnim="@anim/fragment_slide_in_left" app:popExitAnim="@anim/fragment_slide_out_right"/>
+        <action android:id="@+id/action_userProofsOverviewFragment_to_confirmSuperPassPurchaseFragment" app:destination="@+id/confirmSuperPassPurchaseFragment" app:enterAnim="@anim/fragment_slide_in_right" app:exitAnim="@anim/fragment_slide_out_left" app:popEnterAnim="@anim/fragment_slide_in_left_slow" app:popExitAnim="@anim/fragment_slide_out_right_slow"/>
+    </fragment>
+    <fragment android:label="" android:name="app.zophop.ui.fragments.superpassPurchase.SuperPassUserProofUploadFragment" android:id="@+id/superPassUserProofUploadFragment">
+        <argument android:name="arg_proof_document_props" app:argType="app.zophop.models.mTicketing.ProofDocumentProps"/>
+    </fragment>
+    <fragment android:label="" android:name="app.zophop.ui.fragments.superpassPurchase.ConfirmSuperPassPurchaseFragment" android:id="@+id/confirmSuperPassPurchaseFragment"/>
+</navigation>

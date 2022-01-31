@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/parent_layout" android:background="@color/home_screen_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="@dimen/action_bar_height" android:elevation="4dp" app:title="@string/title_activity_confirm_mticket" style="@style/ZophopToolbarStyle.WhiteToolBar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:layout_below="@+id/toolbar">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                <LinearLayout android:orientation="vertical" android:background="@color/white" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp">
+                        <TextView android:textSize="18sp" android:textColor="@color/black_87" android:id="@+id/pass_type" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Magic Pass" android:layout_weight="1" style="@style/mediumFont"/>
+                        <TextView android:textColor="@color/view_schedule_color" android:id="@+id/btn_edit_pass" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/edit" style="@style/mediumFont.NormalText"/>
+                    </LinearLayout>
+                    <TextView android:textSize="14sp" android:textColor="@color/black_60" android:id="@+id/duration_category_info" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="6dp" android:text="90 days, General" android:layout_weight="1" style="@style/regularFont.NormalText"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/black_60" android:id="@+id/trip_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="4dp" android:layout_marginRight="16dp" android:text="90 days, General" android:layout_weight="1" style="@style/regularFont.NormalText"/>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/route_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+                        <include android:id="@+id/component_divider" layout="@layout/component_divider_layout"/>
+                        <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="16dp" android:layout_marginRight="16dp">
+                            <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:src="@drawable/bus_trip_planner"/>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                    <TextView android:textSize="18dp" android:textColor="@color/black_87" android:id="@+id/route_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sample_route" style="@style/mediumFont"/>
+                                    <TextView android:textColor="@color/black_60" android:id="@+id/spl_features" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:text="90 days, General" style="@style/regularFont.NormalText"/>
+                                </LinearLayout>
+                                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                    <TextView android:textSize="14sp" android:textColor="@color/black_70" android:id="@+id/first_stop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/route_from_to" style="@style/regularFont"/>
+                                    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="10dp" android:src="@drawable/direction_route"/>
+                                    <TextView android:textSize="14sp" android:textColor="@color/black_70" android:id="@+id/last_stop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/route_from_to" style="@style/regularFont"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                <LinearLayout android:orientation="horizontal" android:id="@+id/validity_layout" android:background="@color/white" android:paddingLeft="16dp" android:paddingTop="16dp" android:paddingRight="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                        <TextView android:textSize="14sp" android:textColor="@color/black_70" android:id="@+id/validity_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/validity_title" style="@style/regularFont"/>
+                        <TextView android:textSize="18dp" android:textColor="@color/black_87" android:id="@+id/validity_date" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="4dp" android:text="@string/today" style="@style/mediumFont"/>
+                    </LinearLayout>
+                    <TextView android:textColor="@color/view_schedule_color" android:id="@+id/btn_edit_validity" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/edit" style="@style/mediumFont.NormalText"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                <LinearLayout android:orientation="vertical" android:background="@color/white" android:paddingLeft="16dp" android:paddingTop="16dp" android:paddingRight="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/discount_layout" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textColor="@color/black_70" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/discount" android:layout_weight="1"/>
+                        <TextView android:textSize="14sp" android:textColor="@color/black_70" android:id="@+id/discount_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rupee_symbol" style="@style/regularFont"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="18dp" android:textColor="@color/black_87" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/mticket_total_amount" android:layout_weight="1" style="@style/mediumFont"/>
+                        <TextView android:textSize="18dp" android:textColor="@color/black_87" android:id="@+id/total_fare" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/mediumFont"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginBottom="68dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:background="@color/white" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginBottom="16dp">
+                            <TextView android:textSize="14sp" android:textColor="@color/black_70" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pass_holder" android:layout_weight="1" style="@style/regularFont"/>
+                            <TextView android:textSize="14sp" android:textColor="@color/view_schedule_color" android:id="@+id/btn_edit_personal_details" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/edit" style="@style/mediumFont.NormalText"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp">
+                            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp">
+                                <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/user_profile_pic" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="96dp" android:layout_height="96dp" android:src="@drawable/profile_empty"/>
+                                <ProgressBar android:id="@+id/user_profile_pic_progressbar" android:visibility="gone" android:layout_width="32dp" android:layout_height="96dp" android:indeterminate="true" android:layout_centerHorizontal="true" android:indeterminateTint="@color/orange_primary" android:indeterminateTintMode="src_atop" style="@style/Widget.ProgressBar.Small"/>
+                            </RelativeLayout>
+                            <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="8dp" android:layout_weight="1">
+                                <TextView android:textSize="18dp" android:textColor="@color/black_87" android:id="@+id/user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8dp" style="@style/mediumFont"/>
+                                <TextView android:textColor="@color/black_60" android:id="@+id/dob" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:text="@string/profile_hint_dob" style="@style/regularFont.NormalText"/>
+                                <TextView android:textSize="14sp" android:textColor="@color/black_60" android:id="@+id/user_details" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/regularFont"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/attachments_container_layout" android:background="@color/white" android:paddingBottom="16dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+                            <TextView android:textSize="14sp" android:textColor="@color/black_70" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/documents" android:layout_weight="1" style="@style/regularFont"/>
+                            <TextView android:textColor="@color/view_schedule_color" android:id="@+id/btn_edit_attachments" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/edit" style="@style/mediumFont.NormalText"/>
+                        </LinearLayout>
+                        <LinearLayout android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <include layout="@layout/attachments_container"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout android:id="@+id/btn_book_pass" android:background="@drawable/orange_button" android:layout_width="match_parent" android:layout_height="56dp" android:layout_alignParentBottom="true">
+        <TextView android:textColor="@color/white" android:id="@+id/book_btn_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SUBMIT" android:layout_centerInParent="true" style="@style/mediumFont.LargeText"/>
+    </RelativeLayout>
+</RelativeLayout>

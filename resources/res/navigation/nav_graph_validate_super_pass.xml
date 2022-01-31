@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph_activate_super_pass" app:startDestination="@+id/soundInfoRationaleFragmentSuperPass">
+    <fragment android:label="ActivateSuperPassFragment" android:name="app.zophop.ui.fragments.superPassValidation.ActivateSuperPassFragment" android:id="@+id/activateSuperPassFragment">
+        <action android:id="@+id/action_activateSuperPassFragment_to_activeSuperPassFragment" app:destination="@+id/activeSuperPassFragment" app:enterAnim="@anim/fragment_slide_in_right_slow" app:exitAnim="@anim/fragment_slide_out_left_slow" app:launchSingleTop="true" app:popEnterAnim="@anim/fragment_slide_in_left_slow" app:popExitAnim="@anim/fragment_slide_out_right_slow" app:popUpTo="@+id/activateSuperPassFragment" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_activateSuperPassFragment_to_soundFragmentSuperPass" app:destination="@+id/soundFragmentSuperPass" app:enterAnim="@anim/fragment_slide_in_right_slow" app:exitAnim="@anim/fragment_slide_out_left_slow" app:launchSingleTop="true" app:popEnterAnim="@anim/fragment_slide_in_left_slow" app:popExitAnim="@anim/fragment_slide_out_right_slow" app:popUpTo="@+id/activateSuperPassFragment" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_activateSuperPassFragment_to_activeSuperPassVisualValidationFragment" app:destination="@+id/activeSuperPassVisualValidationFragment" app:enterAnim="@anim/fragment_slide_in_right_slow" app:exitAnim="@anim/fragment_slide_out_left_slow" app:launchSingleTop="true" app:popEnterAnim="@anim/fragment_slide_in_left_slow" app:popExitAnim="@anim/fragment_slide_out_right_slow" app:popUpTo="@+id/activateSuperPassFragment" app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment android:label="ActiveSuperPassFragment" android:name="app.zophop.ui.fragments.superPassValidation.ActiveSuperPassFragment" android:id="@+id/activeSuperPassFragment">
+        <argument android:name="arg_source" android:defaultValue="&quot;&quot;" app:argType="string"/>
+        <action android:id="@+id/action_activeSuperPassFragment_to_activeSuperPassQrZoomedFragment" app:destination="@+id/activeSuperPassQrZoomedFragment" app:enterAnim="@anim/fragment_slide_in_right_slow" app:exitAnim="@anim/fragment_slide_out_left_slow" app:launchSingleTop="true" app:popEnterAnim="@anim/fragment_slide_in_left_slow" app:popExitAnim="@anim/fragment_slide_out_right_slow" app:popUpTo="@+id/activeSuperPassFragment"/>
+    </fragment>
+    <fragment android:label="ActiveSuperPassQrZoomedFragment" android:name="app.zophop.ui.fragments.superPassValidation.ActiveSuperPassQrZoomedFragment" android:id="@+id/activeSuperPassQrZoomedFragment">
+        <argument android:name="arg_source" android:defaultValue="&quot;&quot;" app:argType="string"/>
+    </fragment>
+    <dialog android:label="SoundInfoFragmentSuperPass" android:name="app.zophop.ui.fragments.superPassValidation.SoundInfoFragmentSuperPass" android:id="@+id/soundInfoFragmentSuperPass">
+        <argument android:name="arg_source" android:defaultValue="&quot;&quot;" app:argType="string"/>
+        <action android:id="@+id/action_soundInfoFragmentSuperPass_to_soundFragmentSuperPass" app:destination="@+id/soundFragmentSuperPass" app:launchSingleTop="true" app:popUpTo="@+id/soundInfoFragmentSuperPass" app:popUpToInclusive="true"/>
+    </dialog>
+    <fragment android:label="SoundFragmentSuperPass" android:name="app.zophop.ui.fragments.superPassValidation.SoundFragmentSuperPass" android:id="@+id/soundFragmentSuperPass">
+        <argument android:name="arg_source" android:defaultValue="&quot;&quot;" app:argType="string"/>
+        <action android:id="@+id/action_soundFragmentSuperPass_to_activeSuperPassQrZoomedFragment" app:destination="@+id/activeSuperPassQrZoomedFragment" app:enterAnim="@anim/fragment_slide_in_right_slow" app:exitAnim="@anim/fragment_slide_out_left_slow" app:launchSingleTop="true" app:popEnterAnim="@anim/fragment_slide_in_left_slow" app:popExitAnim="@anim/fragment_slide_out_right_slow"/>
+        <action android:id="@+id/action_soundFragmentSuperPass_to_soundVerificationFragmentSuperPass" app:destination="@+id/soundVerificationFragmentSuperPass" app:launchSingleTop="true" app:popUpTo="@+id/soundFragmentSuperPass" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_soundFragmentSuperPass_to_soundInfoFragmentSuperPass" app:destination="@+id/soundInfoFragmentSuperPass" app:launchSingleTop="true"/>
+        <argument android:name="arg_can_show_sound_info" android:defaultValue="true" app:argType="boolean"/>
+    </fragment>
+    <fragment android:label="SoundVerificationFragmentSuperPass" android:name="app.zophop.ui.fragments.superPassValidation.SoundVerificationFragmentSuperPass" android:id="@+id/soundVerificationFragmentSuperPass">
+        <argument android:name="arg_soure" android:defaultValue="&quot;&quot;" app:argType="string"/>
+        <argument android:name="arg_verification_status" app:argType="app.zophop.ui.enums.TicketVerificationStatus"/>
+    </fragment>
+    <fragment android:label="ActiveSuperPassVisualValidationFragment" android:name="app.zophop.ui.fragments.superPassValidation.ActiveSuperPassVisualValidationFragment" android:id="@+id/activeSuperPassVisualValidationFragment">
+        <argument android:name="arg_source" android:defaultValue="&quot;&quot;" app:argType="string"/>
+        <action android:id="@+id/action_activeSuperPassVisualValidationFragment_to_activeSuperPassQrZoomedFragment" app:destination="@+id/activeSuperPassQrZoomedFragment" app:enterAnim="@anim/fragment_slide_in_right_slow" app:exitAnim="@anim/fragment_slide_out_left_slow" app:launchSingleTop="true" app:popEnterAnim="@anim/fragment_slide_in_left_slow" app:popExitAnim="@anim/fragment_slide_out_right_slow" app:popUpTo="@+id/activeSuperPassFragment"/>
+    </fragment>
+    <fragment android:label="SoundInfoRationaleFragmentSuperPass" android:name="app.zophop.ui.fragments.superPassValidation.SoundInfoRationaleFragmentSuperPass" android:id="@+id/soundInfoRationaleFragmentSuperPass">
+        <argument android:name="arg_source" android:defaultValue="&quot;&quot;" app:argType="string"/>
+        <action android:id="@+id/action_soundInfoRationaleFragmentSuperPass_to_soundFragmentSuperPass" app:destination="@+id/soundFragmentSuperPass" app:enterAnim="@anim/fragment_slide_in_right_slow" app:exitAnim="@anim/fragment_slide_out_left_slow" app:launchSingleTop="true" app:popEnterAnim="@anim/fragment_slide_in_left_slow" app:popExitAnim="@anim/fragment_slide_out_right_slow" app:popUpTo="@+id/soundInfoRationaleFragmentSuperPass" app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" android:textSize="14dp" android:textColor="@color/view_schedule_color" android:gravity="center_vertical" android:id="@+id/card_footer" android:background="@drawable/drawer_item_selector" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginRight="8dp" android:text="@string/more_trips" android:drawableLeft="@drawable/more__trips_scheduler" android:drawablePadding="16dp"/>

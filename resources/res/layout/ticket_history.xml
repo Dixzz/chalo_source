@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/ticket_history_linear_layout" android:background="@color/new_activity_color" android:paddingLeft="8dp" android:paddingTop="8dp" android:paddingRight="8dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ListView android:id="@+id/history_list" android:layout_width="match_parent" android:layout_height="match_parent" android:divider="@android:color/transparent"/>
+    <include layout="@layout/book_ticket_empty_view"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/card_container" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/home_screen_card_container_margin_left" android:layout_marginTop="@dimen/home_card_paddings" android:layout_marginRight="@dimen/home_screen_card_container_margin_right"/>
+</LinearLayout>

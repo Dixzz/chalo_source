@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@+id/nps_survey_dialog_layout" android:paddingTop="24dp" android:paddingBottom="16dp" android:layout_width="@dimen/feedback_dialog_width" android:layout_height="wrap_content">
+        <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:fillViewport="false" android:layout_weight="1">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@+id/rating_container" android:paddingLeft="16dp" android:paddingRight="24dp" android:paddingBottom="24dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="18dp" android:textColor="@color/black_87" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/nps_dialog_type2_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:text="@string/nps_survey_text_input_dialog_title" style="@style/mediumFont"/>
+                    <com.google.android.flexbox.FlexboxLayout android:id="@+id/suggested_nps_survey_tags" android:layout_width="match_parent" android:layout_height="wrap_content" app:alignContent="2" app:alignItems="2" app:flexDirection="2" app:flexWrap="1" app:justifyContent="2"/>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/nps_dialog_type2_text_input_layout" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="24dp" android:layout_marginRight="24dp" android:hint="@string/hint_anything_else">
+                    <EditText android:textSize="16sp" android:id="@+id/nps_dialog_type2_comments" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="5" android:singleLine="false" android:inputType="textMultiLine" android:imeOptions="actionDone"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </ScrollView>
+        <RelativeLayout android:id="@+id/btn_dialog_action_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginRight="16dp">
+            <TextView android:textSize="14dp" android:textColor="@color/black_70" android:id="@+id/btn_negative_action" android:background="@drawable/drawer_item_selector" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp" android:text="@string/CANCEL" android:layout_toLeftOf="@+id/btn_positive_action" style="@style/mediumFont"/>
+            <TextView android:textSize="14dp" android:textColor="@color/chalo_primary" android:gravity="end" android:id="@+id/btn_positive_action" android:background="@drawable/drawer_item_selector" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/submit" android:layout_alignParentEnd="true" style="@style/mediumFont"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

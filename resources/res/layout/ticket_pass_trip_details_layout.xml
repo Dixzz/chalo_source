@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="16dp">
+        <View android:id="@+id/circle_top" android:background="@color/scheduler_input_divider" android:visibility="gone" android:layout_width="1dp" android:layout_height="match_parent" android:layout_above="@+id/circle" android:layout_centerHorizontal="true"/>
+        <ImageView android:id="@+id/circle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/scheduler_input_circle_from" android:layout_centerVertical="true"/>
+        <View android:id="@+id/circle_bottom" android:background="@color/scheduler_input_divider" android:visibility="gone" android:layout_width="1dp" android:layout_height="match_parent" android:layout_below="@+id/circle" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <TextView android:textSize="18dp" android:textColor="@color/black_87" android:id="@+id/stop_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginBottom="4dp" style="@style/regularFont"/>
+</LinearLayout>

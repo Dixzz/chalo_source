@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="agency_padding">12dp</dimen>
+    <dimen name="animation_zoom_in">2.1</dimen>
+    <dimen name="animation_zoom_in_mticket">1</dimen>
+    <dimen name="animation_zoom_in_route_pass">4</dimen>
+    <dimen name="home_screen_route_search">14dp</dimen>
+    <dimen name="qr_code_top_padding">5dp</dimen>
+    <dimen name="route_bidirectional_icon_size">12dp</dimen>
+    <dimen name="tv_home_screen_hook_size">14dp</dimen>
+</resources>

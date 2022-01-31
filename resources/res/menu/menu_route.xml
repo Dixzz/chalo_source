@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/route_view_schedule" android:title="@string/view_schedule_route" app:showAsAction="never"/>
+    <item android:id="@+id/route_menu_search_stops" android:title="@string/search_stop_menu_title" app:showAsAction="never"/>
+    <item android:id="@+id/route_menu_share" android:visible="false" android:title="@string/Share" app:showAsAction="never"/>
+    <item android:id="@+id/route_menu_add_fav" android:title="@string/add" app:showAsAction="never"/>
+    <item android:id="@+id/route_menu_subscribe" android:title="@string/subscribe" app:showAsAction="never"/>
+    <item android:id="@+id/route_menu_checkin" android:title="@string/Check_in" app:showAsAction="never"/>
+</menu>

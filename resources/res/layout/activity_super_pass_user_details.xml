@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/user_profile_linear_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="@dimen/action_bar_height" style="@style/ZophopToolbarStyle.WhiteToolBar"/>
+    <ScrollView android:id="@+id/main_layout" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <app.zophop.ui.views.PassDurationFormInput android:id="@+id/date_selection_layout" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <View android:id="@+id/start_date_separator" android:background="#eeeeee" android:layout_width="match_parent" android:layout_height="8dp" android:layout_below="@+id/date_selection_layout"/>
+                <TextView android:textSize="18sp" android:textColor="#de000000" android:id="@+id/passenger_details_header" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/passenger_details" android:layout_below="@+id/start_date_separator" style="@style/mediumFont"/>
+                <TextView android:textSize="14sp" android:textColor="#de000000" android:id="@+id/passenger_details_notes" android:background="@drawable/passenger_details_background" android:padding="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:text="@string/passenger_details_notes" android:layout_below="@+id/passenger_details_header" style="@style/regularFont"/>
+                <include android:id="@+id/register_form" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/passenger_details_notes" layout="@layout/super_pass_user_details_form"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

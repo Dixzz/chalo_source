@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:amazon="http://schemas.amazon.com/apk/res/android" xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="764" android:versionName="7.6.4" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" package="app.zophop" platformBuildVersionCode="30" platformBuildVersionName="11">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30"/>
+    <uses-feature android:glEsVersion="20000" android:required="true"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <permission android:name="app.zophop.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="app.zophop.permission.C2D_MESSAGE"/>
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE"/>
+        </intent>
+        <package android:name="com.truecaller"/>
+        <package android:name="com.truecaller.debug"/>
+    </queries>
+    <queries>
+        <package android:name="com.google.android.apps.nbu.paisa.user"/>
+        <package android:name="com.phonepe.app"/>
+        <intent>
+            <action android:name="android.intent.action.SEND"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE"/>
+    <permission android:name="app.zophop.permission.RECEIVE_ADM_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="app.zophop.permission.RECEIVE_ADM_MESSAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.landscape" android:required="false"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-permission android:name="com.truecaller.permission.sdk.internal.read_account_state"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <application android:theme="@style/ZophopTheme" android:label="@string/app_name" android:icon="@drawable/logo_chalo" android:name="app.zophop.ZophopApplication" android:logo="@drawable/actionbar" android:largeHeap="@bool/largeheap" android:fullBackupContent="@xml/backup_descriptor" android:usesCleartextTraffic="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <meta-data android:name="com.truecaller.android.sdk.PartnerKey" android:value="@string/partnerKey"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="invitereferrals_bid" android:value="19467"/>
+        <meta-data android:name="invitereferrals_bid_e" android:value="00E6E5A1A7C307B81B1A59C019E4701B"/>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAf95NjxskKP0D1Vop4uOTTJNJLR8pYLKM"/>
+        <meta-data android:name="com.razorpay.ApiKey" android:value="rzp_test_WSyUzkJ18cSuMg"/>
+        <meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_apovMwXNDh8Ra5G5m6gPtcdgBwba0rfW"/>
+        <meta-data android:name="com.facebook.accountkit.ApplicationName" android:value="@string/app_name"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/logo_notification"/>
+        <meta-data android:name="com.mixpanel.android.MPConfig.DisableGestureBindingUI" android:value="true"/>
+        <meta-data android:name="com.mixpanel.android.MPConfig.DisableEmulatorBindingUI" android:value="true"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/orange_primary"/>
+        <meta-data android:name="com.mixpanel.android.MPConfig.AutoShowMixpanelUpdates" android:value="false"/>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="296be43533f4faf3e1bafa50216cd24615f08864"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
+        <meta-data android:name="com.urbanairship.autopilot" android:value="app.zophop.engagement.airship.AirshipAutoPilot"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <provider android:name="app.zophop.sync.StubContentProvider" android:exported="false" android:authorities="app.zophop.provider" android:syncable="true"/>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="app.zophop.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+        </provider>
+        <activity android:theme="@style/Base.Theme.AppCompat" android:name="com.theartofdev.edmodo.cropper.CropImageActivity"/>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:label="@string/trip_activity_label" android:icon="@drawable/transparent" android:name="app.zophop.ui.activities.TripActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:logo="@drawable/transparent"/>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:label="@string/train_schedule_activity_label" android:icon="@drawable/logo_chalo" android:name="app.zophop.ui.activities.TripsSchedulesDirectionActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:logo="@drawable/actionbar" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="stop"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="zophop.com" android:pathPrefix="/stop"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:name="app.zophop.ui.activities.ReferralActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.AppCompat.NoActionBar" android:name="app.zophop.DeepLinkHelper" android:screenOrientation="portrait" android:parentActivityName="app.zophop.ui.activities.HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https" android:host="www.chalo.com"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="chalo" android:host="book" android:pathPrefix="/bookPass"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="chalo" android:host="card" android:pathPrefix="/support"/>
+                <data android:scheme="chalo" android:host="card" android:pathPrefix="/alerts"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https" android:host="chalo.com" android:pathPrefix="/bookTicket"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="chalo" android:host="book" android:pathPrefix="/bookScanPay"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="chalo" android:host="dialog" android:pathPrefix="/availability"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="chalo" android:host="book" android:pathPrefix="/bookTicket"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="chalo" android:host="book" android:pathPrefix="/bookProduct"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="chalo" android:host="appopen" android:pathPrefix="/homescreen"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/HomeActivityTheme" android:name="app.zophop.ui.activities.UserDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:name="app.zophop.ui.activities.ActivePassScreen" android:screenOrientation="portrait" android:parentActivityName="app.zophop.ui.activities.SplashScreen"/>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:name="app.zophop.ui.activities.ActivatePassScreen" android:parentActivityName="app.zophop.ui.activities.SplashScreen"/>
+        <activity android:theme="@style/HomeActivityMaterialTheme" android:name="app.zophop.ui.activities.SuperPassValidationActivity" android:screenOrientation="portrait" android:parentActivityName="app.zophop.ui.activities.SplashScreen"/>
+        <activity android:theme="@style/ZophopTheme.NoActionBar" android:name="app.zophop.ui.activities.RenewMagicPassActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/HomeActivityTheme" android:name="app.zophop.products.ProductSelectionActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/HomeActivityTheme" android:label="@string/nearby_activity_label" android:icon="@drawable/logo_chalo" android:name="app.zophop.ui.activities.NearbyStopsActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:logo="@drawable/actionbar" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="nearby"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="zophop.com" android:pathPrefix="/nearby"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/HomeActivityMaterialTheme" android:name="app.zophop.ui.activities.HomeScreenMapActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/pick_location_activity_label" android:icon="@drawable/logo_chalo" android:name="app.zophop.ui.activities.PickLocationActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateVisible|stateAlwaysVisible|adjustResize" android:logo="@drawable/actionbar"/>
+        <activity android:label="@string/pick_location_activity_label" android:icon="@drawable/logo_chalo" android:name="app.zophop.ui.activities.UniversalPickerActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:windowSoftInputMode="adjustUnspecified|stateVisible|adjustResize" android:logo="@drawable/actionbar"/>
+        <activity android:theme="@style/HomeActivityTheme" android:name="app.zophop.scanPay.ScanPayBaseActivity"/>
+        <activity android:theme="@style/ZophopTheme.NoActionBar" android:name="app.zophop.scanPay.ScanPayPaymentActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/ZophopTheme.NoActionBar" android:name="app.zophop.ui.activities.ScanPayBookingSummary"/>
+        <activity android:theme="@style/ZophopTheme.NoActionBar" android:name="app.zophop.ui.activities.ActiveScanPayScreen"/>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:label="@string/trip_details_activity_label" android:icon="@drawable/logo_chalo" android:name="app.zophop.ui.activities.TripDetailsActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:logo="@drawable/actionbar"/>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:label="@string/trip_planner_activity_label" android:icon="@drawable/transparent" android:name="app.zophop.ui.activities.TripPlanningStopBasedActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:windowSoftInputMode="adjustPan" android:logo="@drawable/transparent" android:parentActivityName="app.zophop.ui.activities.SplashScreen"/>
+        <activity android:theme="@style/HomeActivityTheme" android:label="@string/trip_planner_activity_label" android:icon="@drawable/transparent" android:name="app.zophop.ui.activities.TripPlanningActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:windowSoftInputMode="adjustPan" android:logo="@drawable/transparent" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="plan"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="zophop.com" android:pathPrefix="/plan"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/HomeActivityTheme" android:name="app.zophop.ui.activities.BookingSuccessActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:name="app.zophop.ui.activities.ReportProblemActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:label="" android:icon="@drawable/transparent" android:name="app.zophop.ui.activities.SchedulerActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:logo="@drawable/transparent" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="scheduler"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="zophop.com" android:pathPrefix="/scheduler"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:name="app.zophop.ui.fragments.BusFrequencyActivity" android:screenOrientation="portrait" android:parentActivityName="app.zophop.ui.activities.RouteDetailsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="chalo" android:host="availability" android:pathPrefix="/showTimetable"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:name="app.zophop.ui.activities.BusEtaFrequencyActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/HomeActivityTheme" android:icon="@drawable/transparent" android:name="app.zophop.ui.activities.RouteDetailsActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:logo="@drawable/transparent" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="route"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="zophop.com" android:pathPrefix="/route"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/HomeActivityTheme" android:icon="@drawable/logo_chalo" android:name="app.zophop.ui.activities.CitySelectionActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:logo="@drawable/actionbar" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="select-city"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:label="Cabs" android:icon="@drawable/logo_chalo" android:name="app.zophop.ui.activities.CabActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:logo="@drawable/actionbar" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="autocab"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="zophop.com" android:pathPrefix="/autocab"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/SplashTheme" android:name="app.zophop.ui.activities.SplashScreen" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/HomeActivityTheme" android:name="app.zophop.ui.activities.WebViewActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="blog"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="linemap"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="blog.zophop.com"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https" android:host="blog.zophop.com"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/ZophopTheme.NoActionBar" android:name="app.zophop.ui.activities.CashWebViewActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:parentActivityName="app.zophop.ui.activities.SplashScreen"/>
+        <activity android:theme="@style/ZophopTheme.NoActionBar" android:name="app.zophop.ui.activities.BankingActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:windowSoftInputMode="adjustUnspecified|stateVisible|adjustResize"/>
+        <activity android:theme="@style/ZophopTheme.NoActionBar" android:name="app.zophop.ui.activities.WebViewInterceptActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation"/>
+        <activity android:theme="@style/Theme.AppCompat.NoActionBar" android:name="app.zophop.ui.activities.ForceUpdateActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.AppCompat.NoActionBar" android:name="app.zophop.ui.activities.CityDiscontinuedActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/ZophopTheme.NoActionBar" android:name="app.zophop.ui.activities.CardActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:theme="@style/HomeActivityTheme" android:name="app.zophop.ui.activities.CheckoutActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/HomeActivityMaterialTheme" android:icon="@drawable/transparent" android:name="app.zophop.ui.activities.HomeActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustPan" android:logo="@drawable/transparent"/>
+        <activity android:theme="@style/HomeActivityTheme" android:name="app.zophop.ui.activities.LanguageSelectionActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation"/>
+        <activity android:name="app.zophop.ui.activities.PickStopActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:windowSoftInputMode="adjustUnspecified|stateVisible|adjustResize"/>
+        <activity android:name="app.zophop.ui.activities.PickRouteStopActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:icon="@drawable/transparent" android:name="app.zophop.ui.activities.TripSchedulesActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:logo="@drawable/transparent" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="schedules"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="zophop.com" android:pathPrefix="/schedules"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:name="app.zophop.ui.activities.CabHistoryActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="history" android:pathPrefix="/cab"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="app.zophop.ui.activities.LocationIntentReceiverActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="geo"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:label="Alerts" android:icon="@drawable/logo_chalo" android:name="app.zophop.ui.activities.AlertsListActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:logo="@drawable/actionbar" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="alerts"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/HomeActivityTheme" android:name="app.zophop.ui.activities.FavoriteListActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="favorites"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="app.zophop.ui.activities.PickStopFilterableActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation"/>
+        <activity android:name="app.zophop.ui.activities.EndTripActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="chat"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/ZophopTheme.WhitePrimary" android:name="app.zophop.ui.activities.SuggestNextCityActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation"/>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:name="app.zophop.ui.activities.UserProfileActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:parentActivityName="app.zophop.ui.activities.HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="profile"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="zophop.com" android:pathPrefix="/profile"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:icon="@drawable/logo_chalo" android:name="app.zophop.ui.activities.SchedulerDescriptionActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:logo="@drawable/actionbar"/>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:icon="@drawable/logo_chalo" android:name="app.zophop.ui.activities.BookingSummaryMagicPassActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:logo="@drawable/actionbar" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="book" android:pathPrefix="/bookSummary"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="chalo" android:host="book" android:pathPrefix="/bookSummary"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/com_mixpanel_android_TakeoverInAppActivityTheme" android:name="com.mixpanel.android.takeoverinapp.TakeoverInAppActivity"/>
+        <activity android:theme="@style/HomeActivityMaterialTheme" android:icon="@drawable/logo_chalo" android:name="app.zophop.ui.activities.ProductHistoryActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:logo="@drawable/actionbar" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name=".PassBooked"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="chalo" android:host="book" android:pathPrefix="/showPass"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:icon="@drawable/logo_chalo" android:name="app.zophop.ui.activities.PassStatusActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:logo="@drawable/actionbar" android:parentActivityName="app.zophop.ui.activities.SplashScreen"/>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:name="app.zophop.ui.activities.OfflinePaymentActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/HomeActivityTheme" android:icon="@drawable/logo_chalo" android:name="app.zophop.ui.activities.ConfirmMagicPassActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:logo="@drawable/actionbar" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="book" android:pathPrefix="/confirmPass"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="chalo" android:host="book" android:pathPrefix="/confirmPass"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:label="@string/cab_booking_activity_toolbar_title" android:name="app.zophop.ui.activities.CabBookingActivity" android:screenOrientation="portrait" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="book" android:pathPrefix="/cab"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:label="@string/title_activity_mticketing_info" android:name="app.zophop.ui.activities.MTicketingInfoActivity" android:screenOrientation="portrait" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="tutorial" android:path="/mticketing"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:label="zoomed_image_view" android:name="app.zophop.ui.activities.ZoomedImageViewActivity" android:screenOrientation="portrait" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="image"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:name="app.zophop.ui.activities.SubscriptionActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/HomeActivityTheme" android:name="app.zophop.ui.activities.AccountLoginActivity" android:screenOrientation="portrait" android:parentActivityName="app.zophop.ui.activities.HomeActivity"/>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:name="app.zophop.ui.activities.ZophopSosActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:name="app.zophop.ui.activities.EditMessageActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysVisible"/>
+        <activity android:theme="@style/Theme.Freshchat.SelectedTheme" android:name="com.freshchat.consumer.sdk.activity.ChannelListActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.Freshchat.SelectedTheme" android:name="com.freshchat.consumer.sdk.activity.ConversationDetailActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/HomeActivityTheme" android:name="app.zophop.products.PassSelectionActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/HomeActivityTheme" android:name="app.zophop.products.CategorySelectionActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/HomeActivityMaterialTheme" android:name="app.zophop.ui.activities.MPassPurchaseActivity" android:screenOrientation="portrait" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name=".MakePayment"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name=".ViewPass"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="book" android:pathPrefix="/mPassPurchase"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="chalo" android:host="book" android:pathPrefix="/mPassPurchase"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/HomeActivityMaterialTheme" android:name="app.zophop.ui.activities.MPassVerificationStatusActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/HomeActivityMaterialTheme" android:name="app.zophop.ui.activities.SuperPassPurchaseActivity" android:screenOrientation="portrait" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name=".ViewPassApplication"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/HomeActivityMaterialTheme" android:name="app.zophop.ui.activities.SuperPassVerificationStatusActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/HomeActivityMaterialTheme" android:name="app.zophop.ui.activities.SuperPassBookingSummaryActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/HomeActivityMaterialTheme" android:name="app.zophop.ui.activities.SuperPassBookingSuccessActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/ZophopTheme.NoActionBar" android:name="app.zophop.ui.activities.SuperPassCashPaymentWebViewActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:parentActivityName="app.zophop.ui.activities.SplashScreen"/>
+        <activity android:theme="@style/HomeActivityMaterialTheme" android:name="app.zophop.ui.activities.cardRecharge.CardRechargeActivity" android:screenOrientation="portrait" android:parentActivityName="app.zophop.ui.activities.SplashScreen"/>
+        <activity android:theme="@style/HomeActivityMaterialTheme" android:name="app.zophop.ui.activities.cardRecharge.OnlineCardRechargePaymentSuccessActivity" android:screenOrientation="portrait" android:parentActivityName="app.zophop.ui.activities.SplashScreen"/>
+        <activity android:theme="@style/HomeActivityMaterialTheme" android:name="app.zophop.ui.activities.cardRecharge.OnlineCardRechargeSummaryActivity" android:screenOrientation="portrait" android:parentActivityName="app.zophop.ui.activities.SplashScreen"/>
+        <activity android:theme="@style/HomeActivityMaterialTheme" android:name="app.zophop.ui.activities.cardRecharge.OnlineCardRechargeHistoryActivity" android:screenOrientation="portrait" android:parentActivityName="app.zophop.ui.activities.SplashScreen"/>
+        <activity android:theme="@style/HomeActivityMaterialTheme" android:name="app.zophop.ui.activities.MTicketTripReceiptActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:parentActivityName="app.zophop.ui.activities.SplashScreen"/>
+        <activity android:theme="@style/HomeActivityMaterialTheme" android:name="app.zophop.ui.activities.UniversalPassActivity" android:screenOrientation="portrait" android:parentActivityName="app.zophop.ui.activities.SplashScreen"/>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:enabled="false" android:exported="false" android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="app.zophop.sync.SyncService" android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/syncadapter"/>
+        </service>
+        <service android:name="app.zophop.sync.AuthenticatorService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@xml/authenticator"/>
+        </service>
+        <service android:name="app.zophop.features.GeoFenceService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="true"/>
+        <service android:name="app.zophop.service.LocationTrackingService"/>
+        <service android:name="app.zophop.service.WifiSender"/>
+        <service android:name="app.zophop.service.NearbyStopsGeofenceService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="app.zophop.alarm.SubscriberService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <service android:name="app.zophop.alarm.AlarmBootService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="app.zophop.UpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <data android:scheme="package" android:path="app.zophop"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <data android:scheme="package" android:path="app.zophop"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="app.zophop.InstallReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="app.zophop.utilities.mixpanel.mpmetrics.GCMReceiver" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="app.zophop.alarm.SubscriberAlarm"/>
+        <receiver android:name="app.zophop.alarm.AlarmBootReceiver" android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="app.zophop.features.GeoFenceReceiver" android:enabled="true" android:exported="true"/>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="app.zophop.utils" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/freshchat_file_provider_paths"/>
+        </provider>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:name="app.zophop.ui.activities.ActiveMTicketScreen" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/ZophopTheme.NoActionBar" android:name="app.zophop.ui.activities.ValidationScreen" android:screenOrientation="portrait" android:parentActivityName="app.zophop.ui.activities.SplashScreen"/>
+        <activity android:theme="@style/ZophopTheme.NoActionBar" android:name="app.zophop.ui.activities.ActivateMTicketScreen" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:icon="@drawable/logo_chalo" android:name="app.zophop.ui.activities.MTicketSelectionActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:logo="@drawable/actionbar" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="book" android:pathPrefix="/confirmMTicket"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="chalo" android:host="book" android:pathPrefix="/confirmMTicket"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/ZophopThemeLolipop.ActionBarToolBar" android:icon="@drawable/logo_chalo" android:name="app.zophop.ui.activities.MTicketBookingSummary" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:logo="@drawable/actionbar" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="book" android:pathPrefix="/mticketSummary"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="chalo" android:host="book" android:pathPrefix="/mticketSummary"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/HomeActivityTheme" android:icon="@drawable/logo_chalo" android:name="app.zophop.ui.activities.MTicketTripInfoActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:logo="@drawable/actionbar" android:parentActivityName="app.zophop.ui.activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="book" android:pathPrefix="/mticket"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="book" android:pathPrefix="/mticket"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="app.zophop.ui.activities.MTicketNotificationRouter">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zophop" android:host="book" android:pathPrefix="/mTicketNotification"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="chalo" android:host="book" android:pathPrefix="/mTicketNotification"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="app.zophop.ui.activities.PickRouteLocationActivity" android:screenOrientation="portrait" android:configChanges="locale|orientation" android:windowSoftInputMode="adjustUnspecified|stateVisible|adjustResize"/>
+        <receiver android:name="app.zophop.ui.receivers.SMSBroadcastReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@style/Theme.Freshchat.SelectedTheme" android:name="com.freshchat.consumer.sdk.activity.DeeplinkInterstitialActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.Freshchat.SelectedTheme" android:name="com.freshchat.consumer.sdk.activity.PictureAttachmentActivity" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Freshchat.SelectedTheme" android:name="com.freshchat.consumer.sdk.activity.CategoryListActivity"/>
+        <activity android:theme="@style/Theme.Freshchat.SelectedTheme" android:name="com.freshchat.consumer.sdk.activity.ArticleListActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Freshchat.SelectedTheme" android:name="com.freshchat.consumer.sdk.activity.ArticleDetailActivity"/>
+        <activity android:theme="@style/Freshchat.Theme.Transparent" android:name="com.freshchat.consumer.sdk.activity.InterstitialActivity" android:configChanges="orientation|screenSize"/>
+        <service android:name="com.freshchat.consumer.sdk.service.FreshchatService"/>
+        <receiver android:name="com.freshchat.consumer.sdk.receiver.FreshchatReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.freshchat.consumer.sdk.receiver.FreshchatNetworkChangeReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <provider android:name="com.freshchat.consumer.sdk.provider.FreshchatInitProvider" android:enabled="true" android:exported="false" android:multiprocess="true" android:authorities="app.zophop.freshchat.initprovider"/>
+        <activity android:theme="@style/Theme.Freshchat.SelectedTheme" android:name="com.freshchat.consumer.sdk.activity.FAQCategoriesActivity" android:configChanges="orientation|screenSize"/>
+        <activity android:theme="@style/Theme.Freshchat.SelectedTheme" android:name="com.freshchat.consumer.sdk.activity.FAQListActivity" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Freshchat.SelectedTheme" android:name="com.freshchat.consumer.sdk.activity.FAQDetailsActivity" android:configChanges="orientation|screenSize"/>
+        <activity android:theme="@style/Theme.Freshchat.SelectedTheme" android:name="com.freshchat.consumer.sdk.activity.FAQSearchActivity" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustResize"/>
+        <provider android:name="com.google.firebase.perf.provider.FirebasePerfProvider" android:exported="false" android:authorities="app.zophop.firebaseperfprovider" android:initOrder="101"/>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <activity android:theme="@style/UrbanAirship.InAppHtml.Activity" android:name="com.urbanairship.iam.html.HtmlActivity" android:exported="false">
+            <meta-data android:name="com.urbanairship.push.iam.EXCLUDE_FROM_AUTO_SHOW" android:value="true"/>
+        </activity>
+        <activity android:theme="@style/UrbanAirship.InAppFullscreen.Activity" android:name="com.urbanairship.iam.fullscreen.FullScreenActivity" android:exported="false">
+            <meta-data android:name="com.urbanairship.push.iam.EXCLUDE_FROM_AUTO_SHOW" android:value="true"/>
+        </activity>
+        <activity android:theme="@style/UrbanAirship.InAppModal.Activity" android:name="com.urbanairship.iam.modal.ModalActivity" android:exported="false">
+            <meta-data android:name="com.urbanairship.push.iam.EXCLUDE_FROM_AUTO_SHOW" android:value="true"/>
+        </activity>
+        <receiver android:name="com.urbanairship.automation.alarms.AlarmOperationReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.urbanairship.automation.alarms.ALARM_FIRED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.urbanairship.push.fcm.AirshipFirebaseMessagingService" android:exported="false">
+            <intent-filter android:priority="-1">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <enable-feature android:name="com.amazon.device.messaging" android:required="false"/>
+        <receiver android:name="com.urbanairship.push.adm.AdmPushReceiver" android:permission="com.amazon.device.messaging.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.amazon.device.messaging.intent.RECEIVE"/>
+                <category android:name="app.zophop"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.urbanairship.messagecenter.MessageActivity" android:exported="false"/>
+        <activity android:label="@string/ua_message_center_title" android:name="com.urbanairship.messagecenter.MessageCenterActivity" android:exported="false"/>
+        <activity android:theme="@style/Theme.NoDisplay" android:name="com.urbanairship.push.NotificationProxyActivity" android:exported="false" android:taskAffinity="app.zophop.NotificationProxyActivity" android:launchMode="singleInstance"/>
+        <activity android:theme="@style/UrbanAirship.HelperActivity" android:name="com.urbanairship.util.HelperActivity" android:exported="false">
+            <meta-data android:name="com.urbanairship.push.iam.EXCLUDE_FROM_AUTO_SHOW" android:value="true"/>
+        </activity>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.urbanairship.google.PlayServicesErrorActivity" android:exported="false">
+            <meta-data android:name="com.urbanairship.push.iam.EXCLUDE_FROM_AUTO_SHOW" android:value="true"/>
+        </activity>
+        <activity android:theme="@style/UrbanAirship.RateAppActivity" android:name="com.urbanairship.actions.RateAppActivity" android:exported="false">
+            <meta-data android:name="com.urbanairship.push.iam.EXCLUDE_FROM_AUTO_SHOW" android:value="true"/>
+            <intent-filter>
+                <action android:name="com.urbanairship.actions.SHOW_RATE_APP_INTENT_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.urbanairship.actions.WalletLoadingActivity" android:exported="false" android:noHistory="true"/>
+        <receiver android:name="com.urbanairship.push.NotificationProxyReceiver" android:exported="false">
+            <intent-filter android:priority="-999">
+                <action android:name="com.urbanairship.push.OPENED"/>
+                <category android:name="app.zophop"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.urbanairship.locale.LocaleChangeReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <provider android:name="com.urbanairship.UrbanAirshipProvider" android:exported="false" android:authorities="app.zophop.urbanairship.provider"/>
+        <provider android:name="androidx.work.impl.WorkManagerInitializer" android:exported="false" android:multiprocess="true" android:authorities="app.zophop.workmanager-init" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.foreground.SystemForegroundService" android:enabled="@bool/enable_system_foreground_service_default" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" android:enabled="true" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP" android:enabled="true" android:exported="true" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true"/>
+        <activity android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity" android:enabled="false" android:exported="false" android:process=":playcore_missing_splits_activity" android:stateNotNeeded="true" android:launchMode="singleInstance"/>
+        <activity android:theme="@style/Theme.PlayCore.Transparent" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:enabled="false" android:exported="false" android:stateNotNeeded="true"/>
+        <service android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService" android:enabled="false" android:exported="true">
+            <meta-data android:name="com.google.android.play.core.assetpacks.versionCode" android:value="10901"/>
+        </service>
+        <service android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService" android:enabled="false" android:exported="false"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.firebase.auth.internal.GenericIdpActivity" android:exported="true" android:excludeFromRecents="true" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="genericidp" android:host="firebase.auth" android:path="/"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.firebase.auth.internal.RecaptchaActivity" android:exported="true" android:excludeFromRecents="true" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="recaptcha" android:host="firebase.auth" android:path="/"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.auth.api.gms.service.START"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true"/>
+        <activity android:theme="@style/zxing_CaptureTheme" android:name="com.journeyapps.barcodescanner.CaptureActivity" android:clearTaskOnLaunch="true" android:stateNotNeeded="true" android:screenOrientation="sensorLandscape" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <receiver android:name="com.google.android.gms.analytics.AnalyticsReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.analytics.AnalyticsService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="app.zophop.firebaseinitprovider" android:initOrder="100" android:directBootAware="true"/>
+        <provider android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer" android:exported="false" android:multiprocess="true" android:authorities="app.zophop.lifecycle-process"/>
+        <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <provider android:name="com.squareup.picasso.PicassoProvider" android:exported="false" android:authorities="app.zophop.com.squareup.picasso"/>
+        <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+        <activity android:name="com.mixpanel.android.mpmetrics.MixpanelNotificationRouteActivity" android:exported="false"/>
+        <receiver android:name="com.mixpanel.android.mpmetrics.MixpanelPushNotificationDismissedReceiver"/>
+        <uses-library android:name="android.test.runner" android:required="false"/>
+    </application>
+</manifest>

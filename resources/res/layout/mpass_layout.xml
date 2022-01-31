@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@+id/pass_container" android:background="@drawable/drawer_item_selector" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/pass_details_container" android:paddingLeft="16dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@+id/profile_pic_holder" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginTop="16dp" android:layout_marginRight="8dp">
+                <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/passHolderImage" android:layout_width="45dp" android:layout_height="45dp" android:src="@drawable/profile_empty"/>
+                <ProgressBar android:id="@+id/pass_profile_pic_progressbar" android:visibility="gone" android:layout_width="32dp" android:layout_height="72dp" android:indeterminateDrawable="@drawable/progress_bar_circle_orange" android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:paddingRight="16dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="18sp" android:textColor="@color/black_87" android:id="@+id/pass_type_title" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/route_pass" android:includeFontPadding="false" android:layout_weight="1" style="@style/mediumFont"/>
+                    <TextView android:textSize="16sp" android:textColor="@color/pass_active" android:gravity="right" android:id="@+id/passActiveStatus" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Active" style="@style/mediumFont"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/route_name_linearlayout" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/route_name_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bus_trip_planner"/>
+                        <TextView android:textSize="16sp" android:textColor="@color/black_87" android:layout_gravity="center_vertical" android:id="@+id/mpass_route_name" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:text="@string/enter_route_number" style="@style/mediumFont"/>
+                        <TextView android:textColor="@color/black_60" android:id="@+id/route_pass_special_info" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:text="90 days, General" style="@style/regularFont.NormalText"/>
+                    </LinearLayout>
+                    <TextView android:textSize="14sp" android:textColor="@color/black_70" android:id="@+id/route_details_mpass" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/route_from_to" android:includeFontPadding="false"/>
+                </LinearLayout>
+                <TextView android:textSize="14sp" android:textColor="@color/black_70" android:id="@+id/trip_details" android:paddingTop="5dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false"/>
+                <TextView android:textSize="14sp" android:textColor="@color/black_70" android:id="@+id/category_details" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/route_sample_text" style="@style/regularFont"/>
+                <TextView android:textSize="14dp" android:textColor="@color/black_70" android:id="@+id/expiry_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Expires on" android:maxLines="4" android:includeFontPadding="false" style="@style/regularFont"/>
+                <FrameLayout android:id="@+id/mpass_history_action_btn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:foreground="@drawable/drawer_item_selector">
+                    <TextView android:textSize="14sp" android:textColor="@color/chalo_primary" android:gravity="center" android:id="@+id/mpass_history_action_btn_text" android:background="@drawable/primary_stroked_rectangle" android:paddingLeft="18dp" android:paddingTop="6dp" android:paddingRight="18dp" android:paddingBottom="6dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Renew" style="@style/mediumFont"/>
+                </FrameLayout>
+            </LinearLayout>
+            <ImageView android:layout_gravity="right" android:id="@+id/pass_refresh" android:background="@drawable/drawer_item_selector" android:paddingLeft="12dp" android:paddingTop="12dp" android:paddingRight="4dp" android:paddingBottom="12dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cab_activity_refresh" android:layout_toLeftOf="@+id/pass_view_settings_menu" android:layout_alignParentRight="true"/>
+            <ImageView android:id="@+id/pass_view_settings_menu" android:background="@drawable/drawer_item_selector" android:paddingLeft="16dp" android:paddingTop="16dp" android:paddingRight="20dp" android:paddingBottom="12dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_menu_icon"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/pass_extension_magic_pass_info_view" android:paddingLeft="16dp" android:paddingRight="16dp" android:paddingBottom="12dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+            <include android:layout_height="wrap_content" android:layout_below="@+id/margin_placeholder" layout="@layout/pass_validity_extension_layout_bottom"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

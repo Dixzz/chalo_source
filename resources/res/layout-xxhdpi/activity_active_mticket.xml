@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:background="@color/rating_tag_background_not_selected" android:layout_width="match_parent" android:layout_height="@dimen/action_bar_height" android:layout_alignParentTop="true" android:elevation="0dp" style="@style/ZophopToolbarStyle.WhiteToolBar"/>
+    <app.zophop.LockingScrollView android:id="@+id/main_layout" android:background="@color/rating_tag_background_not_selected" android:paddingLeft="12dp" android:paddingRight="12dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true" android:layout_above="@+id/footer_bus_anim" android:layout_below="@+id/toolbar">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="4dp" app:cardElevation="4dp" app:cardUseCompatPadding="true">
+                <RelativeLayout android:background="@color/cards_container_background" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <RelativeLayout android:background="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <View android:id="@+id/margin_placeholder" android:background="@color/green_pressed_state" android:visibility="gone" android:layout_width="match_parent" android:layout_height="300dp"/>
+                        <TextView android:textSize="18sp" android:textStyle="normal" android:textColor="@color/black_87" android:gravity="center" android:layout_gravity="center" android:id="@+id/time_container" android:paddingTop="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Current time" android:layout_below="@+id/margin_placeholder" android:layout_centerHorizontal="true" style="@style/mediumFont"/>
+                        <ImageView android:id="@+id/mticket_qr_code" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8dp" android:minWidth="150dp" android:layout_below="@+id/time_container" android:layout_centerHorizontal="true"/>
+                        <TextView android:textSize="14sp" android:textColor="@color/black_87" android:gravity="center" android:layout_gravity="center" android:id="@+id/btn_tap_qr_code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/btn_txt_tap_qr_code" android:layout_below="@+id/mticket_qr_code" android:layout_centerHorizontal="true" style="@style/regularFont"/>
+                        <LinearLayout android:gravity="center" android:id="@+id/mticket_validity_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-8dp" android:layout_marginBottom="-12dp" android:layout_below="@+id/btn_tap_qr_code" android:layout_centerHorizontal="true">
+                            <include layout="@layout/mticket_validity_layout"/>
+                        </LinearLayout>
+                        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/dotted_separator" android:paddingLeft="-6dp" android:paddingRight="-6dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="-12dp" android:layout_below="@+id/mticket_validity_time">
+                            <ImageView android:id="@+id/iv_circle_start" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/half_circle_right"/>
+                            <LinearLayout android:orientation="vertical" android:id="@+id/dotted_separator" android:paddingLeft="20dp" android:paddingTop="11dp" android:layout_width="match_parent" android:layout_height="match_parent">
+                                <View android:id="@+id/dotted_separator" android:background="@drawable/component_divider_dotted" android:layout_width="match_parent" android:layout_height="3dp" android:layerType="software"/>
+                            </LinearLayout>
+                            <ImageView android:id="@+id/iv_circle_end" android:paddingRight="0dp" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/half_circle_left" app:layout_constraintRight_toRightOf="@+id/dotted_separator"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@+id/visible_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="0dp" android:layout_below="@+id/dotted_separator">
+                            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-12dp">
+                                <include layout="@layout/mticket_route_stop_details_layout"/>
+                            </LinearLayout>
+                            <include layout="@layout/component_divider_layout"/>
+                            <include layout="@layout/mticket_booking_details_layout"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <LinearLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <include layout="@layout/branding_mticket"/>
+            </LinearLayout>
+        </LinearLayout>
+    </app.zophop.LockingScrollView>
+    <RelativeLayout android:gravity="bottom" android:id="@+id/footer_bus_anim" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <pl.droidsonroids.gif.GifImageView android:id="@+id/animation" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="-110dp" android:src="@drawable/bus_anim_new" android:scaleType="fitEnd"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

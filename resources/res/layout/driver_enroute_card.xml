@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="20dp" android:textColor="@color/black_87" android:ellipsize="end" android:id="@+id/title" android:background="@android:color/transparent" android:paddingLeft="12dp" android:paddingTop="14dp" android:paddingBottom="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" style="@style/mediumFont"/>
+    <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:cardCornerRadius="4dp" app:cardElevation="4dp" app:cardUseCompatPadding="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <include android:id="@+id/driver_details_card" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/driver_details"/>
+                <include android:id="@+id/destination_details_card" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/check_in_card_entry"/>
+                <include android:id="@+id/requesting_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/cab_card_loader"/>
+            </RelativeLayout>
+            <View android:background="@color/black" android:layout_width="match_parent" android:layout_height="1dp" android:alpha="0.1"/>
+            <RelativeLayout android:id="@+id/bottom_container" android:background="@color/white" android:layout_width="match_parent" android:layout_height="48dp">
+                <ImageView android:layout_gravity="center" android:id="@+id/view_in_map" android:background="@drawable/drawer_item_selector" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="8dp" android:src="@drawable/map_cab_card" android:layout_alignParentLeft="true"/>
+                <ImageView android:layout_gravity="center" android:id="@+id/share_trip" android:background="@drawable/drawer_item_selector" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/share_cab_card" android:layout_toRightOf="@+id/view_in_map"/>
+                <TextView android:textSize="14dp" android:gravity="center" android:id="@+id/cancel_ride" android:background="@drawable/drawer_item_selector" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/cancel_ride" android:layout_toLeftOf="@+id/call_driver" fontPath="@string/font_medium"/>
+                <TextView android:textSize="14dp" android:textColor="#2196f3" android:gravity="center" android:id="@+id/call_driver" android:background="@drawable/drawer_item_selector" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/call_driver" android:layout_alignParentRight="true" fontPath="@string/font_medium"/>
+                <TextView android:textSize="14dp" android:textColor="#99000000" android:gravity="center" android:id="@+id/end_trip" android:background="@drawable/drawer_item_selector" android:paddingLeft="16dp" android:paddingRight="16dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/end_trip" android:layout_alignParentRight="true" fontPath="@string/font_medium"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

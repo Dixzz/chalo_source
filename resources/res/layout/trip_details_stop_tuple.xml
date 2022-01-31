@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:background="@drawable/stop_item_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/trip_details_tuple_right_padding">
+    <TextView android:textSize="14dp" android:textColor="@color/view_schedule_color" android:id="@+id/stop_numbers" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/more_stops" style="@style/mediumFont.NormalText"/>
+    <ImageView android:gravity="center_vertical" android:id="@+id/more_stops" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="5dp"/>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/bus" style="@style/preference_title"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp">
+        <CheckBox android:id="@+id/ac_checkbox" android:layout_width="0dp" android:layout_height="wrap_content" android:checked="true" android:text="@string/ac" android:layout_weight="1" style="@style/preference_bus_type"/>
+        <CheckBox android:id="@+id/non_ac_checkbox" android:layout_width="0dp" android:layout_height="wrap_content" android:checked="true" android:text="@string/non_ac" android:layout_weight="1" style="@style/preference_bus_type"/>
+    </LinearLayout>
+</LinearLayout>

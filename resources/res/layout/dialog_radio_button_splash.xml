@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:padding="7dp" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:foreground="@drawable/drawer_item_selector" app:cardBackgroundColor="@color/white" app:cardCornerRadius="6dp" app:cardElevation="4dp" app:cardUseCompatPadding="true">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16sp" android:textColor="@color/black_87" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@+id/language" android:paddingTop="13dp" android:paddingBottom="13dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/english" android:singleLine="true" android:layout_weight="1" fontPath="@string/font_regular"/>
+        <ImageView android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/selected_lang" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="7dp" android:src="@drawable/selected_select_duration"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

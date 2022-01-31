@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <item android:left="-1dp" android:top="0dp" android:right="-1dp" android:bottom="-1dp">
+        <shape android:shape="line">
+            <stroke android:width="2dp" android:color="@color/scheduler_input_divider" android:dashWidth="10dp" android:dashGap="5dp"/>
+            <solid android:color="@android:color/transparent"/>
+            <padding android:left="10dp" android:top="10dp" android:right="10dp" android:bottom="10dp"/>
+        </shape>
+    </item>
+</layer-list>

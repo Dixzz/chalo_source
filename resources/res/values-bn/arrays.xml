@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="gen_instructions_arr">
+        <item>সকল পাস অফেরতযোগ্য এবং অরুপান্তরযোগ্য</item>
+        <item>আপনাকে কোন কাগজের টিকিট বহন করতে হবে না</item>
+        <item>পাসগুলি অফলাইন ব্যবহার করা যেতে পারে</item>
+        <item>আপনি আপনার পাসের দ্বারা একদিনে শুধুমাত্র দুইবার ভ্রমণ করতে পারেন</item>
+    </array>
+</resources>

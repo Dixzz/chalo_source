@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:background="@color/cards_container_background" android:padding="16dp" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+    <app.zophop.utilities.external.loader_view.LoadingSpinnerView android:id="@+id/loading_spinner" android:layout_width="@dimen/loader_width" android:layout_height="@dimen/loader_height" android:layout_marginTop="20dp" android:layout_centerHorizontal="true" android:layout_centerVertical="true"/>
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/trip_details_disruption_banner" android:background="@drawable/grey_rounded_layout" android:padding="8dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="8dp" android:layout_marginRight="8dp">
+            <ImageView android:layout_gravity="center" android:id="@+id/alertIcon" android:layout_width="28dp" android:layout_height="28dp" android:src="@drawable/alert_route_card" android:layout_centerVertical="true"/>
+            <TextView android:textSize="14dp" android:textColor="@color/black_70" android:layout_gravity="center_vertical" android:id="@+id/disruptionText" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:text="@string/disruption_info" android:layout_weight="1" style="@style/mediumFont"/>
+            <TextView android:textColor="@color/chalo_primary" android:layout_gravity="center" android:id="@+id/trip_details_disruption_cta" android:background="?attr/selectableItemBackgroundBorderless" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Details" style="@style/mediumFont"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/trip_details_top_container" android:paddingLeft="16dp" android:paddingTop="16dp" android:paddingRight="16dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/leg_image" android:paddingRight="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bus_favorites"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/black_60" android:id="@+id/mode_details" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6dp" style="@style/regularFont.NormalText"/>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/route_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6dp">
+                    <TextView android:textSize="18dp" android:textColor="@color/black_87" android:ellipsize="end" android:id="@+id/mode_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:drawablePadding="6dp" style="@style/mediumFont"/>
+                    <TextView android:layout_gravity="center" android:id="@+id/agency" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/bus_route_agency"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/schedules_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textColor="@color/black_87" android:id="@+id/schedule_timing" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/regularFont.NormalText"/>
+                        <ImageView android:layout_gravity="center_vertical" android:id="@+id/seat_occupancy_icon_trip_details_activity" android:paddingLeft="4dp" android:paddingRight="8dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1dp" android:src="@drawable/seats_available" android:layout_toRightOf="@+id/from"/>
+                        <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+                        <TextView android:textColor="@color/view_schedule_color" android:id="@+id/see_schedule" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/see_schedule" fontPath="fonts/NotoSans-SemiBold.ttf"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/time_table_disclaimer_layout" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_below="@+id/card_title" android:layout_alignLeft="@+id/card_title">
+                        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/alert_routescreen"/>
+                        <TextView android:textSize="14dp" android:textColor="@color/black_60" android:layout_gravity="center_vertical" android:id="@+id/timetable_disclaimer_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:text="timetable accuracy disclaimer" android:layout_alignBottom="@+id/card_info_container" fontPath="fonts/NotoSans-Regular.ttf"/>
+                    </LinearLayout>
+                    <View android:background="@color/scheduler_input_divider" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="16dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <include android:id="@+id/location_container" android:visibility="gone" layout="@layout/trip_details_location_tuple"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/stops_name_container" android:paddingLeft="16dp" android:paddingTop="12dp" android:paddingRight="16dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <LinearLayout android:orientation="vertical" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="37dp">
+            <LinearLayout android:orientation="horizontal" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include android:id="@+id/stop_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_marginRight="12dp" layout="@layout/trip_details_stop_tuple"/>
+            </LinearLayout>
+            <View android:id="@+id/last_divider" android:background="@color/scheduler_input_divider" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="16dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="37dp">
+            <View android:id="@+id/transaction_container_divider" android:background="@color/scheduler_input_divider" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="16dp" android:layout_marginBottom="16dp"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:id="@+id/fare_distance_container" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                    <TextView android:textColor="@color/black_87" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/distance_details" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12dp" style="@style/mediumFont.NormalText"/>
+                    <ImageView android:id="@+id/service_type" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="2dp"/>
+                    <TextView android:textColor="@color/black_87" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/fare_details" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12dp" style="@style/mediumFont.NormalText"/>
+                    <TextView android:textColor="@color/black_87" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/time_duration" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/mediumFont.NormalText"/>
+                </LinearLayout>
+                <TextView android:textSize="14dp" android:textColor="@color/white" android:gravity="center" android:id="@+id/btn_book_mticket" android:background="@drawable/green_rounded_button_otp" android:paddingLeft="16dp" android:paddingTop="8dp" android:paddingRight="16dp" android:paddingBottom="8dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="53dp" android:text="@string/btn_text_buy_ticket" android:layout_alignParentRight="true" fontPath="fonts/NotoSans-SemiBold.ttf"/>
+            </RelativeLayout>
+            <TextView android:id="@+id/fare_more_details" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:drawablePadding="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="16dp" android:layout_marginBottom="16dp">
+    <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include android:id="@+id/from_to_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/card_timing" layout="@layout/card_item_from_to"/>
+        <TextView android:id="@+id/card_timing" android:paddingLeft="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Time" android:drawablePadding="8dp" android:layout_alignParentRight="true" fontPath="@string/font_medium" style="@style/card_item_time"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:id="@+id/card_special_feature_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="31dp" android:layout_marginTop="20dp" android:layout_alignBottom="@+id/main_content_view">
+                <TextView android:id="@+id/card_special_feature" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp" android:text="Fast" style="@style/card_item_speacial_feature"/>
+                <TextView android:id="@+id/card_subtitle" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Platform" android:color="#87000000" android:alpha="0.54" style="@style/card_item_platform"/>
+            </LinearLayout>
+            <TextView android:id="@+id/trainTypeDescription" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="31dp" android:layout_marginTop="4dp" android:text="Central Railways" android:color="#87000000" android:alpha="0.54" style="@style/card_item_platform"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

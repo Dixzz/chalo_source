@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="#e0e0e0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/picker_search_bar" layout="@layout/picker_search_bar"/>
+    <include layout="@layout/no_internet_layout"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="8dp">
+        <androidx.cardview.widget.CardView android:id="@+id/trip_planner_hook" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp">
+            <RelativeLayout android:orientation="horizontal" android:background="@drawable/drawer_item_selector" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView android:textSize="12dp" android:textColor="@color/black_54" android:id="@+id/dont_know_route_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8dp" android:text="@string/route_picker_tp_hook_title" android:layout_centerVertical="true" style="@style/mediumFont"/>
+                <TextView android:textSize="12dp" android:textColor="@color/scheduler_favorite_action_bar_color" android:layout_gravity="center_vertical" android:id="@+id/enter_destination" android:paddingLeft="8dp" android:paddingRight="26dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:text="@string/enter_destination_location" android:layout_toRightOf="@+id/dont_know_route_number" android:layout_centerVertical="true" style="@style/mediumFont"/>
+                <View android:background="@color/scheduler_favorite_action_bar_color" android:layout_width="match_parent" android:layout_height="1dp" android:layout_toRightOf="@+id/dont_know_route_number" android:layout_below="@+id/enter_destination"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:id="@+id/list_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="12dp" android:layout_below="@+id/trip_planner_hook">
+            <ListView android:id="@+id/location_list" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:divider="@null"/>
+            <TextView android:gravity="center_horizontal" android:id="@+id/empty_view" android:padding="16dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

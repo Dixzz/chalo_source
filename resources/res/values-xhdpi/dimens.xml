@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="animation_zoom_in_mticket">1.25</dimen>
+    <dimen name="home_screen_route_search">16dp</dimen>
+    <dimen name="qr_code_top_padding">40dp</dimen>
+    <dimen name="route_bidirectional_icon_size">14dp</dimen>
+    <dimen name="tv_home_screen_hook_size">16dp</dimen>
+</resources>

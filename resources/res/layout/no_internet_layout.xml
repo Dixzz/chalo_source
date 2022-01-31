@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/settings_error" android:background="@drawable/no_internet_banner_pressed_state" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="14dp" android:textColor="@color/white" android:gravity="center" android:id="@+id/settings_not_available_description" android:paddingLeft="4dp" android:paddingTop="9dp" android:paddingRight="4dp" android:paddingBottom="9dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:text="@string/internet_unavailable" fontPath="@string/font_bold"/>
+</RelativeLayout>

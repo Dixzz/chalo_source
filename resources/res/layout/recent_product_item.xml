@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="horizontal" android:background="@drawable/drawer_item_selector" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:paddingRight="16dp" android:visibility="gone" android:layout_width="27dp" android:layout_height="16dp" android:layout_marginTop="11dp" android:src="@drawable/logo_chalo"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+        <TextView android:textSize="18sp" android:textColor="@color/black_87" android:id="@+id/pass_type_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/route_pass" style="@style/mediumFont"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/mpass_linearlayout" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:paddingTop="8dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bus_trip_planner"/>
+                <TextView android:textSize="18sp" android:textColor="@color/black_87" android:id="@+id/mpass_route_name" android:paddingLeft="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hint_route_number" style="@style/mediumFont"/>
+                <TextView android:textColor="@color/black_60" android:id="@+id/route_pass_special_info" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:text="90 days, General" style="@style/regularFont.NormalText"/>
+            </LinearLayout>
+            <TextView android:textSize="14sp" android:textColor="@color/black_70" android:id="@+id/route_details_mpass" android:paddingTop="8dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/route_from_to"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/mticket_route_name_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="4dp">
+            <ImageView android:id="@+id/route_mode_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bus_trip_planner"/>
+            <TextView android:textSize="16sp" android:textColor="@color/black_87" android:layout_gravity="center_vertical" android:id="@+id/mticket_route_name" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:text="@string/enter_route_number" style="@style/mediumFont"/>
+        </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/mticket_constraintlayout" android:paddingLeft="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/iv_circle_start" android:layout_width="10dp" android:layout_height="10dp" android:src="@drawable/trip_planner_circle_from" app:layout_constraintBottom_toBottomOf="@+id/tv_start_stop" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="@+id/tv_start_stop"/>
+            <TextView android:textSize="14sp" android:textColor="@color/black_87" android:id="@+id/tv_start_stop" android:paddingLeft="14dp" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Andheri eastAndheri east" app:layout_constraintLeft_toRightOf="@+id/iv_circle_start" style="@style/regularFont"/>
+            <TextView android:textSize="14sp" android:textColor="@color/black_87" android:id="@+id/tv_end_stop" android:paddingLeft="14dp" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Vashi railways station depot" app:layout_constraintLeft_toLeftOf="@+id/tv_start_stop" app:layout_constraintTop_toBottomOf="@+id/tv_start_stop" style="@style/regularFont"/>
+            <View android:id="@+id/start_end_separator" android:background="@color/black" android:layout_width="2dp" android:layout_height="0dp" app:layout_constraintBottom_toTopOf="@+id/iv_circle_end" app:layout_constraintEnd_toEndOf="@+id/iv_circle_start" app:layout_constraintStart_toStartOf="@+id/iv_circle_start" app:layout_constraintTop_toBottomOf="@+id/iv_circle_start"/>
+            <ImageView android:id="@+id/iv_circle_end" android:layout_width="10dp" android:layout_height="10dp" android:src="@drawable/trip_planner_circle_to" app:layout_constraintBottom_toBottomOf="@+id/tv_end_stop" app:layout_constraintEnd_toEndOf="@+id/iv_circle_start" app:layout_constraintStart_toStartOf="@+id/iv_circle_start" app:layout_constraintTop_toTopOf="@+id/tv_end_stop"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView android:textSize="14sp" android:textColor="@color/black_70" android:id="@+id/passenger_details" android:paddingTop="8dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/route_sample_text"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="right" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="18sp" android:textColor="@color/black_87" android:id="@+id/fare" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rupee_symbol" style="@style/mediumFont"/>
+    </LinearLayout>
+</LinearLayout>

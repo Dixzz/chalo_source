@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/zh_green" android:paddingTop="24dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:layout_gravity="center_horizontal" android:id="@+id/image" android:layout_width="match_parent" android:layout_height="0dp" android:scaleType="fitCenter" android:layout_weight="1"/>
+    <TextView android:textSize="18dp" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_gravity="left" android:id="@+id/title" android:paddingLeft="24dp" android:paddingTop="24dp" android:paddingRight="24dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sample Title" style="@style/boldFont"/>
+    <TextView android:textSize="14dp" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_gravity="left" android:id="@+id/sub_title" android:paddingLeft="24dp" android:paddingTop="6dp" android:paddingRight="24dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sample subtitle" android:alpha="0.7"/>
+    <View android:layout_width="match_parent" android:layout_height="32dp"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:textColor="@color/zh_green" android:id="@+id/actionBtn" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="12dp" android:text="UPDATE"/>
+        <RelativeLayout android:id="@+id/button_layout" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginBottom="8dp">
+            <TextView android:textSize="14dp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@+id/positive" android:background="@drawable/drawer_item_selector" android:paddingRight="16dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="YES" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/mediumFont"/>
+            <TextView android:textSize="14dp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@+id/negative" android:background="@drawable/drawer_item_selector" android:paddingRight="24dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="SKIP" android:layout_toLeftOf="@+id/positive" android:layout_centerVertical="true" android:alpha="0.7" style="@style/mediumFont"/>
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="@dimen/cab_single_input_height">
+    <RelativeLayout android:id="@+id/circle_container" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="8dp" android:layout_marginRight="16dp">
+        <ImageView android:id="@+id/circle_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/scheduler_input_circle_from" android:layout_centerInParent="true"/>
+        <View android:id="@+id/circle_top" android:background="@color/scheduler_input_divider" android:visibility="gone" android:layout_width="1dp" android:layout_height="match_parent" android:layout_above="@+id/circle_image" android:layout_centerHorizontal="true"/>
+        <View android:id="@+id/circle_bottom" android:background="@color/scheduler_input_divider" android:visibility="gone" android:layout_width="1dp" android:layout_height="match_parent" android:layout_below="@+id/circle_image" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:background="@drawable/drawer_item_selector" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_toRightOf="@+id/circle_container">
+        <TextView android:textSize="16dp" android:textColor="#de000000" android:textColorHint="#89000000" android:gravity="center_vertical" android:id="@+id/header_title" android:background="@drawable/drawer_item_selector" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="match_parent" android:singleLine="true" android:includeFontPadding="false" android:drawablePadding="16dp" android:layout_toLeftOf="@+id/divider_drop_down" android:layout_centerVertical="true" fontPath="fonts/NotoSans-Regular.ttf"/>
+        <RelativeLayout android:id="@+id/divider_drop_down" android:background="@color/white" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_alignParentRight="true">
+            <View android:id="@+id/divider" android:background="@color/scheduler_input_divider" android:layout_width="1dp" android:layout_height="32dp" android:layout_toLeftOf="@+id/drop_down" android:layout_centerVertical="true"/>
+            <ImageView android:id="@+id/drop_down" android:background="@drawable/drawer_item_selector" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/arrow_down_tripplanner_details" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <View android:id="@+id/header_separator" android:background="@color/scheduler_input_divider" android:paddingLeft="16dp" android:paddingRight="16dp" android:paddingBottom="8dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</RelativeLayout>

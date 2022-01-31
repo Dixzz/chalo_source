@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingTop="24dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:id="@+id/prefs_header" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="24dp" android:text="@string/preferences" style="@style/preference_header"/>
+    <ScrollView android:visibility="visible" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginLeft="24dp" android:fillViewport="true" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:id="@+id/prefs_container" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/preferences" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginRight="20dp" android:layout_weight="1">
+                <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" layout="@layout/preference_bus"/>
+                <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" layout="@layout/preference_walking"/>
+                <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" layout="@layout/preference_auto"/>
+            </LinearLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp"/>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/done_cancel_container" android:paddingRight="24dp" android:layout_width="match_parent" android:layout_height="52dp">
+        <TextView android:gravity="center" android:id="@+id/preference_cancel" android:background="@drawable/drawer_item_selector" android:padding="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="1" android:layout_toLeftOf="@+id/preference_done" android:layout_centerVertical="true" android:textAllCaps="true" style="@style/preference_done_cancel"/>
+        <TextView android:textColor="@color/orange_primary" android:gravity="center" android:id="@+id/preference_done" android:background="@drawable/drawer_item_selector" android:padding="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="32dp" android:text="@string/done" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/preference_done_cancel"/>
+    </RelativeLayout>
+</LinearLayout>

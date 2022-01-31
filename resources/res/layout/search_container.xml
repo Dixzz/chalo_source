@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@+id/search_bar_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/search_bar_initial_top_margin">
+        <androidx.cardview.widget.CardView android:id="@+id/search_action" android:layout_width="match_parent" android:layout_height="wrap_content" android:foreground="@drawable/drawer_item_selector" app:cardCornerRadius="4dp" app:cardElevation="4dp" app:cardUseCompatPadding="true">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_vertical" android:id="@+id/left_action_icon" android:background="@drawable/search_homescreen_icon" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="12dp" android:alpha="0.87"/>
+                <TextView android:textSize="@dimen/home_screen_route_search" android:textColor="@color/black_87" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/floating_search_view" android:paddingRight="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:text="@string/search_live_timings" android:maxLines="1" style="@style/regularFont"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <TextView android:textSize="14dp" android:textColor="@color/black_87" android:gravity="center" android:layout_gravity="center" android:id="@+id/buses_loading_view" android:background="@drawable/buses_loading_background" android:paddingLeft="12dp" android:paddingTop="6dp" android:paddingRight="12dp" android:paddingBottom="6dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:text="@string/searching_live_home_map" android:layout_centerHorizontal="true" style="@style/regularFont"/>
+        <include layout="@layout/component_divider_layout"/>
+    </LinearLayout>
+</RelativeLayout>

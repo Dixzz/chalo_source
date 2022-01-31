@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <include android:id="@+id/card_header" layout="@layout/card_header"/>
+    <ScrollView android:id="@+id/scroll_container" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include layout="@layout/summary_card_container"/>
+    </ScrollView>
+    <include layout="@layout/offline_footer"/>
+</LinearLayout>

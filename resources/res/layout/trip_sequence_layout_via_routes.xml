@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/mode_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/train_trip_planner"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/to_via_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp">
+        <TextView android:textSize="14sp" android:textColor="@color/black_87" android:id="@+id/to_stop" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="1dp" android:text="DB College - Lighthouse" style="@style/mediumFont"/>
+        <TextView android:textSize="14sp" android:textColor="@color/black_60" android:id="@+id/via" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="via details"/>
+    </LinearLayout>
+    <ImageView android:id="@+id/disruption_icon" android:visibility="gone" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginLeft="12dp" android:src="@drawable/alert_route_card"/>
+    <ImageView android:id="@+id/separator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:src="@drawable/arrow_tripplanner_result"/>
+</LinearLayout>

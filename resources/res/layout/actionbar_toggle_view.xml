@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="40dp" android:weightSum="2">
+        <View android:id="@+id/toggle_background_view" android:background="@drawable/blue_rounded_toggle_button" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="40dp" android:weightSum="2">
+        <TextView android:textSize="14dp" android:textColor="@color/white" android:gravity="center" android:id="@+id/toggle_left" android:padding="5dp" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/station" android:layout_weight="1" fontPath="@string/font_medium"/>
+        <TextView android:textSize="14dp" android:textColor="@color/white" android:gravity="center" android:id="@+id/toggle_right" android:padding="5dp" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/live_trips" android:layout_weight="1" fontPath="@string/font_medium"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" android:enabled="false" android:textColor="@color/black_60" android:gravity="center_vertical" android:id="@+id/item_description" android:background="@color/new_activity_color" android:paddingLeft="16dp" android:clickable="false" android:layout_width="match_parent" android:layout_height="42dp" android:text="@string/favorite_recent_searches" style="@style/mediumFont.LargeText"/>

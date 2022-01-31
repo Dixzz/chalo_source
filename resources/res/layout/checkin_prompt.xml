@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+    <ImageView android:id="@+id/picture" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/nearby_click"/>
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:paddingLeft="24dp" android:paddingTop="24dp" android:paddingRight="24dp" android:paddingBottom="8dp" android:layout_width="312dp" android:layout_height="wrap_content">
+        <TextView android:textSize="20dp" android:textColor="@color/black" android:layout_gravity="left|center_vertical|center_horizontal|center" android:id="@+id/title_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:alpha="0.87" fontPath="fonts/NotoSans-SemiBold.ttf"/>
+        <TextView android:textSize="14dp" android:textColor="@color/black" android:layout_gravity="left|center_vertical|center_horizontal|center" android:id="@+id/sub_title_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:alpha="0.57" fontPath="fonts/NotoSans-Regular.ttf"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14dp" android:textColor="@color/orange_primary" android:gravity="center" android:id="@+id/got_it_btn" android:background="@drawable/drawer_item_selector" android:padding="3dp" android:layout_width="wrap_content" android:layout_height="48dp" android:layout_marginTop="16dp" android:text="@string/got_it" android:layout_alignParentRight="true" fontPath="fonts/NotoSans-SemiBold.ttf"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

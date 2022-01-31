@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/radio_button_layout" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RadioButton android:theme="@style/ZophopThemeLolipop.ActionBarToolBar.RadioButton" android:textSize="18dp" android:textColor="#de000000" android:id="@+id/route_radio_button" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="8dp" android:layout_weight="1" style="@style/regularFont"/>
+        <TextView android:textSize="18dp" android:textColor="#de000000" android:layout_gravity="center_vertical" android:id="@+id/route_fare" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100 Rs." style="@style/regularFont"/>
+    </LinearLayout>
+</RelativeLayout>

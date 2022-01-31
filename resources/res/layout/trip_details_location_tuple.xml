@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/location_container_view" android:paddingLeft="16dp" android:paddingTop="12dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="21dp" android:layout_height="match_parent">
+                <View android:layout_gravity="center_horizontal" android:layout_width="1dp" android:layout_height="0dp" android:layout_weight="1"/>
+                <ImageView android:layout_gravity="center_horizontal" android:id="@+id/universal_from_image" android:layout_width="10dp" android:layout_height="10dp" android:src="@drawable/trip_details_from" android:layout_centerVertical="true"/>
+                <View android:layout_gravity="center_horizontal" android:background="@color/black_60" android:layout_width="1dp" android:layout_height="0dp" android:layout_weight="1"/>
+            </LinearLayout>
+            <TextView android:textSize="@dimen/trip_details_stop_location_size" android:id="@+id/location" android:layout_marginLeft="16dp" style="@style/universal_trip_stop_style"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="21dp" android:layout_height="match_parent">
+                <View android:layout_gravity="center_horizontal" android:background="@color/black_60" android:layout_width="1dp" android:layout_height="0dp" android:layout_weight="1"/>
+                <ImageView android:layout_gravity="center_horizontal" android:id="@+id/universal_from_image" android:layout_width="10dp" android:layout_height="10dp" android:src="@drawable/trip_planner_circle_to" android:layout_centerVertical="true"/>
+                <View android:layout_gravity="center_horizontal" android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+            </LinearLayout>
+            <TextView android:textSize="@dimen/trip_details_stop_location_size" android:id="@+id/to_stop" android:layout_marginLeft="16dp" style="@style/universal_trip_stop_style"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

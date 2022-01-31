@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="16dp" android:paddingTop="16dp" android:paddingRight="16dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textColor="@color/black_60" android:id="@+id/booking_type_tag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/scan_pay_tag" style="@style/regularFont.NormalText"/>
+    <TextView android:textSize="18dp" android:textColor="#000000" android:id="@+id/bus_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Paid" style="@style/mediumFont"/>
+    <TextView android:textSize="14sp" android:textColor="#b3000000" android:id="@+id/bus_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="To Chalo" style="@style/regularFont"/>
+    <TextView android:textSize="14dp" android:textColor="@color/black_60" android:id="@+id/tv_expiry_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginBottom="16dp" android:text="Expires on 24 Oct 2018" android:maxLines="4" style="@style/mediumFont"/>
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/action_bar_height" android:elevation="0dp" style="@style/ZophopToolbarStyle.CreamToolbar"/>
+    <FrameLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <app.zophop.ui.views.collapse_on_scroll.CollapseOnScrollViewPager android:id="@+id/collpase_view" android:layout_width="match_parent" android:layout_height="match_parent" app:collapseOnDragId="@+id/dummyView" app:expandOnDragId="@+id/header" app:scrollOnDragId="@+id/pages" app:stayVisibleId="@+id/tabs_line_above">
+            <FrameLayout android:id="@+id/trip_planner_frag" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+                <View android:id="@+id/dummyView" android:layout_width="0dp" android:layout_height="match_parent"/>
+                <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/header" android:background="@color/white" android:paddingLeft="12dp" android:paddingRight="8dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:layout_width="wrap_content" android:layout_height="68dp" android:layout_marginTop="28dp">
+                            <ImageView android:id="@+id/circle_image" android:layout_width="10dp" android:layout_height="10dp" android:src="@drawable/trip_planner_circle_from" android:layout_centerHorizontal="true"/>
+                            <View android:background="@color/black" android:layout_width="2dp" android:layout_height="match_parent" android:layout_above="@+id/circle_to" android:layout_below="@+id/circle_image" android:layout_centerHorizontal="true"/>
+                            <ImageView android:id="@+id/circle_to" android:layout_width="10dp" android:layout_height="10dp" android:src="@drawable/trip_planner_circle_to" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+                        </RelativeLayout>
+                        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_weight="1">
+                            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginBottom="2dp" app:cardCornerRadius="4dp" app:cardElevation="4dp" app:cardPreventCornerOverlap="false" app:cardUseCompatPadding="true">
+                                <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                                    <EditText android:textSize="16sp" android:textColor="#de000000" android:textColorHint="#89000000" android:gravity="center_vertical" android:id="@+id/input_from" android:background="@color/white" android:paddingLeft="12dp" android:paddingRight="62dp" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="@string/hint_start_stop" android:singleLine="true" android:includeFontPadding="false" android:drawablePadding="26dp" android:layout_centerVertical="true" fontPath="fonts/NotoSans-Regular.ttf">
+                                        <requestFocus/>
+                                    </EditText>
+                                    <app.zophop.utilities.external.loader_view.LoadingSpinnerView android:id="@+id/from_location_loading_spinner" android:paddingLeft="20dp" android:visibility="gone" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="34dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:loaderThickness="2dp"/>
+                                    <ImageView android:id="@+id/clear_from_location" android:background="@drawable/white_action_bar_selector" android:paddingLeft="10dp" android:paddingRight="10dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/close_location_search" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                                </RelativeLayout>
+                            </androidx.cardview.widget.CardView>
+                            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginBottom="6dp" app:cardCornerRadius="4dp" app:cardElevation="4dp" app:cardPreventCornerOverlap="false" app:cardUseCompatPadding="true">
+                                <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                                    <EditText android:textSize="16sp" android:textColor="#de000000" android:textColorHint="#89000000" android:gravity="center_vertical" android:id="@+id/input_to" android:background="@color/white" android:paddingLeft="12dp" android:paddingRight="62dp" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="@string/hint_end_stop" android:singleLine="true" android:includeFontPadding="false" android:drawablePadding="26dp" android:layout_centerVertical="true" fontPath="fonts/NotoSans-Regular.ttf"/>
+                                    <app.zophop.utilities.external.loader_view.LoadingSpinnerView android:id="@+id/to_location_loading_spinner" android:paddingLeft="20dp" android:visibility="gone" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="34dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:loaderThickness="2dp"/>
+                                    <ImageView android:id="@+id/clear_to_location" android:background="@drawable/white_action_bar_selector" android:paddingLeft="8dp" android:paddingRight="10dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/close_location_search" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                                </RelativeLayout>
+                            </androidx.cardview.widget.CardView>
+                            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/preferences_layout" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+                                <RelativeLayout android:gravity="center" android:id="@+id/time_container" android:background="@drawable/trip_planner_pressed_state" android:layout_width="0dp" android:layout_height="34dp" android:layout_marginRight="8dp" android:layout_weight="1">
+                                    <TextView android:textSize="14dp" android:textColor="#de000000" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@+id/scheduler_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/leave_now" android:drawableLeft="@drawable/time_planner_input" android:drawablePadding="8dp" style="@style/regularFont"/>
+                                </RelativeLayout>
+                                <RelativeLayout android:gravity="center" android:id="@+id/preference_hook" android:background="@drawable/trip_planner_pressed_state" android:layout_width="0dp" android:layout_height="34dp" android:layout_marginLeft="8dp" android:layout_weight="1">
+                                    <TextView android:textSize="14sp" android:textColor="#de000000" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Options" android:drawableLeft="@drawable/filter_planner_input" android:drawablePadding="8dp" style="@style/regularFont"/>
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <ImageButton android:id="@+id/swap_planner_button" android:background="?attr/selectableItemBackgroundBorderless" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="8dp" android:layout_marginTop="38dp" android:src="@drawable/swap_planner" android:scaleType="fitXY"/>
+                    </LinearLayout>
+                    <View android:id="@+id/tabs_line_above" android:background="@drawable/add_shadow2" android:visibility="gone" android:layout_width="match_parent" android:layout_height="6dp"/>
+                    <app.zophop.utilities.ui.views.sliding_tabs.HorizontalTabScrollWithViewPager android:id="@+id/tabs" android:background="@color/white" android:visibility="visible" android:layout_width="match_parent" android:layout_height="@dimen/horizontal_tab_height" android:elevation="2dp" app:tab_selected="@color/orange_primary" app:tab_unselected="@color/black_60"/>
+                    <androidx.viewpager.widget.ViewPager android:id="@+id/pages" android:background="#f5f5f5" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                    <View android:id="@+id/shadow" android:background="@drawable/add_shadow" android:layout_width="match_parent" android:layout_height="6dp" android:layout_above="@+id/id_from_your_LinearLayout"/>
+                </LinearLayout>
+            </FrameLayout>
+        </app.zophop.ui.views.collapse_on_scroll.CollapseOnScrollViewPager>
+        <View android:id="@+id/shadow_above_stop_picker_results" android:background="@drawable/add_shadow3" android:layout_width="match_parent" android:layout_height="4dp" android:layout_marginTop="128dp" android:layout_above="@+id/id_from_your_LinearLayout"/>
+        <FrameLayout android:id="@+id/stop_picker_results_container" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="132dp">
+            <ListView android:id="@+id/stop_results_list_view" android:paddingBottom="16dp" android:visibility="visible" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent" android:listSelector="@drawable/drawer_item_selector" android:divider="@color/list_divider_color" android:dividerHeight="1dp"/>
+            <TextView android:gravity="center" android:orientation="vertical" android:id="@+id/empty_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:text="No info available"/>
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

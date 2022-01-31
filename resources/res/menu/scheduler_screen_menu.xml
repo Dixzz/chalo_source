@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/favorites_save" android:id="@+id/menu_scheduler_fav" android:title="@string/trip_screen_menu_fav" app:showAsAction="always"/>
+</menu>

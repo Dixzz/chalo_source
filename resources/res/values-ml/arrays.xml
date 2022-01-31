@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="kochi_beta_instructions">
+        <item>ചില ബസുകൾ കാണിക്കാനിടയില്ല</item>
+        <item>യാത്ര നിരക്കുകളിൽ വ്യത്യാസം ഉണ്ടായേക്കാം</item>
+        <item>സമയം ചിലപ്പോൾ വ്യത്യാസപ്പെടാം</item>
+    </array>
+</resources>

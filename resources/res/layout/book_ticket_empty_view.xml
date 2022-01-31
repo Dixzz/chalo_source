@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:id="@+id/book_ticket_empty_view" android:background="#eeeeee" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="56dp" android:layout_marginBottom="16dp" android:src="@drawable/empty_my_bookings"/>
+    <TextView android:textSize="16dp" android:textColor="@color/black_60" android:layout_gravity="center_horizontal" android:id="@+id/empty_view_descripiton_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:text="@string/no_tickets_bought_yet" style="@style/mediumFont"/>
+    <TextView android:textSize="14dp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@+id/book_ticket_button" android:background="@drawable/orange_rounded_button" android:paddingLeft="42dp" android:paddingRight="42dp" android:layout_width="wrap_content" android:layout_height="48dp" android:layout_marginBottom="56dp" android:text="@string/buy_ticket_now" style="@style/mediumFont"/>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="@dimen/action_bar_height" android:layout_alignParentTop="true" style="@style/ZophopToolbarStyle.WhiteToolBar"/>
+    <include android:id="@+id/no_internet_banner" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/toolbar" layout="@layout/no_internet_layout"/>
+    <ScrollView android:id="@+id/cab_view" android:background="@color/new_activity_color" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/no_internet_banner">
+        <LinearLayout android:orientation="vertical" android:id="@+id/card_container" android:paddingLeft="@dimen/home_screen_card_container_margin_right" android:paddingRight="@dimen/home_screen_card_container_margin_left" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="8dp"/>
+    </ScrollView>
+    <app.zophop.ui.views.summary_card.LoaderView android:id="@+id/loader" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/toolbar"/>
+</RelativeLayout>

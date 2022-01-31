@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="@dimen/action_bar_height" android:elevation="@dimen/action_bar_elevation" style="@style/ZophopToolbarStyle.WhiteToolBar"/>
+    <androidx.core.widget.NestedScrollView android:id="@+id/product_selection_nested_scroll_view" android:background="@color/cards_container_background" android:clipToPadding="true" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/toolbar">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:id="@+id/multiple_products_disabled_banner_product_selection" android:background="@color/new_activity_color" android:padding="12dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center" android:id="@+id/alertIcon" android:layout_width="28dp" android:layout_height="28dp" android:src="@drawable/alert_icon_orange" android:layout_centerVertical="true"/>
+                <TextView android:textSize="14sp" android:textColor="@color/black_70" android:layout_gravity="center_vertical" android:id="@+id/product_selection_disabled_textview" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:text="@string/multiple_product_disabled_text" android:layout_weight="1" style="@style/mediumFont"/>
+                <TextView android:textSize="14sp" android:textColor="@color/chalo_primary" android:layout_gravity="center" android:id="@+id/trip_details_disruption_cta" android:background="?attr/selectableItemBackgroundBorderless" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Details" style="@style/mediumFont"/>
+            </LinearLayout>
+            <TextView android:id="@+id/dummy_view_top" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:height="12dp"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/product_recycler_view" android:background="@color/white" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/toolbar" app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+            <TextView android:id="@+id/dummy_view_bottom" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:height="6dp"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/recent_purchases_header" android:paddingLeft="18dp" android:paddingTop="32dp" android:paddingRight="18dp" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="18sp" android:textColor="@color/black_87" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/recent_purchases" android:layout_weight="1" style="@style/mediumFont"/>
+                <TextView android:textColor="@color/view_schedule_color" android:id="@+id/recent_purchases_see_all" android:background="@drawable/drawer_item_selector" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_screen_card_see_all" style="@style/mediumFont.LargeText"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/recent_purchases_layout" android:background="@color/cards_container_background" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:background="@drawable/viewpager_tab_pressed_state" android:layout_width="wrap_content" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="match_parent">
+        <TextView android:textSize="14dp" android:textColor="@color/orange_primary" android:gravity="center" android:id="@+id/tab_title" android:paddingLeft="12dp" android:paddingRight="12dp" android:layout_width="wrap_content" android:layout_height="58dp" android:text="TRAIN" android:maxLines="1" android:drawablePadding="4dp" fontPath="fonts/NotoSans-SemiBold.ttf"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="312dp" android:layout_height="wrap_content">
+    <include android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/report_fragment"/>
+    <include android:layout_width="312dp" android:layout_height="wrap_content" android:layout_centerInParent="true" layout="@layout/loader_fragment_layout"/>
+    <include android:layout_width="312dp" android:layout_height="wrap_content" android:layout_centerInParent="true" layout="@layout/confirmation_dialog"/>
+</FrameLayout>

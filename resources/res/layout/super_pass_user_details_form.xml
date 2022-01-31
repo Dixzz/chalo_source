@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/white" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <app.zophop.ui.views.ZophopFormInput android:id="@+id/form_first_name" android:layout_width="match_parent" android:layout_height="wrap_content" app:editable="true" app:hint="@string/first_name_pass"/>
+    <app.zophop.ui.views.ZophopFormInput android:id="@+id/form_last_name" android:layout_width="match_parent" android:layout_height="wrap_content" app:editable="true" app:hint="@string/last_name_pass"/>
+    <app.zophop.ui.views.ZophopFormInput android:id="@+id/form_gender" android:layout_width="match_parent" android:layout_height="wrap_content" app:hint="@string/profile_hint_gender_pass"/>
+    <app.zophop.ui.views.ZophopFormInput android:id="@+id/form_dob" android:layout_width="match_parent" android:layout_height="wrap_content" app:hint="@string/profile_hint_dob_pass"/>
+    <View android:id="@+id/passenger_details_separator" android:background="#eeeeee" android:layout_width="match_parent" android:layout_height="8dp" android:layout_marginTop="10dp"/>
+    <TextView android:textSize="18sp" android:textColor="#de000000" android:id="@+id/documents_header" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/document_header" android:layout_below="@+id/passenger_details_separator" style="@style/mediumFont"/>
+    <TextView android:textSize="14sp" android:textColor="#de000000" android:id="@+id/document_details_notes" android:background="@drawable/passenger_details_background" android:padding="12dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:text="@string/passenger_details" android:layout_below="@+id/documents_header" style="@style/regularFont"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/form_passenger_type" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <View android:background="#eeeeee" android:layout_width="match_parent" android:layout_height="8dp" android:layout_marginTop="10dp"/>
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@+id/checkBoxLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="20dp" android:layout_marginRight="16dp">
+            <CheckBox android:id="@+id/checkBox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/cb_selector" android:layout_alignParentTop="true" android:layout_alignParentStart="true"/> /&gt; 
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/terms" android:layout_alignBaseline="@+id/checkBox" android:layout_alignBottom="@+id/checkBox" android:layout_marginStart="16dp" android:layout_toEndOf="@+id/checkBox"/>
+        </RelativeLayout>
+        <TextView android:enabled="false" android:textSize="16dp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="bottom" android:id="@+id/action_button" android:background="@drawable/orange_rounded_button" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginLeft="16dp" android:layout_marginTop="24dp" android:layout_marginRight="16dp" android:layout_marginBottom="12dp" android:text="@string/next" android:layout_below="@+id/checkBoxLayout" android:alpha="0.4" fontPath="fonts/Roboto-Medium.ttf"/>
+    </RelativeLayout>
+</LinearLayout>

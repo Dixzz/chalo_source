@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="animation_zoom_in">1.5</dimen>
+    <dimen name="animation_zoom_in_mticket">1.5</dimen>
+    <dimen name="animation_zoom_in_route_pass">1.5</dimen>
+    <dimen name="route_bidirectional_icon_size">14dp</dimen>
+</resources>

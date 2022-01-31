@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/sp_image_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/nearby_click"/>
+    <TextView android:textSize="18sp" android:textColor="#000000" android:gravity="center" android:id="@+id/sp_header_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="26dp" android:layout_marginTop="16dp" android:layout_marginRight="26dp" android:text="@string/sp_header_text" style="@style/mediumFont"/>
+    <TextView android:textSize="16sp" android:textColor="#000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="26dp" android:layout_marginTop="20dp" android:text="@string/sp_sub_header" style="@style/mediumFont"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@+id/sp_details" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </ScrollView>
+    <TextView android:textSize="14sp" android:textColor="#fe7c00" android:layout_gravity="end" android:id="@+id/sp_btn" android:background="@drawable/stop_item_selector" android:paddingLeft="8dp" android:paddingTop="4dp" android:paddingRight="8dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginRight="24dp" android:layout_marginBottom="30dp" android:text="@string/GOT_IT" style="@style/mediumFont"/>
+</LinearLayout>

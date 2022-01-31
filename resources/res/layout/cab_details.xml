@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/cab_details" android:background="@drawable/item_selector" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="18dp" android:textColor="@color/black" android:id="@+id/cab_subtype" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="8dp" android:includeFontPadding="false" android:drawablePadding="10dp" android:layout_toLeftOf="@+id/next_cab_available" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:alpha="0.87"/>
+    <TextView android:id="@+id/cab_book_button" android:layout_marginRight="8dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/cab_book_button"/>
+    <TextView android:textSize="18dp" android:id="@+id/next_cab_available" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:includeFontPadding="false" android:layout_toLeftOf="@+id/cab_book_button" android:layout_centerVertical="true" android:alpha="0.87"/>
+    <View android:id="@+id/cab_divider" android:background="@color/black" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp" android:layout_below="@+id/cab_subtype" android:alpha="0.1"/>
+</RelativeLayout>

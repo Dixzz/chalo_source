@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/card_item_container" android:background="@drawable/drawer_item_selector" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <app.zophop.utilities.external.loader_view.LoadingSpinnerView android:layout_gravity="center" android:id="@+id/loading_spinner" android:paddingTop="76dp" android:paddingBottom="76dp" android:layout_width="@dimen/loader_width" android:layout_height="@dimen/loader_height"/>
+    <TextView android:textSize="20sp" android:textColor="#bcbfb4" android:gravity="center" android:layout_gravity="center" android:id="@+id/empty_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="100dp" android:text="@string/no_scheduled_trips"/>
+</LinearLayout>

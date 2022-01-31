@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph_mpass_booking">
+    <fragment android:label="" android:name="app.zophop.ui.fragments.BasicUserDetailsFragment" android:id="@+id/basicUserDetailsFragment">
+        <action android:id="@+id/action_basicUserDetailsFragment_to_userProofsOverviewFragment" app:destination="@+id/userProofsOverviewFragment" app:enterAnim="@anim/fragment_slide_in_right_slow" app:exitAnim="@anim/fragment_slide_out_left_slow" app:popEnterAnim="@anim/fragment_slide_in_left" app:popExitAnim="@anim/fragment_slide_out_right"/>
+    </fragment>
+    <fragment android:label="" android:name="app.zophop.ui.fragments.UserProofsOverviewFragment" android:id="@+id/userProofsOverviewFragment">
+        <action android:id="@+id/action_userProofsOverviewFragment_to_userProofUploadFragment" app:destination="@+id/userProofUploadFragment" app:enterAnim="@anim/fragment_slide_in_right" app:exitAnim="@anim/fragment_slide_out_left" app:popEnterAnim="@anim/fragment_slide_in_left" app:popExitAnim="@anim/fragment_slide_out_right"/>
+        <action android:id="@+id/action_userProofsOverviewFragment_to_confirmMPassPurchaseFragment" app:destination="@+id/confirmMPassPurchaseFragment" app:enterAnim="@anim/fragment_slide_in_right" app:exitAnim="@anim/fragment_slide_out_left" app:popEnterAnim="@anim/fragment_slide_in_left_slow" app:popExitAnim="@anim/fragment_slide_out_right_slow"/>
+    </fragment>
+    <fragment android:label="" android:name="app.zophop.ui.fragments.UserProofUploadFragment" android:id="@+id/userProofUploadFragment">
+        <argument android:name="arg_proof_document_props" app:argType="app.zophop.models.mTicketing.ProofDocumentProps"/>
+    </fragment>
+    <fragment android:label="" android:name="app.zophop.ui.fragments.ConfirmMPassPurchaseFragment" android:id="@+id/confirmMPassPurchaseFragment"/>
+</navigation>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RadioButton android:theme="@style/ZophopThemeLolipop.ActionBarToolBar.RadioButton" android:textSize="16dp" android:textColor="@color/black" android:id="@+id/custom_radio" android:paddingTop="10dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="0.87" fontPath="@string/font_medium"/>
+    <TextView android:id="@+id/payment_desc" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="30dp" android:text="@string/payment_description_online" android:layout_below="@+id/custom_radio"/>
+</RelativeLayout>

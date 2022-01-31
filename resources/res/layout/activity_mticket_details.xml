@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="@dimen/action_bar_height" android:elevation="@dimen/action_bar_elevation" style="@style/ZophopToolbarStyle.WhiteToolBar"/>
+    <ScrollView android:id="@+id/main_layout" android:background="@color/cards_container_background" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:layout_below="@+id/toolbar">
+        <RelativeLayout android:background="@color/cards_container_background" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:background="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@+id/visible_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp">
+                    <TextView android:textSize="16dp" android:textColor="@color/magic_pass_active" android:id="@+id/tv_mticket_validity_banner" android:paddingLeft="16dp" android:paddingTop="12dp" android:paddingRight="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/mediumFont"/>
+                    <TextView android:textColor="@color/black_60" android:id="@+id/tv_booking_id" android:paddingLeft="16dp" android:paddingRight="16dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" style="@style/regularFont.NormalText"/>
+                    <include layout="@layout/component_divider_thick_layout"/>
+                    <include layout="@layout/mticket_route_stop_details_layout"/>
+                    <include layout="@layout/component_divider_thick_layout"/>
+                    <include layout="@layout/mticket_booking_details_layout"/>
+                    <include layout="@layout/component_divider_thick_layout"/>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/fare_details" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16dp"/>
+                    <include layout="@layout/component_divider_thick_layout"/>
+                </LinearLayout>
+                <TextView android:textSize="18dp" android:textColor="@color/black_60" android:gravity="center" android:layout_gravity="bottom" android:id="@+id/agency_text_id" android:background="#eeeeee" android:paddingTop="24dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/agency_text" android:includeFontPadding="false" android:layout_below="@+id/visible_content" style="@style/mediumFont"/>
+                <TextView android:textSize="14dp" android:textColor="@color/black_40" android:gravity="center" android:layout_gravity="bottom" android:id="@+id/partner_text_id" android:background="#eeeeee" android:paddingTop="0dp" android:paddingBottom="12dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/partner_text" android:includeFontPadding="false" android:layout_below="@+id/agency_text_id" style="@style/mediumFont"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <TextView android:textColor="@color/white" android:gravity="center" android:id="@+id/btn_mticket_book_again" android:background="@drawable/orange_button" android:visibility="gone" android:layout_width="match_parent" android:layout_height="56dp" android:text="@string/btn_txt_mticket_book_again" android:layout_alignParentBottom="true" style="@style/mediumFont.LargeText"/>
+</RelativeLayout>
